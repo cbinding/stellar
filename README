@@ -1,3 +1,13 @@
 STELLAR - "Semantic Technologies Enhancing Links and Linked Data for Archaeological Resources"
-A 12 month AHRC funded project by University of Glamorgan in conjunction with English Heritage and the Archaeology Data Service (York)
-The project started in March 2010
+A 12 month (Mar 2010-Feb 2011) AHRC funded project by University of Glamorgan in conjunction with English Heritage and the Archaeology Data Service (York)
+NOTE: The source code here has a number of external DLL dependencies that are not included, so will not compile on its own. The dependencies are:
+
+Antrl3.Runtime.dll (see http://www.stringtemplate.org/)
+Antlr3.StringTemplate.dll (see http://www.stringtemplate.org/)
+FileHelpers.dll (see http://www.filehelpers.com/)
+Mono.Data.SqliteClient.dll (http://www.mono-project.com/)
+SemWeb.dll (see http://razor.occams.info/code/semweb/)
+SemWeb.SqliteStore.dll (see http://razor.occams.info/code/semweb/)
+
+Some code included here may be derived from work already in the public domain. Where this is the case it will be indicated in comments in the source code.
+This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
