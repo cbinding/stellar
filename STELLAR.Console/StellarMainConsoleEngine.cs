@@ -38,7 +38,7 @@ namespace STELLAR.Console
             line = line.Trim();
             int pos = line.IndexOf(' ');
             if (pos == -1)
-                command = line;
+                command = line.Trim();
             else
             {
                 command = line.Substring(0, pos).Trim();
@@ -70,7 +70,7 @@ namespace STELLAR.Console
                 case "": break;
                 case "exit": System.Console.ResetColor(); Environment.Exit(0);  break;
                 case "quit": System.Console.ResetColor(); Environment.Exit(0); break;
-                //case "help": engine = new ShowHelpConsoleEngine(); break;
+                case "help": engine = new ShowHelpConsoleEngine(); break;
                 case "dbnames": engine = new DbNamesConsoleEngine(); break;
                 case "dbtables": engine = new DbTablesConsoleEngine(); break;
                 case "dbcolumns": engine = new DbColumnsConsoleEngine(); break;

@@ -18,7 +18,7 @@ namespace STELLAR.Console
             System.Console.ForegroundColor = ConsoleColor.Gray;
             System.Console.Clear();
 
-            System.Console.Out.WriteLine("(type HELP for instructions)");
+            System.Console.Out.WriteLine("(type HELP for commands)");
             System.Console.Out.Write("\n{0}>", appName);
 
             ConsoleEngineBase engine = new StellarMainConsoleEngine();

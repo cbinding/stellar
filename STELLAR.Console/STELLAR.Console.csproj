@@ -113,6 +113,9 @@
     <Compile Include="DbRowCountConsoleEngine.cs" />
     <Compile Include="RdfMergeConsoleEngine.cs" />
     <Compile Include="RdfStatsConsoleEngine.cs" />
+    <Compile Include="ShowHelpConsoleEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Sql2CsvConsoleEngine.cs" />
     <Compile Include="Csv2DbConsoleEngine.cs" />
     <Compile Include="Sql2RdfConsoleEngine.cs" />
@@ -127,7 +130,6 @@
     <Compile Include="DbTablesConsoleEngine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowHelpConsoleEngine.cs" />
     <Compile Include="StellarMainConsoleEngine.cs" />
   </ItemGroup>
   <ItemGroup>
