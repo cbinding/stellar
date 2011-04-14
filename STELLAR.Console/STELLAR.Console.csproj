@@ -123,7 +123,6 @@
     <Compile Include="Tab2DbConsoleEngine.cs" />
     <Compile Include="Tab2RdfConsoleEngine.cs" />
     <Compile Include="TemplatesConsoleEngine.cs" />
-    <Compile Include="TermSuggestConsoleEngine.cs" />
     <Compile Include="Xml2RdfConsoleEngine.cs" />
     <Compile Include="DbTablesConsoleEngine.cs" />
     <Compile Include="Program.cs" />

@@ -94,7 +94,6 @@ namespace STELLAR.Console
                 case "csv2stg": engine = new Csv2StgConsoleEngine(); break; //New 18/03/2011
                 case "sql2stg": engine = new Sql2StgConsoleEngine(); break; //New 18/03/2011
                 case "datadir": engine = new DataDirConsoleEngine(); break; //New 18/03/2011
-                case "suggest": engine = new TermSuggestConsoleEngine(); break; //temp 06/04/2011
                 default:
                     // 01/04/2011 - pass through a DOS command inside STELLAR.Console
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
