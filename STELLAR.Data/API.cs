@@ -910,11 +910,16 @@ namespace STELLAR.Data
                 IDictionary<string, object> record = new Dictionary<string, object>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    // Leave out if value = ""; check for presence of
-                    // properties in templates before attempting to use them
-                    if (dr[dc].ToString().Trim() != "")
-                        record[dc.ColumnName.Trim()] = dr[dc].ToString().Trim(); 
-                    
+                   
+                    String s = dr[dc].ToString().Trim();
+                    // Ensure any leading and trailing double quotes are removed..                        
+                    if (s.StartsWith("\"") && s.EndsWith("\""))
+                        s = s.Substring(1, s.Length - 2);
+                    // Check for presence of properties in templates before attempting to use them
+                    if (s != "")
+                    {                        
+                        record[dc.ColumnName.Trim()] = s;
+                    }                    
                 }                
                 records.Add(record);              
                 rowCount++;
