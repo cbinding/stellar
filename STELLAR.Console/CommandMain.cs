@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Console.CommandMain
+Summary	: Main handler for STELLAR console commands
+License : http://creativecommons.org/licenses/by/3.0/ 
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,23 +19,24 @@ using System.Text.RegularExpressions;
 
 namespace STELLAR.Console
 {
-    public class StellarMainConsoleEngine : ConsoleEngineBase
+    public class CommandMain : CommandBase
     {
         public override void Main(string[] args)
         {
             //System.Console.Clear();
-
-            // Display application name and version in console window title bar
-            String appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            base.Main(args);
+            // Application name to be used as command prompt
+            //String appName = System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
+            ////String appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             
-            //Process commands as they come in
-            string currentLine = this.In.ReadLine();
-            while (currentLine != null)
-            {
-                this.ProcessLine(currentLine);
-                this.Out.Write("\n{0}>", appName);                
-                currentLine = this.In.ReadLine();
-            }            
+            ////Process commands as they come in
+            //string currentLine = this.In.ReadLine();
+            //while (currentLine != null)
+            //{
+            //    this.ProcessLine(currentLine);
+            //    this.Out.Write("\n{0}>", appName);                
+            //    currentLine = this.In.ReadLine();
+            //}            
         }
 
         protected override void ProcessLine(string line)
@@ -64,36 +78,42 @@ namespace STELLAR.Console
             string[] args = (String[])list.ToArray(typeof(String));            
                         
             //Command handlers
-            ConsoleEngineBase engine = null;
+            CommandBase engine = null;
             switch (command.ToLower())
             {                
                 case "": break;
                 case "exit": System.Console.ResetColor(); Environment.Exit(0);  break;
                 case "quit": System.Console.ResetColor(); Environment.Exit(0); break;
-                case "help": engine = new ShowHelpConsoleEngine(); break;
-                case "dbnames": engine = new DbNamesConsoleEngine(); break;
-                case "dbtables": engine = new DbTablesConsoleEngine(); break;
-                case "dbcolumns": engine = new DbColumnsConsoleEngine(); break;
-                case "dbrowcount": engine = new DbRowCountConsoleEngine(); break;
-                case "sqlexecute": engine = new SqlExecuteConsoleEngine(); break;
-                case "csv2db": engine = new Csv2DbConsoleEngine(); break;
-                case "tab2db": engine = new Tab2DbConsoleEngine(); break;
-                case "sql2csv": engine = new Sql2CsvConsoleEngine(); break;
-                case "sql2tab": engine = new Sql2TabConsoleEngine(); break;
-                case "sql2xml": engine = new Sql2XmlConsoleEngine(); break;
-                case "sql2rdf": engine = new Sql2RdfConsoleEngine(); break;
-                case "csv2xml": engine = new Csv2XmlConsoleEngine(); break;
-                case "csv2rdf": engine = new Csv2RdfConsoleEngine(); break;
-                case "tab2rdf": engine = new Tab2RdfConsoleEngine(); break;
-                case "xml2rdf": engine = new Xml2RdfConsoleEngine(); break;
-                case "templates": engine = new TemplatesConsoleEngine(); break;
-                case "rdfstats": engine = new RdfStatsConsoleEngine(); break;
-                case "csvstats": engine = new CsvStatsConsoleEngine(); break;
-                case "rdfmerge": engine = new RdfMergeConsoleEngine(); break;
-                case "cmdfile": engine = new StellarMainConsoleEngine(); break;
-                case "csv2stg": engine = new Csv2StgConsoleEngine(); break; //New 18/03/2011
-                case "sql2stg": engine = new Sql2StgConsoleEngine(); break; //New 18/03/2011
-                case "datadir": engine = new DataDirConsoleEngine(); break; //New 18/03/2011
+                case "help": engine = new CommandHELP(); break;
+                case "dbnames": engine = new CommandDBNAMES(); break;
+                case "dbtables": engine = new CommandDBTABLES(); break;
+                case "dbcolumns": engine = new CommandDBCOLUMNS(); break;
+                case "dbrowcount": engine = new CommandDBROWCOUNT(); break;
+                case "dbcolsplit": engine = new CommandDBCOLSPLIT(); break; //New 04/07/2011                
+                case "sqlexecute": engine = new CommandSQLEXECUTE(); break;
+                case "delim2db": engine = new CommandDELIM2DB(); break; //New 14/09/2011
+                case "csv2db": engine = new CommandCSV2DB(); break;
+                case "tab2db": engine = new CommandTAB2DB(); break;
+                case "sql2delim": engine = new CommandSQL2DELIM(); break; //New 14/09/2011
+                case "sql2csv": engine = new CommandSQL2CSV(); break;
+                case "sql2tab": engine = new CommandSQL2TAB(); break;
+                case "sql2xml": engine = new CommandSQL2XML(); break;
+                case "sql2rdf": engine = new CommandSQL2RDF(); break;
+                case "csv2xml": engine = new CommandCSV2XML(); break;
+                case "delim2rdf": engine = new CommandDELIM2RDF(); break; //New 14/09/2011
+                case "csv2rdf": engine = new CommandCSV2RDF(); break;
+                case "tab2rdf": engine = new CommandTAB2RDF(); break;
+                case "xml2rdf": engine = new CommandXML2RDF(); break;
+                case "templates": engine = new CommandTEMPLATES(); break;
+                case "rdfstats": engine = new CommandRDFSTATS(); break;
+                case "csvstats": engine = new CommandCSVSTATS(); break;
+                case "rdfmerge": engine = new CommandRDFMERGE(); break;
+                case "cmdfile": engine = new CommandMain(); break;
+                case "delim2stg": engine = new CommandDELIM2STG(); break; //New 14/09/2011
+                case "csv2stg": engine = new CommandCSV2STG(); break; //New 18/03/2011
+                case "tab2stg": engine = new CommandTAB2STG(); break; //New 18/08/2011                
+                case "sql2stg": engine = new CommandSQL2STG(); break; //New 18/03/2011
+                case "datadir": engine = new CommandDATADIR(); break; //New 18/03/2011
                 default:
                     // 01/04/2011 - pass through a DOS command inside STELLAR.Console
                     System.Diagnostics.Process process = new System.Diagnostics.Process();

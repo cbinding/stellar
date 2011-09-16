@@ -1,11 +1,24 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Console.CommandBase
+Summary	: Main base console command functionality
+License : http://creativecommons.org/licenses/by/3.0/ 
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace STELLAR.Console
 {   
-    public abstract class ConsoleEngineBase
+    public abstract class CommandBase
     {
         private string[] m_args;        
         protected DateTime started = DateTime.Now;
@@ -15,7 +28,7 @@ namespace STELLAR.Console
         protected System.IO.TextWriter Out = null;
         protected System.IO.TextWriter Error = null;
 
-        public ConsoleEngineBase()
+        public CommandBase()
         {
             //by default, read from/write to standard streams
             this.In = System.Console.In;
@@ -27,14 +40,15 @@ namespace STELLAR.Console
         public virtual void Main(string[] args)
         {
             this.m_args = args;
-
-            //application name and version display
-            //String appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            //Version appVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            //Console.Title = String.Format("{0} v{1}.{2}", appName, appVersion.Major, appVersion.Minor);
-            //DateTime startTime = DateTime.Now;  
-            //Console.WriteLine("{0} started {1}", Console.Title, started.ToLongTimeString());
             
+            //application name and version display
+            String appName = System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
+            //String appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            Version appVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
+            System.Console.Title = String.Format("{0} v{1}.{2}", appName, appVersion.Major, appVersion.Minor);
+            //DateTime startTime = DateTime.Now;  
+            //System.Console.WriteLine("{0} started {1}", System.Console.Title, started.ToLongTimeString());
+            this.Out.Write("\n{0}>", appName);           
 
             if (this.ValidateArguments())
             {
@@ -45,6 +59,7 @@ namespace STELLAR.Console
                     while (currentLine != null)
                     {
                         this.ProcessLine(currentLine);
+                        this.Out.Write("\n{0}>", appName);           
                         currentLine = this.In.ReadLine();
                     }
                 }

@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Console.CommandTEMPLATES
+Summary	: Handler for STELLAR console command
+License : http://creativecommons.org/licenses/by/3.0/ 
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +19,7 @@ using System.IO;
 
 namespace STELLAR.Console
 {
-    class TemplatesConsoleEngine : ConsoleEngineBase
+    class CommandTEMPLATES : CommandBase
     {
         protected override void PreProcess()
         {

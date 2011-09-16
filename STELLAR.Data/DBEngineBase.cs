@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Data.DBEngineBase
+Summary	: base class for db access, see concrete implementation in SQLiteDBEngine
+License : http://creativecommons.org/licenses/by/3.0/
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;

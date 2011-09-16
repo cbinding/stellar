@@ -29,7 +29,19 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STELLAR.Web", "STELLAR.Web\
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DDBDFFE-065F-4C8E-8DFC-D83B77F45D51}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		STELLAR.vsmdi = STELLAR.vsmdi
+		STELLAR1.vsmdi = STELLAR1.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STELLAR.Test", "STELLAR.Test\STELLAR.Test.csproj", "{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = STELLAR1.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +94,16 @@ Global
 		{21D2F77D-D2FC-4D68-BFE0-F92B3BAEB617}.Release|Any CPU.Build.0 = Debug|.NET
 		{21D2F77D-D2FC-4D68-BFE0-F92B3BAEB617}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
 		{21D2F77D-D2FC-4D68-BFE0-F92B3BAEB617}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Release|.NET.ActiveCfg = Release|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8EE2DD43-25BF-4EFE-BBB5-B580A4D05CF6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

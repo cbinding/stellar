@@ -100,37 +100,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arguments.cs" />
-    <Compile Include="ConsoleEngineBase.cs" />
-    <Compile Include="Csv2RdfConsoleEngine.cs">
+    <Compile Include="CommandBase.cs" />
+    <Compile Include="CommandCSV2RDF.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Csv2StgConsoleEngine.cs" />
-    <Compile Include="Csv2XmlConsoleEngine.cs" />
-    <Compile Include="CsvStatsConsoleEngine.cs" />
-    <Compile Include="DataDirConsoleEngine.cs" />
-    <Compile Include="DbColumnsConsoleEngine.cs" />
-    <Compile Include="DbNamesConsoleEngine.cs" />
-    <Compile Include="DbRowCountConsoleEngine.cs" />
-    <Compile Include="RdfMergeConsoleEngine.cs" />
-    <Compile Include="RdfStatsConsoleEngine.cs" />
-    <Compile Include="ShowHelpConsoleEngine.cs">
+    <Compile Include="CommandCSV2STG.cs" />
+    <Compile Include="CommandCSV2XML.cs" />
+    <Compile Include="CommandCSVSTATS.cs" />
+    <Compile Include="CommandDATADIR.cs" />
+    <Compile Include="CommandDBCOLUMNS.cs" />
+    <Compile Include="CommandDBCOLSPLIT.cs" />
+    <Compile Include="CommandDBNAMES.cs" />
+    <Compile Include="CommandDBROWCOUNT.cs" />
+    <Compile Include="CommandDELIM2DB.cs" />
+    <Compile Include="CommandDELIM2RDF.cs" />
+    <Compile Include="CommandDELIM2STG.cs" />
+    <Compile Include="CommandRDFMERGE.cs" />
+    <Compile Include="CommandRDFSTATS.cs" />
+    <Compile Include="CommandHELP.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Sql2CsvConsoleEngine.cs" />
-    <Compile Include="Csv2DbConsoleEngine.cs" />
-    <Compile Include="Sql2RdfConsoleEngine.cs" />
-    <Compile Include="Sql2StgConsoleEngine.cs" />
-    <Compile Include="Sql2TabConsoleEngine.cs" />
-    <Compile Include="Sql2XmlConsoleEngine.cs" />
-    <Compile Include="SqlExecuteConsoleEngine.cs" />
-    <Compile Include="Tab2DbConsoleEngine.cs" />
-    <Compile Include="Tab2RdfConsoleEngine.cs" />
-    <Compile Include="TemplatesConsoleEngine.cs" />
-    <Compile Include="Xml2RdfConsoleEngine.cs" />
-    <Compile Include="DbTablesConsoleEngine.cs" />
+    <Compile Include="CommandSQL2CSV.cs" />
+    <Compile Include="CommandCSV2DB.cs" />
+    <Compile Include="CommandSQL2DELIM.cs" />
+    <Compile Include="CommandSQL2RDF.cs" />
+    <Compile Include="CommandSQL2STG.cs" />
+    <Compile Include="CommandSQL2TAB.cs" />
+    <Compile Include="CommandSQL2XML.cs" />
+    <Compile Include="CommandSQLEXECUTE.cs" />
+    <Compile Include="CommandTAB2DB.cs" />
+    <Compile Include="CommandTAB2RDF.cs" />
+    <Compile Include="CommandTAB2STG.cs" />
+    <Compile Include="CommandTEMPLATES.cs" />
+    <Compile Include="CommandXML2RDF.cs" />
+    <Compile Include="CommandDBTABLES.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StellarMainConsoleEngine.cs" />
+    <Compile Include="CommandMain.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Data.API
+Summary	: Data conversion functionality
+License : http://creativecommons.org/licenses/by/3.0/
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +29,7 @@ namespace STELLAR.Data
     //Main functionality for STELLAR app
     public static class API
     {
-        //Upload CSV file to a table in the database, return number of rows inserted
+        //Upload delimited file to a table in the database, return number of rows inserted
         public static int Delimited2DB(string dbName, string fileName)
         {
             return Delimited2DB(dbName, fileName, false);
@@ -27,7 +40,7 @@ namespace STELLAR.Data
         }
         public static int Delimited2DB(string dbName, string fileName, char delimiter, bool hasHeader)
         {
-            return Delimited2DB(dbName, fileName, "", delimiter, hasHeader);
+            return Delimited2DB(dbName, fileName, "", delimiter, hasHeader, false);
         }
         public static int Delimited2DB(string dbName, string fileName, bool hasHeader)
         {
@@ -39,9 +52,13 @@ namespace STELLAR.Data
         }
         public static int Delimited2DB(string dbName, string fileName, string tableName, bool hasHeader)
         {
-            return Delimited2DB(dbName, fileName, tableName, ',', hasHeader);
+            return Delimited2DB(dbName, fileName, tableName, ',', hasHeader, false);
         }
-        public static int Delimited2DB(string dbName, string fileName, string tableName, char delimiter, bool hasHeader)
+        public static int Delimited2DB(string dbName, string fileName, string tableName, bool hasHeader, bool append)
+        {
+            return Delimited2DB(dbName, fileName, tableName, ',', hasHeader, append);
+        }
+        public static int Delimited2DB(string dbName, string fileName, string tableName, char delimiter, bool hasHeader, bool append)
         {
             //Tidy up input parameters
             dbName = dbName.Trim();
@@ -60,34 +77,37 @@ namespace STELLAR.Data
             tableName = getValidTableName(tableName);
 
             //Do the import
-            //DBEngineBase db = new SQLiteDBEngine(dbName);
             DataTable dt = Delimited2DT(fileName, delimiter, hasHeader);
             dt.TableName = tableName;
-            return DT2DB(dbName, dt);
+            return DT2DB(dbName, dt, append);
         }
 
         //Write DataTable to database, recreate the table first to ensure structure is correct
-        public static int DT2DB(String dbName, DataTable table)
+        public static int DT2DB(String dbName, DataTable table, bool append)
         {
-            //dbName = DBFileName(dbName);
+            // Why didnt I use IDBEngine here? test...
+            // IDBEngine db = new SQLiteDBEngine(dbName);            
             DBEngineBase db = new SQLiteDBEngine(dbName);
 
-            //Drop the table if it already exists (consider merging data as option?) 
-            db.executeNonQuery(String.Format("DROP TABLE IF EXISTS \"{0}\";", table.TableName));
-
-            //Create the table based on the structure of the DataTable
-            String sql = String.Format("CREATE TABLE \"{0}\" (", table.TableName);
-            foreach (DataColumn dc in table.Columns)
+            if (!append)
             {
-                //Column names should already be valid (CSV2DT cleaned them up)
-                //sql += String.Format("\"{0}\" TEXT NOT NULL DEFAULT '',", dc.ColumnName);
-                //sql += String.Format("\"{0}\" TEXT,", dc.ColumnName);//04/03/2010 - ensure case insensitive comparisons
-                sql += String.Format("\"{0}\" TEXT COLLATE NOCASE,", dc.ColumnName);
-            }
+                //Drop the table if it already exists  
+                db.executeNonQuery(String.Format("DROP TABLE IF EXISTS \"{0}\";", table.TableName));
 
-            //remove the last comma, complete and run the command
-            sql = sql.Remove(sql.LastIndexOf(',')) + ");";
-            db.executeNonQuery(sql);
+                //Create the table based on the structure of the DataTable
+                String sql = String.Format("CREATE TABLE \"{0}\" (", table.TableName);
+                foreach (DataColumn dc in table.Columns)
+                {
+                    //Column names should already be valid (CSV2DT cleaned them up)
+                    //sql += String.Format("\"{0}\" TEXT NOT NULL DEFAULT '',", dc.ColumnName);
+                    //sql += String.Format("\"{0}\" TEXT,", dc.ColumnName);//04/03/2010 - ensure case insensitive comparisons
+                    sql += String.Format("\"{0}\" TEXT COLLATE NOCASE,", dc.ColumnName);
+                }
+
+                //remove the last comma, complete and run the command
+                sql = sql.Remove(sql.LastIndexOf(',')) + ");";
+                db.executeNonQuery(sql);
+            }
 
             //Created the table, now insert the data
             return db.bulkInsert(table);
@@ -143,6 +163,8 @@ namespace STELLAR.Data
             {
                 if (delimiter == ',')
                     outFileName = sqlFileName + ".csv";
+                else if (delimiter == '\t')
+                    outFileName = sqlFileName + ".tab";
                 else
                     outFileName = sqlFileName + ".txt";
             }
@@ -214,7 +236,7 @@ namespace STELLAR.Data
             templateName = templateName.Trim();
             rdfFileName = rdfFileName.Trim();
             namespaceURI = namespaceURI.Trim();
-
+            
             //Fail if dbName, sqlFileName or templateName not passed in
             if (dbName == String.Empty)
                 throw new ArgumentException("database name required", "dbName");
@@ -717,67 +739,7 @@ namespace STELLAR.Data
                 outFileName = fileName + ".txt";
             DataTable dt = Delimited2DT(fileName, delimiter, true);
             return DT2STG(dt, stgFileName, outFileName);            
-        }
-        //public static int Delimited2STG1(string fileName, string path, string templateName, string outFileName, char delimiter)
-        //{
-        //    //Tidy up input parameters
-        //    fileName = fileName.Trim();
-        //    //stgFileName = stgFileName.Trim();
-        //    outFileName = outFileName.Trim();
-
-        //    //If output file name not passed in, generate it from delimited file name
-        //    if (outFileName == String.Empty)
-        //        outFileName = fileName + ".txt";
-        //    DataTable dt = Delimited2DT(fileName, delimiter, true);
-        //    return DT2STG1(dt, path, templateName, outFileName);
-        //}
-
-        //public static int DT2STG_OLD(DataTable table, String stgFileName, String outFileName)
-        //{            
-        //    //tidy up input parameters
-        //    stgFileName = stgFileName.Trim();
-
-        //    //Fail if stgFileName not passed in
-        //    if (stgFileName == String.Empty)
-        //        throw new ArgumentException("template file name required", "stgFileName");
-        //    //Fail if outFileName not passed in
-        //    if (outFileName == String.Empty)
-        //        throw new ArgumentException("output file name required", "outFileName");
-
-        //    //Read the template group from the file
-        //    System.IO.TextReader tr = new System.IO.StreamReader(stgFileName);
-        //    StringTemplateGroup stg = new StringTemplateGroup(tr, typeof(TemplateLexer)); //lexer added to use $..$ in group templates instead of <..>
-        //    tr.Close();
-
-        //    //Check that all required templates are present (can be empty)
-        //    StringTemplate stHeader = stg.GetInstanceOf("HEADER");
-        //    StringTemplate stRecord = stg.GetInstanceOf("RECORD");
-        //    StringTemplate stFooter = stg.GetInstanceOf("FOOTER"); 
-
-        //    //Apply the RECORD template for each row 
-        //    int rowCount = 0;
-        //    StringBuilder sbRecord = new StringBuilder();
-        //    foreach (DataRow dr in table.Rows)
-        //    {
-        //        foreach (DataColumn dc in table.Columns)
-        //        {
-        //            stRecord.SetAttribute(dc.ColumnName.Trim(), dr[dc].ToString().Trim());
-        //        }
-        //        sbRecord.AppendLine(stRecord.ToString());
-        //        stRecord.Attributes.Clear();
-        //        rowCount++;
-        //    }
-
-        //    // Write the HEADER, RECORD, FOOTER results to the output file
-        //    System.IO.StreamWriter sw = new System.IO.StreamWriter(outFileName, false);
-        //    sw.WriteLine(stHeader.ToString());
-        //    sw.WriteLine(sbRecord.ToString());
-        //    sw.WriteLine(stFooter.ToString());
-        //    sw.Close();
-        //    sw.Dispose();                
-
-        //    return rowCount;
-        //}
+        }        
         
         /** <summary>
          *  Where to report errors.  All string templates in this group
@@ -799,71 +761,7 @@ namespace STELLAR.Data
                 Console.Out.WriteLine(s);
             }
         }
-
-        //public static int DT2STG1(DataTable table, String path, String templateName, String outFileName)
-        //{
-        //    //tidy up input parameters
-        //    //stgFileName = stgFileName.Trim();
-
-        //    //Fail if stgFileName not passed in
-        //    //if (stgFileName == String.Empty)
-        //    //throw new ArgumentException("template file name required", "stgFileName");
-        //    //Fail if outFileName not passed in
-        //    if (outFileName == String.Empty)
-        //        throw new ArgumentException("output file name required", "outFileName");
-
-        //    int rowCount = 0;            
-
-        //    IStringTemplateGroupLoader loader = new PathGroupLoader(path, new DefaultErrorListener());
-        //    StringTemplateGroup.RegisterDefaultLexer(typeof(TemplateLexer));
-        //    StringTemplateGroup.RegisterGroupLoader(loader);
-        //    StringTemplateGroup stg = loader.LoadGroup(templateName);
-           
-        //    //Read the template group from the file
-        //    //System.IO.TextReader tr = new System.IO.StreamReader(templateName);
-        //    //StringTemplateGroup stg = new StringTemplateGroup(tr, typeof(TemplateLexer)); //lexer added to use $..$ in group templates instead of <..>
-        //    //tr.Close();
-            
-        //    //Check that the 'MAIN' template is present (can be empty)
-        //    StringTemplate stMain = stg.GetInstanceOf("MAIN");
-
-        //    System.Collections.ArrayList records = new System.Collections.ArrayList();
-
-        //    foreach (DataRow dr in table.Rows)
-        //    {
-        //        IDictionary<string, object> record = new Dictionary<string, object>();
-        //        foreach (DataColumn dc in table.Columns)
-        //        {
-        //            record[dc.ColumnName.Trim()] = dr[dc].ToString().Trim();
-        //            // TODO: Maybe avoid adding if dr[dc] = "", Then just check for 
-        //            // presence / absence of properties in template before using them?
-        //        }
-        //        records.Add(record);
-        //        rowCount++;
-        //    }
-        //    stMain.SetAttribute("data", (object[])records.ToArray(typeof(IDictionary<string, object>)));
-
-        //    //Write the results to the output file  
-        //    System.IO.StreamWriter sw = null;
-        //    try
-        //    {
-
-        //        sw = new System.IO.StreamWriter(outFileName, false);
-        //        sw.WriteLine(stMain.ToString());
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //hardly worth catching this?
-        //        throw new Exception("Error during conversion: " + ex.Message, ex.InnerException);
-        //    }
-        //    finally
-        //    {
-        //        sw.Close();
-        //        sw.Dispose();
-        //    }
-        //    return rowCount;
-        //}
+        
         
         /// <summary>Convert a System.Data.DataTable using a StringTemplateGroup file</summary>
         /// <param name="table">DataTable to be converted</param>
@@ -900,39 +798,67 @@ namespace STELLAR.Data
             StringTemplateGroup stg = new StringTemplateGroup(tr, typeof(TemplateLexer)); //lexer added to use $..$ in group templates instead of <..>
             tr.Close();
                      
-            //Check that the 'MAIN' template is present (must be present, but can be empty)
-            StringTemplate stMain = stg.GetInstanceOf("MAIN");            
+            // Used to check which templates are present before calling them            
+            ICollection<string> templateNames = stg.GetTemplateNames();                
             
             System.Collections.ArrayList records = new System.Collections.ArrayList();
-            
-            foreach (DataRow dr in table.Rows)
-            {
-                IDictionary<string, object> record = new Dictionary<string, object>();
-                foreach (DataColumn dc in table.Columns)
-                {
-                   
-                    String s = dr[dc].ToString().Trim();
-                    // Ensure any leading and trailing double quotes are removed..                        
-                    if (s.StartsWith("\"") && s.EndsWith("\""))
-                        s = s.Substring(1, s.Length - 2);
-                    // Check for presence of properties in templates before attempting to use them
-                    if (s != "")
-                    {                        
-                        record[dc.ColumnName.Trim()] = s;
-                    }                    
-                }                
-                records.Add(record);              
-                rowCount++;
-            }
-            stMain.SetAttribute("data",(object[])records.ToArray(typeof(IDictionary<string, object>)));
-            
+
             //Write the results to the output file  
             System.IO.StreamWriter sw = null;
             try
             {
                 sw = new System.IO.StreamWriter(outFileName, false);
-                sw.WriteLine(stMain.ToString());
+
+                // If the HEADER template is present, call it and write result to output file 
+                if (templateNames.Contains("HEADER"))
+                {
+                    StringTemplate stHeader = stg.GetInstanceOf("HEADER");
+                    sw.WriteLine(stHeader.ToString());
+                }                    
                 
+                foreach (DataRow dr in table.Rows)
+                {
+                    IDictionary<string, object> record = new Dictionary<string, object>();
+                    foreach (DataColumn dc in table.Columns)
+                    {
+                       
+                        String s = dr[dc].ToString().Trim();
+                        // Ensure any leading and trailing double quotes are removed..
+                        if (s.StartsWith("\"") && s.EndsWith("\""))
+                            s = s.Substring(1, s.Length - 2);
+                        // Check for presence of properties in templates before attempting to use them
+                        if (s != "")
+                        {                        
+                            record[dc.ColumnName.Trim()] = s;
+                        }
+                    }
+                    // If the RECORD template is present, call it and write result to output file 
+                    if (templateNames.Contains("RECORD"))
+                    {
+                        StringTemplate stRecord = stg.GetInstanceOf("RECORD");
+                        stRecord.SetAttribute("data", record);
+                        sw.WriteLine(stRecord.ToString());
+                    }
+
+                    records.Add(record);              
+                    rowCount++;
+                }
+
+                // If the MAIN template is present, call it and write result to output file
+                //NOTE - deprecated; use HEADER, RECORD, FOOTER instead in templates
+                if (templateNames.Contains("MAIN"))
+                {
+                    StringTemplate stMain = stg.GetInstanceOf("MAIN");
+                    stMain.SetAttribute("data", (object[])records.ToArray(typeof(IDictionary<string, object>)));
+                    sw.WriteLine(stMain.ToString());
+                }
+
+                // If the FOOTER template is present, call it and write result to output file 
+                if (templateNames.Contains("FOOTER"))
+                {
+                    StringTemplate stFooter = stg.GetInstanceOf("FOOTER");
+                    sw.WriteLine(stFooter.ToString());
+                }
             }
             catch (Exception ex)
             {
@@ -978,7 +904,7 @@ namespace STELLAR.Data
         /// <param name="dbName">Database file name</param>
         /// <param name="tableName">Database table name</param>
         /// <returns>Array of database column names</returns>  
-        /// <exception cref="System.ArgumentException">Throws an exception if dbName or tableName are not supplied</exception>
+        /// <exception cref="System.ArgumentException">Throws an argument exception if dbName or tableName are not supplied</exception>
         public static String[] DBColumns(String dbName, String tableName)
         {
             //Tidy up input parameters
@@ -1018,7 +944,9 @@ namespace STELLAR.Data
             return db.count(tableName);
         }
         
-        // used in CSV2DT to generate column name when no column header row exists
+        /// <summary>used in CSV2DT to generate next column name when no column header row exists</summary>
+        /// <param name="table">existing DataTable</param>
+        /// <returns>Generated column name</returns>  
         private static String getNextColumnName(DataTable table)
         {
             int c = 1;
@@ -1030,7 +958,9 @@ namespace STELLAR.Data
             }
         }
 
-        // used in CSV2DT to ensure table/column names are valid
+        /// <summary>used in CSV2DT to ensure table/column names are valid - punctuation and spaces replaced with underscores</summary>
+        /// <param name="colName">Column name to be checked</param>
+        /// <returns>Column name modified as necessary</returns>         
         private static String getValidColumnName(String colName)
         {
             return getValidName(colName);
@@ -1051,6 +981,48 @@ namespace STELLAR.Data
             //replace any punctuation with underscores
             name = System.Text.RegularExpressions.Regex.Replace(name, @"\p{P}", "_");
             return name;
+        }
+
+        /// <summary>New 04/07/11 - split field values containing nested delimiters into a new table (named as tableName_columnName_split)</summary>
+        /// <param name="dbName">Database file name</param>
+        /// <param name="tableName">Database table name</param>
+        /// <param name="columnName">Name of field containing nested delimiters</param>
+        /// <param name="keyColumnName">Name of the key field from the specified table</param>
+        /// <param name="delimiter">Character used as delimiter in the column</param>
+        /// <returns>Number of new rows created</returns>  
+        public static int DBColumnSplit(string dbName, string tableName, string columnName, string keyColumnName, char delimiter)
+        {
+            // (re)create the split table as tableName_columnName_split
+            String newTableName = tableName.Trim() + "_" + columnName.Trim() + "_split";
+            DBEngineBase db = new SQLiteDBEngine(dbName);
+            db.executeNonQuery(String.Format("DROP TABLE IF EXISTS \"{0}\";", newTableName));
+            db.executeNonQuery(String.Format("CREATE TABLE \"{0}\" (\"{1}\" TEXT COLLATE NOCASE, \"{2}\" TEXT COLLATE NOCASE);", newTableName, keyColumnName, columnName));
+            
+            //get a DataTable of the values of the ID column and the delimited column
+            DataTable dt1 = db.select(String.Format("SELECT {0}, {1} FROM {2} WHERE {1} IS NOT NULL", keyColumnName, columnName, tableName));
+            
+            //Create a new DataTable to put the split values into
+            DataTable dt2 = dt1.Clone();
+            dt2.Clear();
+            dt2.TableName = newTableName;
+            
+            //Split the values from dt1 and put them into dt2
+            char[] delimiters = new char[] {delimiter};
+            foreach(DataRow dr in dt1.Rows)
+            {
+                String[] splitValues = dr[columnName].ToString().Split(delimiters);
+                foreach(String s in splitValues)
+                {
+                    String[] fieldValues = new String[2];
+                    fieldValues[0] = dr[keyColumnName].ToString();
+                    fieldValues[1] = s.Trim();
+                    if (fieldValues[1] != String.Empty)
+                        dt2.Rows.Add(fieldValues);
+                }              
+            }
+
+            //now insert all the data
+            return db.bulkInsert(dt2);             
         }
     }
 }

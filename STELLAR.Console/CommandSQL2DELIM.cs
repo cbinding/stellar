@@ -1,11 +1,24 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Console.CommandSQL2DELIM
+Summary	: Handler for STELLAR console command
+License : http://creativecommons.org/licenses/by/3.0/ 
+================================================================================
+History :
+
+14/09/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace STELLAR.Console
 {
-    class Sql2StgConsoleEngine : ConsoleEngineBase
+    public class CommandSQL2DELIM : CommandBase
     {
         protected override void PreProcess()
         {
@@ -15,17 +28,17 @@ namespace STELLAR.Console
 
         protected override void PostProcess()
         {
-            //Do the SQL2STG export
+            //Do the SQL2DELIM export
             Arguments a = new Arguments(this.Arguments);
             String dbFileName = a["db"].Trim().ToLower();
             String sqlFileName = a["sql"].Trim();
-            String stgFileName = a["stg"].Trim();
             String outFileName = a["out"] == null ? "" : a["out"].Trim();
-            this.Out.WriteLine("Running '{0}' against '{1}' using template '{2}'", System.IO.Path.GetFileName(sqlFileName), dbFileName, stgFileName);
+            Char delimiter = a["delimiter"] == null ? ',' : a["delimiter"].Trim().ToCharArray(0, 1).First();
+            this.Out.WriteLine("Running '{0}' against '{1}' producing delimited file", System.IO.Path.GetFileName(sqlFileName), dbFileName);
 
             try
             {
-                int rowCount = STELLAR.Data.API.SQL2STG(dbFileName, sqlFileName, stgFileName, outFileName);
+                int rowCount = STELLAR.Data.API.SQL2Delimited(dbFileName, sqlFileName, outFileName, delimiter);
                 this.Out.WriteLine("{0} rows exported", rowCount);
             }
             catch (Exception ex)
@@ -36,18 +49,15 @@ namespace STELLAR.Console
 
         protected override string Usage()
         {
-            return String.Format("sql2stg /db:\"NAME\" /sql:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]");
+            return String.Format("sql2delim /db:\"NAME\" /sql:\"FILE\" [/out:\"FILE\"] [/delimiter:\"CHAR\"]");
         }
 
         protected override bool ValidateArguments()
         {
-
             Arguments a = new Arguments(this.Arguments);
             if (a["db"] == null)
                 return false;
             if (a["sql"] == null)
-                return false;
-            if (a["stg"] == null)
                 return false;
             return true;
         }

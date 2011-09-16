@@ -1,11 +1,24 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Console.CommandSQLEXECUTE
+Summary	: Handler for STELLAR console command
+License : http://creativecommons.org/licenses/by/3.0/ 
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace STELLAR.Console
 {
-    public class SqlExecuteConsoleEngine : ConsoleEngineBase
+    public class CommandSQLEXECUTE : CommandBase
     {
         protected override void PreProcess()
         {

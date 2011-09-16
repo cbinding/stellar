@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+================================================================================
+Creator : Ceri Binding, University of Glamorgan
+Project	: STELLAR
+Classes	: STELLAR.Data.SQLiteDBEngine
+Summary	: SQLITE database access functionality
+License : http://creativecommons.org/licenses/by/3.0/
+================================================================================
+History :
+
+12/01/2011  CFB Created classes
+================================================================================
+*/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -71,7 +84,7 @@ namespace STELLAR.Data
             }
             return ((String[])a.ToArray(typeof(String)));
         }
-        //Clean up SQLITE database file name, ensure it ends with ".db3" 
+        //Clean up SQLITE db file name (trim + lowercase) + ensure it ends with ".db3" 
         public static String getFileName(String dbName)
         {
             // Tidy up input parameter
@@ -81,6 +94,8 @@ namespace STELLAR.Data
             return (dbName);
         }
     }
+
+
 }
 /*SELECT example:
      * try
