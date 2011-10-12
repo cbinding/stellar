@@ -21,8 +21,10 @@ using System.Xml.XPath;
 using System.Xml.Xsl;
 using FileHelpers;          // external library for CSV I/O
 using SemWeb;               // external library for rdfMerge
-using Antlr3.ST;            // external library for StringTemplate
-using Antlr3.ST.Language;   // external library for StringTemplate
+using Antlr4.StringTemplate;
+
+//using Antlr3.ST;            // external library for StringTemplate
+//using Antlr3.ST.Language;   // external library for StringTemplate
 
 namespace STELLAR.Data
 {    
@@ -717,7 +719,7 @@ namespace STELLAR.Data
                 outFileName = sqlFileName + ".txt";
 
             DataTable dt = SQL2DT(dbName, sqlFileName);            
-            int rowCount = DT2STG(dt, stgFileName, outFileName);            
+            int rowCount = DT2STG(dt, stgFileName, outFileName);
             return rowCount;
         }
 
@@ -738,7 +740,7 @@ namespace STELLAR.Data
             if (outFileName == String.Empty)
                 outFileName = fileName + ".txt";
             DataTable dt = Delimited2DT(fileName, delimiter, true);
-            return DT2STG(dt, stgFileName, outFileName);            
+            return DT2STG(dt, stgFileName, outFileName); 
         }        
         
         /** <summary>
@@ -746,21 +748,21 @@ namespace STELLAR.Data
          *  use this error handler by default.
          *  </summary>
          */
-        class DefaultErrorListener : IStringTemplateErrorListener
-        {
-            public virtual void Error(string s, Exception e)
-            {
-                Console.Error.WriteLine(s);
-                if (e != null)
-                {
-                    Console.Error.WriteLine(e.Message);
-                }
-            }
-            public virtual void Warning(string s)
-            {
-                Console.Out.WriteLine(s);
-            }
-        }
+        //class DefaultErrorListener : IStringTemplateErrorListener
+        //{
+        //    public virtual void Error(string s, Exception e)
+        //    {
+        //        Console.Error.WriteLine(s);
+        //        if (e != null)
+        //        {
+        //            Console.Error.WriteLine(e.Message);
+        //        }
+        //    }
+        //    public virtual void Warning(string s)
+        //    {
+        //        Console.Out.WriteLine(s);
+        //    }
+        //}
         
         
         /// <summary>Convert a System.Data.DataTable using a StringTemplateGroup file</summary>
@@ -769,6 +771,115 @@ namespace STELLAR.Data
         /// <param name="outFileName">The name of the file to write the output to</param> 
         /// <returns>The number of records processed</returns>     
         /// <exception cref="System.ArgumentException">Throws an exception if stgFileName or outFileName are not supplied</exception>
+        //public static int DT2STG_OLD(DataTable table, String stgFileName, String outFileName)
+        //{
+        //    //tidy up input parameters
+        //    stgFileName = stgFileName.Trim();
+        //    outFileName = outFileName.Trim();
+            
+        //    //Fail if stgFileName not passed in
+        //    if (stgFileName == String.Empty)
+        //        throw new ArgumentException("template file name required", "stgFileName");
+        //    //Fail if outFileName not passed in
+        //    if (outFileName == String.Empty)
+        //        throw new ArgumentException("output file name required", "outFileName");
+
+        //    int rowCount = 0;
+
+        //    //Register group loader (using same directory as STG file)
+        //    String path = System.IO.Path.GetDirectoryName(stgFileName);
+        //    if (path == "")
+        //        path = ".";
+
+            
+
+        //    IStringTemplateGroupLoader loader = new PathGroupLoader(path, new DefaultErrorListener());
+        //    StringTemplateGroup.RegisterDefaultLexer(typeof(TemplateLexer));
+        //    StringTemplateGroup.RegisterGroupLoader(loader);
+                        
+        //    //Read the template group from the file
+        //    //StringTemplateGroup stg = loader.LoadGroup(System.IO.Path.GetFileNameWithoutExtension(stgFileName));            
+        //    System.IO.TextReader tr = new System.IO.StreamReader(stgFileName);
+        //    StringTemplateGroup stg = new StringTemplateGroup(tr, typeof(TemplateLexer)); //lexer added to use $..$ in group templates instead of <..>
+        //    tr.Close();
+            
+            
+        //    // Used to check which templates are present before calling them            
+        //    ICollection<string> templateNames = stg.GetTemplateNames();                
+            
+        //    System.Collections.ArrayList records = new System.Collections.ArrayList();
+
+        //    //Write the results to the output file  
+        //    System.IO.StreamWriter sw = null;
+        //    try
+        //    {
+        //        sw = new System.IO.StreamWriter(outFileName, false);
+
+        //        // If the HEADER template is present, call it and write result to output file 
+        //        if (templateNames.Contains("HEADER"))
+        //        {
+        //            StringTemplate stHeader = stg.GetInstanceOf("HEADER");
+        //            sw.WriteLine(stHeader.ToString());
+        //        }                    
+                
+        //        foreach (DataRow dr in table.Rows)
+        //        {
+        //            IDictionary<string, object> record = new Dictionary<string, object>();
+        //            foreach (DataColumn dc in table.Columns)
+        //            {
+                       
+        //                String s = dr[dc].ToString().Trim();
+        //                // Ensure any leading and trailing double quotes are removed..
+        //                if (s.StartsWith("\"") && s.EndsWith("\""))
+        //                    s = s.Substring(1, s.Length - 2);
+        //                // Check for presence of properties in templates before attempting to use them
+        //                if (s != "")
+        //                {                        
+        //                    record[dc.ColumnName.Trim()] = s;
+        //                }
+        //            }
+        //            // If the RECORD template is present, call it and write result to output file 
+        //            if (templateNames.Contains("RECORD"))
+        //            {
+        //                StringTemplate stRecord = stg.GetInstanceOf("RECORD");
+        //                stRecord.SetAttribute("data", record);
+        //                sw.WriteLine(stRecord.ToString());
+        //            }
+
+        //            records.Add(record);              
+        //            rowCount++;
+        //        }
+
+        //        // If the MAIN template is present, call it and write result to output file
+        //        //NOTE - deprecated; use HEADER, RECORD, FOOTER instead in templates
+        //        if (templateNames.Contains("MAIN"))
+        //        {
+        //            StringTemplate stMain = stg.GetInstanceOf("MAIN");
+        //            stMain.SetAttribute("data", (object[])records.ToArray(typeof(IDictionary<string, object>)));
+        //            sw.WriteLine(stMain.ToString());
+        //        }
+
+        //        // If the FOOTER template is present, call it and write result to output file 
+        //        if (templateNames.Contains("FOOTER"))
+        //        {
+        //            StringTemplate stFooter = stg.GetInstanceOf("FOOTER");
+        //            sw.WriteLine(stFooter.ToString());
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //worth catching this?
+        //        throw new Exception("Error during conversion: " + ex.Message, ex.InnerException);
+        //    }
+        //    finally
+        //    {
+        //        sw.Close();
+        //        sw.Dispose();
+                
+        //    }
+        //    return rowCount;
+        //}
+        //new version 07/10/11 - using Antlr4.StringTemplate..
         public static int DT2STG(DataTable table, String stgFileName, String outFileName)
         {
             //tidy up input parameters
@@ -784,24 +895,15 @@ namespace STELLAR.Data
 
             int rowCount = 0;
 
-            //Register group loader (using same directory as STG file)
+            //Get full path to the STG file, if not already passed in
             String path = System.IO.Path.GetDirectoryName(stgFileName);
             if (path == "")
-                path = ".";            
-            IStringTemplateGroupLoader loader = new PathGroupLoader(path, new DefaultErrorListener());
-            StringTemplateGroup.RegisterDefaultLexer(typeof(TemplateLexer));
-            StringTemplateGroup.RegisterGroupLoader(loader);
+                stgFileName = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), stgFileName);
+                        
+            //Revised for Antlr4...Read the template group from the file, define delimiters
+            TemplateGroupFile stg = new TemplateGroupFile(stgFileName,'$','$');
             
-            //Read the template group from the file
-            //StringTemplateGroup stg = loader.LoadGroup(System.IO.Path.GetFileNameWithoutExtension(stgFileName));            
-            System.IO.TextReader tr = new System.IO.StreamReader(stgFileName);
-            StringTemplateGroup stg = new StringTemplateGroup(tr, typeof(TemplateLexer)); //lexer added to use $..$ in group templates instead of <..>
-            tr.Close();
-                     
-            // Used to check which templates are present before calling them            
-            ICollection<string> templateNames = stg.GetTemplateNames();                
-            
-            System.Collections.ArrayList records = new System.Collections.ArrayList();
+            //System.Collections.ArrayList records = new System.Collections.ArrayList();
 
             //Write the results to the output file  
             System.IO.StreamWriter sw = null;
@@ -810,54 +912,45 @@ namespace STELLAR.Data
                 sw = new System.IO.StreamWriter(outFileName, false);
 
                 // If the HEADER template is present, call it and write result to output file 
-                if (templateNames.Contains("HEADER"))
+                if (stg.IsDefined("HEADER"))
                 {
-                    StringTemplate stHeader = stg.GetInstanceOf("HEADER");
-                    sw.WriteLine(stHeader.ToString());
-                }                    
-                
+                    Template stHeader = stg.GetInstanceOf("HEADER");
+                    sw.WriteLine(stHeader.Render());
+                }
+
                 foreach (DataRow dr in table.Rows)
                 {
                     IDictionary<string, object> record = new Dictionary<string, object>();
                     foreach (DataColumn dc in table.Columns)
                     {
-                       
+
                         String s = dr[dc].ToString().Trim();
                         // Ensure any leading and trailing double quotes are removed..
                         if (s.StartsWith("\"") && s.EndsWith("\""))
                             s = s.Substring(1, s.Length - 2);
-                        // Check for presence of properties in templates before attempting to use them
+                        // Add cleaned value to the array (if not blank)
                         if (s != "")
-                        {                        
+                        {
                             record[dc.ColumnName.Trim()] = s;
                         }
                     }
                     // If the RECORD template is present, call it and write result to output file 
-                    if (templateNames.Contains("RECORD"))
+                    if (stg.IsDefined("RECORD"))
                     {
-                        StringTemplate stRecord = stg.GetInstanceOf("RECORD");
-                        stRecord.SetAttribute("data", record);
-                        sw.WriteLine(stRecord.ToString());
+                        Template stRecord = stg.GetInstanceOf("RECORD");
+                        stRecord.Add("data", record);
+                        sw.WriteLine(stRecord.Render());
                     }
 
-                    records.Add(record);              
+                    //records.Add(record);
                     rowCount++;
                 }
 
-                // If the MAIN template is present, call it and write result to output file
-                //NOTE - deprecated; use HEADER, RECORD, FOOTER instead in templates
-                if (templateNames.Contains("MAIN"))
-                {
-                    StringTemplate stMain = stg.GetInstanceOf("MAIN");
-                    stMain.SetAttribute("data", (object[])records.ToArray(typeof(IDictionary<string, object>)));
-                    sw.WriteLine(stMain.ToString());
-                }
-
                 // If the FOOTER template is present, call it and write result to output file 
-                if (templateNames.Contains("FOOTER"))
+                if (stg.IsDefined("FOOTER"))
                 {
-                    StringTemplate stFooter = stg.GetInstanceOf("FOOTER");
-                    sw.WriteLine(stFooter.ToString());
+                    Template stFooter = stg.GetInstanceOf("FOOTER");
+                    sw.WriteLine(stFooter.Render());
                 }
             }
             catch (Exception ex)
@@ -869,8 +962,7 @@ namespace STELLAR.Data
             {
                 sw.Close();
                 sw.Dispose();
-                
-            }
+            }           
             return rowCount;
         }
 

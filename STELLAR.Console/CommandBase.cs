@@ -4,7 +4,7 @@ Creator : Ceri Binding, University of Glamorgan
 Project	: STELLAR
 Classes	: STELLAR.Console.CommandBase
 Summary	: Main base console command functionality
-License : http://creativecommons.org/licenses/by/3.0/ 
+License : Creative Commons Attribution http://creativecommons.org/licenses/by/3.0/ 
 ================================================================================
 History :
 

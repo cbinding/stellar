@@ -1,4 +1,5 @@
-﻿/*
+﻿#region about
+/*
 ================================================================================
 Creator : Ceri Binding, University of Glamorgan
 Project	: STELLAR
@@ -10,7 +11,9 @@ History :
 
 12/01/2011  CFB Created classes
 ================================================================================
-*/
+ */
+#endregion
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

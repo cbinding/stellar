@@ -43,7 +43,7 @@ namespace STELLAR.Data
             return new SQLiteCommand();
         }
         //11/01/11 - functionality moved here from API...
-        //Get list of SQLITE database file names 
+        //Get list of SQLITE database file names located directly under the specified path
         public static String[] getFileNames()
         {
             return getFileNames("");
