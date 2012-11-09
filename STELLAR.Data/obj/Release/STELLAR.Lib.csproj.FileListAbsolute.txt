@@ -1,7 +1,0 @@
-C:\Projects\stellar\src\STELLAR.Lib\bin\Release\STELLAR.Lib.dll
-C:\Projects\stellar\src\STELLAR.Lib\bin\Release\STELLAR.Lib.pdb
-C:\Projects\stellar\src\STELLAR.Lib\bin\Release\FileHelpers.dll
-C:\Projects\stellar\src\STELLAR.Lib\bin\Release\FileHelpers.xml
-C:\Projects\stellar\src\STELLAR.Lib\obj\Release\ResolveAssemblyReference.cache
-C:\Projects\stellar\src\STELLAR.Lib\obj\Release\STELLAR.Lib.dll
-C:\Projects\stellar\src\STELLAR.Lib\obj\Release\STELLAR.Lib.pdb

@@ -1,8 +1,0 @@
-STELLAR.Console v1.0 (type HELP for instructions)
-
-STELLAR.Console>
-STELLAR.Console>Importing file 'C:\Projects\stellar\data\Cresswell\cresswell.csv' to db 'cresswell'
-6521 rows imported
-finished [elapsed: 00:08:22.713]
-
-STELLAR.Console>

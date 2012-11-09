@@ -1,7 +1,0 @@
-csv2db /db:"silchester" /csv:"SILCHESTER_STAR_FINDS.csv" /table:"star_finds"
-csv2db /db:"silchester" /csv:"SILCHESTER_STAR_CONTEXTS.csv" /table:"star_contexts"
-sql2rdf /db:"silchester" /sql:"silchester_star_find_types.sql" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
-sql2rdf /db:"silchester" /sql:"silchester_star_find_materials.sql" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
-sql2rdf /db:"silchester" /sql:"silchester_star_find_periods.sql" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
-sql2rdf /db:"silchester" /sql:"silchester_star_contexts.sql" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
-

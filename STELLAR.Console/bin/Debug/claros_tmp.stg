@@ -1,7 +1,0 @@
-group claros_tmp;
-
-// template group file for use by StringTemplate component in STELLAR project
-// Note - If BASE_PREFIX comes from another group, use syntax $othergroup:BASE_PREFIX()$
-
-BASE_PREFIX() ::= "http://tmp123/"
-

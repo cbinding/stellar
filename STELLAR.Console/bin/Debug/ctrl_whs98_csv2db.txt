@@ -1,9 +1,0 @@
-# STELLAR commands to import the ctrl_whs98 CSV data to a database. Usage: stellar < ctrl_whs98_csv2db.txt
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_bulk.csv" /table:bulk
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_context.csv" /table:context
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_environmental.csv" /table:environmental
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_event.csv" /table:event
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_finds.csv" /table:finds
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_graphical.csv" /table:graphical
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_group.csv" /table:group
-csv2db /db:ctrl_whs98 /csv:"C:\Projects\stellar\data\ADS_datasets\ctrl_whs98\arc_whs98_site.csv" /table:site

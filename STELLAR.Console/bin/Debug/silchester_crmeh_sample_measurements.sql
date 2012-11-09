@@ -1,9 +1,0 @@
-SELECT
-	finds_dims.fno AS sample_id,
-	'volume' AS measurement_type,
-	'litres' AS measurement_unit,
-	finds_dims.d_volume AS measurement_value
-FROM
-	finds_dims
-WHERE
-	rec_type = 'SA';

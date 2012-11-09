@@ -1,6 +1,0 @@
-C:\Projects\stellar\src\STELLAR.Lib\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\stellar\src\STELLAR.Lib\bin\Debug\STELLAR.Lib.dll
-C:\Projects\stellar\src\STELLAR.Lib\bin\Debug\STELLAR.Lib.pdb
-C:\Projects\stellar\src\STELLAR.Lib\obj\Debug\STELLAR.Lib.dll
-C:\Projects\stellar\src\STELLAR.Lib\obj\Debug\STELLAR.Lib.pdb
-C:\Projects\stellar\src\STELLAR.Lib\bin\Debug\STELLAR.Xsl.dll
