@@ -1,0 +1,7 @@
+object_uri,object_id,object_label,object_title,object_type,thumb_uri,thumb_label,image_uri,image_label,page_uri,reference
+http://claros/tmp/1, 101, object 101, , http://claros/tmp/thumb101, label for thumb 101, http://claros/tmp/image101, label for image 101, http://claros/tmp/page101, http://claros/tmp/reference101
+http://claros/tmp/2, 102, object 102, title for object 102,type for object 102, http://claros/tmp/thumb102, label for thumb 102, http://claros/tmp/image102, label for image 102, http://claros/tmp/page102, http://claros/tmp/reference102
+http://claros/tmp/3, 103, object 103, title for object 103,type for object 103, http://claros/tmp/thumb103, label for thumb 103, http://claros/tmp/image103, label for image 103, http://claros/tmp/page103, http://claros/tmp/reference103
+http://claros/tmp/4, 104, object 104, title for object 104,type for object 104, http://claros/tmp/thumb104, label for thumb 104, http://claros/tmp/image104, label for image 104, http://claros/tmp/page104, http://claros/tmp/reference104
+http://claros/tmp/5, 105, object 105, title for object 105,type for object 105, http://claros/tmp/thumb105, label for thumb 105, http://claros/tmp/image105, label for image 105, http://claros/tmp/page105, http://claros/tmp/reference105
+http://claros/tmp/6, 106, object 106, title for object 106,type for object 106, http://claros/tmp/thumb106, label for thumb 106, http://claros/tmp/image106, label for image 106, http://claros/tmp/page106, http://claros/tmp/reference106

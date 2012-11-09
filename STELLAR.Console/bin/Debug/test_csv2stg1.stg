@@ -1,0 +1,24 @@
+group test_csv2stg1;
+
+HEADER() ::= <<
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+		<title>List of books</title>
+	</head>
+	<body>
+	<table border=1>
+>>
+
+FOOTER() ::= "</table></body></html>"
+
+RECORD(data) ::= <<	
+	<tr>
+	<td>$data.isbn$</td>
+	<td>$data.title$</td>
+	<td>$data.author$</td>
+	</tr>
+>>
+
+
+

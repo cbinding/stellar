@@ -79,12 +79,12 @@ namespace STELLAR.Data
         //used by getStats
         private class StatementProcessor : StatementSink {
             public long statementCount = 0;
-            public System.Collections.Generic.Dictionary<String, long> rdfClasses = new System.Collections.Generic.Dictionary<String, long>();
-            public System.Collections.Generic.Dictionary<String, long> rdfSubjects = new System.Collections.Generic.Dictionary<String, long>();
-            public System.Collections.Generic.Dictionary<String, long> rdfPredicates = new System.Collections.Generic.Dictionary<String, long>();
-            public System.Collections.Generic.Dictionary<String, long> rdfObjects = new System.Collections.Generic.Dictionary<String, long>();
-            public System.Collections.Generic.Dictionary<String, long> rdfLiterals = new System.Collections.Generic.Dictionary<String, long>();
-            public System.Collections.Generic.Dictionary<String, long> rdfLanguages = new System.Collections.Generic.Dictionary<String, long>();
+            public Dictionary<String, long> rdfClasses = new Dictionary<String, long>();
+            public Dictionary<String, long> rdfSubjects = new Dictionary<String, long>();
+            public Dictionary<String, long> rdfPredicates = new Dictionary<String, long>();
+            public Dictionary<String, long> rdfObjects = new Dictionary<String, long>();
+            public Dictionary<String, long> rdfLiterals = new Dictionary<String, long>();
+            public Dictionary<String, long> rdfLanguages = new Dictionary<String, long>();
             
             public bool Add(Statement assertion) 
             {

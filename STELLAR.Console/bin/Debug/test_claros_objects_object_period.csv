@@ -1,0 +1,7 @@
+object_uri, period_begin, period_end
+http://data/obj101, 55, 77
+http://data/obj102, 128, 255
+http://data/obj103, -1500, 1500
+http://data/obj104, -1, 460
+http://data/obj105, 0, 1900
+http://data/obj106, 1066, 1067

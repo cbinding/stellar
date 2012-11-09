@@ -9,6 +9,7 @@ License : http://creativecommons.org/licenses/by/3.0/
 History :
 
 12/01/2011  CFB Created classes
+21/10/2011  CFB Added functionality to pass options file data to STG templates
 ================================================================================
 */
 using System;
@@ -34,11 +35,12 @@ namespace STELLAR.Console
             String sqlFileName = a["sql"].Trim();
             String stgFileName = a["stg"].Trim();
             String outFileName = a["out"] == null ? "" : a["out"].Trim();
+            String optFileName = a["opt"] == null ? "" : a["opt"].Trim();
             this.Out.WriteLine("Running '{0}' against '{1}' using template '{2}'", System.IO.Path.GetFileName(sqlFileName), dbFileName, stgFileName);
 
             try
             {
-                int rowCount = STELLAR.Data.API.SQL2STG(dbFileName, sqlFileName, stgFileName, outFileName);
+                int rowCount = STELLAR.Data.API.SQL2STG(dbFileName, sqlFileName, stgFileName, outFileName, optFileName);
                 this.Out.WriteLine("{0} rows exported", rowCount);
             }
             catch (Exception ex)
@@ -49,7 +51,7 @@ namespace STELLAR.Console
 
         protected override string Usage()
         {
-            return String.Format("sql2stg /db:\"NAME\" /sql:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]");
+            return String.Format("sql2stg /db:\"NAME\" /sql:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]");
         }
 
         protected override bool ValidateArguments()

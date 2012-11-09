@@ -1,0 +1,353 @@
+group claros_objects;
+
+// template group file for use by StringTemplate component in STELLAR project
+
+// multiline template for creating RDF file header
+CLAROS_HEADER() ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY crm "http://purl.org/NET/crm-owl#">
+<!ENTITY claros "http://purl.org/NET/Claros/vocab#">
+<!ENTITY claros_place "http://purl.org/NET/Claros/place#">
+<!ENTITY claros_placeid "http://purl.org/NET/Claros/placeid#">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:crm="http://purl.org/NET/crm-owl#"
+     xmlns:claros="http://purl.org/NET/Claros/vocab#">
+>>
+
+
+// single line template for creating RDF file footer
+CLAROS_FOOTER() ::= "</rdf:RDF>"
+
+
+// STELLAR looks for a template called 'MAIN' within the specified template group (.stg) 
+// file, passing a parameter called 'data' that can then be iterated and the attributes 
+// per record accessed as shown below. This template implements the recommendations 
+// found at http://www.clarosnet.org/wiki/index.php?title=CIDOC_CRM_Objects - looking
+// for any of the following record attributes - these would be specified as column names 
+// in the originating delimited data:
+
+// record.object_uri (mandatory) - Unique URI identifier for the object
+// record.object_id - A string value that serves to uniquely identify the object within its source dataset
+// record.object_label - A short human-readable label for describing the object in user interfaces
+// record.object_title - A (definitive) descriptive title for the object
+// record.object_type - A string that identifies a particular type of object; e.g. "pottery", "statue", gem
+// record.object_type_uri - A URI that identifies a particular type of object
+// record.find_place_uri - URI of place described elsewhere
+// record.find_place_label - Description of place
+// record.thumb_uri - URI that can be used to retrieve the thumbnail image of the object 
+// record.thumb_label - Label describing the image at the specifed URI
+// record.image_uri - URI that can be used to retrieve an image of the object 
+// record.image_label - Label describing the image at the specifed URI
+// record.page_uri - URI at which a web page describing the object can be retrieved
+// record.reference - String describing document that mentions the current object
+// record.object_condition - A string that identifies a particular condition or state of an object; e.g. "broken"
+// record.object_condition_uri - A URI that identifies a particular condition or state of an object
+// record.attributed_fabric - A name identifying the kind of clay material from which an amphora was constructed
+// record.attributed_shape - One or more terms describing the shape of a pottery object
+// record.attributed_technique - A string value identifying a decorative technique used on a vase
+// record.attributed_artist - String containing name of artist associated with an object
+// record.attributor - Name of the scholar who determined this assignment 
+// record.production_label - String value identifying the object production event 
+// record.production_period_uri -A globally unique URI that identifies a particular period
+// record.production_period_label - A short human-readable label for describing the period in user interfaces
+// record.production_period_begin - Start date of the time period 
+// record.production_period_end - End date of the time period 
+// record.production_period_time_uri - Reference to a separately-defined crm:E61_Time_Primitive within which the production took place
+// record.production_material - Label for this material 
+// record.production_material_uri - URI for this material 
+// record.production_material_name - Name of material 
+// record.production_material_name_uri - URI for material name 
+// record.augmentation_feature_uri - A URI identifying this feature
+// record.augmentation_feature_label - A short textual label for the feature
+// record.augmentation_feature_description - A description of the feature
+
+MAIN(data) ::= <<
+$CLAROS_HEADER()$
+$data:{ record | 
+<crm:E22_Man-Made_Object rdf:about="$record.object_uri$">
+	
+	$if(record.object_id)$
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>$record.object_id$</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+	$endif$
+
+	$if(record.object_label)$
+		<rdfs:label>$record.object_label$</rdfs:label>
+	$endif$
+
+	$if(record.object_title)$		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>$record.object_title$</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+	$endif$
+
+	$if(record.object_type)$
+		<crm:P2_has_type>
+		$if(record.object_type_uri)$
+			<crm:E55_Type  rdf:about="$record.object_type_uri$">
+		$else$
+			<crm:E55_Type>
+		$endif$
+				<rdf:value>$record.object_type$</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type>
+	$endif$ 
+
+	$if(record.find_place_uri)$
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="$record.find_place_uri$" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+	$elseif(record.find_place_label)$
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at>$record.find_place_label$</crm:P7_took_place_at>        
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+	$endif$
+
+	$if(record.thumb_uri)$
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="$record.thumb_uri$">
+				$if(record.thumb_label)$
+					<rdfs:label>$record.thumb_label$</rdfs:label>
+				$endif$
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+	$endif$
+
+	$if(record.image_uri)$
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="$record.image_uri$">
+				$if(record.image_label)$
+					<rdfs:label>$record.image_label$</rdfs:label>
+				$endif$
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+	$endif$
+
+	$if(record.page_uri)$
+		<crm:P70i_is_documented_in rdf:resource="$record.page_uri$"/>		
+	$endif$
+
+	$if(record.reference)$
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>$record.reference$</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+	$endif$
+
+	$if(record.object_condition)$
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+					$if(record.object_condition_uri)$
+						<crm:E55_Type rdf:about="$record.object_condition_uri$">
+					$else$
+						<crm:E55_Type>
+					$endif$
+						<rdf:value>$record.object_condition$</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+	$endif$
+
+	$if(record.attributed_fabric)$
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+				$if(record.attributor)$      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>$record.attributor$</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				$endif$
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>$record.attributed_fabric$</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	$endif$
+
+	$if(record.attributed_shape)$
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+				$if(record.attributor)$      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>$record.attributor$</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				$endif$
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>$record.attributed_shape$</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	$endif$
+
+	$if(record.attributed_technique)$
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+				$if(record.attributor)$      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>$record.attributor$</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				$endif$
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>$record.attributed_technique$</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	$endif$
+
+	$if(record.attributed_artist)$
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+				$if(record.attributor)$      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>$record.attributor$</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				$endif$
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>$record.attributed_artist$</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	$endif$
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+			$if(record.production_label)$
+				<rdfs:label>$record.production_label$</rdfs:label>
+			$endif$
+			$if(record.production_material)$
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>$record.production_material$</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+			$endif$
+
+			<crm:P4_has_time-span>
+				$if(record.production_period_uri)$
+					<crm:E52_Time-Span rdf:about="$record.production_period_uri$">
+				$else$
+					<crm:E52_Time-Span>
+				$endif$
+
+				$if(record.production_period_label)$
+					<rdfs:label>$record.production_period_label$</rdfs:label>
+				$endif$
+  
+				$!-- Extent (OPTIONAL) --!$
+				$if(record.production_period_begin)$
+					<crm:P82_at_some_time_within>
+						$if(record.production_period_time_uri)$
+							<claros:Period rdf:about="$record.production_period_time_uri$">
+						$else$
+							<claros:Period>
+						$endif$
+						<claros:period_begin rdf:datatype="&xsd;gYear">$record.production_period_begin$</claros:period_begin>
+						$if(record.production_period_end)$
+							<claros:period_end rdf:datatype="&xsd;gYear">$record.production_period_end$</claros:period_end>
+						$endif$
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+				$endif$
+
+				$!-- Named period (OPTIONAL) --!$
+				$if(record.production_period_time_uri)$
+					<crm:P82_at_some_time_within rdf:resource="$record.production_period_time_uri$" />
+				$endif$					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+	$if(record.production_material)$
+		<crm:P45_consists_of>
+			$if(record.production_material_uri)$
+				<crm:E57_Material rdf:about="$record.production_material_uri$">
+			$else$
+				<crm:E57_Material>
+			$endif$
+			<rdfs:label>$record.production_material$</rdfs:label>
+			$if(record.production_material_name)$
+				<crm:P1_is_identified_by>
+					$if(record.production_material_name_uri)$
+						<crm:E41_Appellation rdf:about="$record.production_material_name_uri$">
+					$else$
+						<crm:E41_Appellation>
+					$endif$
+						<rdf:value>$record.production_material_name$</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			$endif$
+			</crm:E57_Material>
+		</crm:P45_consists_of>
+	$endif$	
+
+	$if(record.augmentation_feature_description)$
+		<crm:P56_bears_feature>
+			$if(record.augmentation_feature_uri)$			
+				<crm:E25_Man-Made_Feature rdf:about="$record.augmentation_feature_uri$">
+			$else$
+				<crm:E25_Man-Made_Feature>
+			$endif$
+				$if(record.augmentation_feature_label)$
+					<rdfs:label>$record.augmentation_feature_label$</rdfs:label>
+				$endif$
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>$record.augmentation_feature_description$</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+	$endif$
+
+</crm:E22_Man-Made_Object>
+}$ 
+$CLAROS_FOOTER()$
+ >>
+

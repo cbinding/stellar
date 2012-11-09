@@ -1,0 +1,14 @@
+#STELLAR commands to import the west_stow CSV data to a database. Usage: stellar < west_stow_csv2db.txt
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Bulk_Finds.csv" /table:Bulk_Finds
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_CMB.csv" /table:CMB
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_context_record.csv" /table:context_record
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Early_Anglo-Saxon_pottery.csv" /table:"Early_Anglo-Saxon_pottery"
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Faunal_measurements_from_context_0001.csv" /table:Faunal_measurements_from_context_0001
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Faunal_remains_by_context.csv" /table:Faunal_remains_by_context
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Fired_Clay.csv" /table:Fired_Clay
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_by_context.csv" /table:Flint_by_context
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_categories.csv" /table:Flint_categories
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_types.csv" /table:Flint_types
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Late_Iron_Age_and_Roman_pottery.csv" /table:Late_Iron_Age_and_Roman_pottery
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Prehistoric_pottery.csv" /table:Prehistoric_pottery
+csv2db /db:west_stow /csv:"C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Small_finds.csv" /table:Small_finds

@@ -38,4 +38,16 @@ namespace STELLAR.Data
             return System.Web.HttpUtility.UrlEncode(args[0].ToString().Trim().ToLower());            
         }
     }
+
+    // extension function to use inside SQLite SELECT statements - find position of string inside another
+    // usage: SQLiteCharIndex(exp1, exp2) - search exp2 for exp1 and return start position (1 based)
+    // if not found, return 0.
+    [SQLiteFunction(Name = "SQLiteCharIndex", Arguments = 2, FuncType = FunctionType.Scalar)]
+    public class SQLiteCharIndex : SQLiteFunction
+    {
+        public override object Invoke(object[] args)
+        {
+            return args[1].ToString().IndexOf(args[1].ToString() + 1);            
+        }
+    }
 }

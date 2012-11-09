@@ -1,0 +1,133 @@
+animal disturbance
+animal disturbance: fill
+ard mark
+ard mark: fill
+bank
+beam
+beam slot
+beam slot: fill
+*building
+coffin
+coffin: fill
+coffin: stain
+*corn-drying oven
+corn-drying oven: cut
+corn-drying oven: fill
+corn-drying oven: wall
+cremation
+cremation pit
+cremation pit: fill
+cremation vessel
+cremation vessel: fill
+ditch
+ditch: fill
+*ditch overall
+ditch segment
+ditch segment: fill
+*drain
+drain: capping
+drain: construction trench
+drain: construction trench fill
+drain: fill
+drain: lining
+drain: packing
+drain: pipe
+drove way
+enclosure
+feature
+feature: fill
+floor
+floor: tessellated
+flue
+flue: fill
+foundation: cut
+foundation: layer
+*four-post structure
+furnace
+grave
+grave: fill
+gully
+gully: fill
+*hearth
+hearth pit
+hearth pit: fill
+hearth: debris
+interface
+*kiln
+kiln: fill
+kiln: lining
+kiln: debris
+hoof print
+hoof print: fill
+layer
+layer: accumulation
+layer: buried soil
+layer: levelling
+layer: natural
+layer: occupation
+layer: plough soil
+layer: redeposited natural
+layer: rubble
+layer: subsoil
+layer: topsoil
+lens
+linear feature
+linear feature: fill
+modern intrusion
+modern intrusion: fill
+natural feature
+natural feature: fill
+*oven
+palaeochannel
+palaeochannel: fill
+pit
+pit, cess
+pit, cess: fill
+pit: fill
+pit: lining
+plough furrow
+plough furrow: fill
+plough mark
+plough mark: fill
+post-hole
+post-hole: fill
+*post-hole: group
+post-hole: packing
+post-pad
+post-pipe
+post-pipe: fill
+pottery: spread
+quarry pit
+quarry pit: fill
+ring ditch
+*road
+robbing trench
+robbing trench: fill
+stake
+stake-hole
+stake-hole: fill
+stoke hole
+stoke hole: fill
+*structure
+surface
+surface: earth/clay
+surface: metalled
+surface: mortar
+surface: paved
+threshold
+tree hollow
+tree hollow: fill
+trial trench
+trial trench: fill
+vessel
+vessel: fill
+wall
+wall: construction trench
+wall: construction trench fill
+*well
+well: construction pit
+well: construction pit fill
+well: lining
+well: fill
+wheel rut
+wheel rut: fill

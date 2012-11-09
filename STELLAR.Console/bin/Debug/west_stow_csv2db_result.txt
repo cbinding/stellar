@@ -1,0 +1,56 @@
+STELLAR.Console v1.0 (type HELP for instructions)
+
+STELLAR.Console>
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Bulk_Finds.csv' to db 'west_stow'
+60 rows imported
+finished [elapsed: 00:00:04.531]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_CMB.csv' to db 'west_stow'
+2 rows imported
+finished [elapsed: 00:00:00.328]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_context_record.csv' to db 'west_stow'
+236 rows imported
+finished [elapsed: 00:00:19.328]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Early_Anglo-Saxon_pottery.csv' to db 'west_stow'
+87 rows imported
+finished [elapsed: 00:00:06.234]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Faunal_measurements_from_context_0001.csv' to db 'west_stow'
+6 rows imported
+finished [elapsed: 00:00:00.640]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Faunal_remains_by_context.csv' to db 'west_stow'
+49 rows imported
+finished [elapsed: 00:00:03.656]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Fired_Clay.csv' to db 'west_stow'
+14 rows imported
+finished [elapsed: 00:00:01.265]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_by_context.csv' to db 'west_stow'
+127 rows imported
+finished [elapsed: 00:00:11.422]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_categories.csv' to db 'west_stow'
+16 rows imported
+finished [elapsed: 00:00:01.109]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Flint_types.csv' to db 'west_stow'
+31 rows imported
+finished [elapsed: 00:00:02.562]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Late_Iron_Age_and_Roman_pottery.csv' to db 'west_stow'
+41 rows imported
+finished [elapsed: 00:00:03.171]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Prehistoric_pottery.csv' to db 'west_stow'
+26 rows imported
+finished [elapsed: 00:00:01.812]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\west_stow\WSW_030_Small_finds.csv' to db 'west_stow'
+16 rows imported
+finished [elapsed: 00:00:01.500]
+
+STELLAR.Console>

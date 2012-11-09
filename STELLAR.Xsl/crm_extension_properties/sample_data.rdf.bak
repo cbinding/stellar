@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:crmeh="http://purl.org/crmeh#" 
+	xmlns:crm="http://cidoc.ics.forth.gr/rdfs/cidoc_v4.2.rdfs#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://tempuri/star/base#">
+	<crmeh:EHE0007.Context rdf:about="http://tempuri/star/base#ehe0007.tmp.1">
+		<crm:P3F.has_note>Context 1 contained the remnants of a wall</crm:P3F.has_note>
+		<crmeh:EHPXXX.has_interpretation>Possibly part of a building</crmeh:EHPXXX.has_interpretation>
+	</crmeh:EHE0007.Context>
+	<crmeh:EHE0007.Context rdf:about="http://tempuri/star/base#ehe0007.tmp.2">
+		<crm:P3F.has_note>Context 2 contained building stone and rubble layers</crm:P3F.has_note>
+		<crmeh:EHPXXX.has_interpretation>Probably a wall</crmeh:EHPXXX.has_interpretation>
+	</crmeh:EHE0007.Context>
+</rdf:RDF>

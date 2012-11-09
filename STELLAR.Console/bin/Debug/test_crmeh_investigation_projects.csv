@@ -1,0 +1,2 @@
+investigation_id, investigation_type, investigation_timespan, investigation_description, investigation_location
+dig1, "Excavation", "12/03/2003-12/03/2004", "Test investigation description", "POINT[123.45 345.67]"

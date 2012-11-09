@@ -47,10 +47,10 @@ namespace STELLAR.Console
             this.Out.WriteLine("CSV2RDF /csv:\"FILE\" /template:\"NAME\" [/rdf:\"FILE\"] [/ns:\"URI\"] [/noheader]\n\tConvert comma delimited file to RDF file (via template)");
             this.Out.WriteLine("TAB2RDF /tab:\"FILE\" /template:\"NAME\" [/rdf:\"FILE\"] [/ns:\"URI\"] [/noheader]\n\tConvert tab delimited file to RDF file (via template)");
             this.Out.WriteLine("XML2RDF /xml:\"FILE\" /template:\"NAME\" [/rdf:\"FILE\"] [/ns:\"URI\"]\n\tConvert XML file to RDF file (via template)");
-            this.Out.WriteLine("DELIM2STG /data:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/delimiter:\"CHAR\"]\n\tConvert delimited file using STG template file");
-            this.Out.WriteLine("TAB2STG /tab:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]\n\tConvert TAB file using STG template file");
-            this.Out.WriteLine("CSV2STG /csv:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]\n\tConvert CSV file using STG template file");
-            this.Out.WriteLine("SQL2STG /db:\"NAME\" /sql:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]\n\tRun SQL, convert result using STG template file");
+            this.Out.WriteLine("DELIM2STG /data:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"] [/delimiter:\"CHAR\"]\n\tConvert delimited file using STG template file");
+            this.Out.WriteLine("TAB2STG /tab:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]\n\tConvert TAB file using STG template file");
+            this.Out.WriteLine("CSV2STG /csv:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]\n\tConvert CSV file using STG template file");
+            this.Out.WriteLine("SQL2STG /db:\"NAME\" /sql:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]\n\tRun SQL, convert result using STG template file");
             this.Out.WriteLine("TEMPLATES\n\tDisplay list of possible templates to use");
             this.Out.WriteLine("CSVSTATS /csv:\"FILE\" [/noheader]\n\tDisplay statistics for comma delimited file");
             this.Out.WriteLine("RDFSTATS /rdf:\"FILE\"\n\tDisplay statistics for RDF file");

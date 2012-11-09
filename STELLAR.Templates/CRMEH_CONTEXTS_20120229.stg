@@ -1,0 +1,195 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_CONTEXTS.stg
+// Version : 001
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+// STELLAR specific templates
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+RECORD(options, data) ::= "$CRMEH_CONTEXT(options, data)$"
+
+// CRMEH_CONTEXT. Fields anticipated:
+// data.context_id [mandatory]
+// data.context_note
+// data.context_type
+// data.context_type_uri
+// data.context_location
+// data.context_period
+// data.within_context_id
+// data.within_group_id
+// data.within_investigation_id
+// data.strat_lower_id
+// data.strat_equal_id
+// data.language
+// options.base_uri
+CRMEH_CONTEXT(options, data) ::= <<
+$if(data.context_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	type=CRMEH_TYPE("EHE0007"), 
+	label=data.context_id, 
+	language=data.language
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0061", data.context_id), 
+	type=CRMEH_TYPE("EHE0061"),
+	label=data.context_id, 
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P87"), inverse=CRM_TYPE("P87i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0061", data.context_id)	
+)$
+
+$if(data.context_note)$ 
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P3"), 
+	literal=data.context_note, 
+	language=data.language	
+)$
+$endif$ 
+
+$if(data.context_type)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"), 
+	object=CRMEH_URI(options.base_uri, "E55", data.context_type)	
+)$
+$endif$ 
+
+$if(data.context_type_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"), 
+	object=data.context_type_uri	
+)$
+$endif$
+
+$if(data.context_location)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0022", data.context_location), 
+	type=CRMEH_TYPE("EHE0022"), 
+	label=data.context_location, 
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P87"), inverse=CRM_TYPE("P87i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0022", data.context_location)	
+)$
+$endif$
+
+$if(data.context_period)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE1001", data.context_id), 
+	type=CRMEH_TYPE("EHE1001")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0025", data.context_period), 
+	type=CRMEH_TYPE("EHE0025")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0026", data.context_period), 
+	type=CRMEH_TYPE("EHE0026"),
+	label=data.context_period,
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.context_id), 
+	predicate=CRM_TYPE("P7"), inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.context_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.context_id), 
+	predicate=CRM_TYPE("P4"), inverse=CRM_TYPE("P4i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0025", data.context_period)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0025", data.context_period), 
+	predicate=CRM_TYPE("P1"), inverse=CRM_TYPE("P1i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0026", data.context_period)	
+)$
+$endif$
+
+$if(data.within_context_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P89"), inverse=CRM_TYPE("P89i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id)	
+)$
+$endif$
+
+$if(data.within_group_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0005", data.within_group_id), 
+	type=CRMEH_TYPE("EHE0005"),
+	label=data.within_group_id,
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P89"), inverse=CRM_TYPE("P89i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0005", data.within_group_id)	
+)$
+$endif$
+
+$if(data.within_investigation_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0007", data.context_id), 
+	predicate=CRM_TYPE("P89"), inverse=CRM_TYPE("P89i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id)	
+)$
+$endif$
+
+$if(data.strat_lower_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.context_id), 
+	predicate=CRM_TYPE("P7"), inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.context_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.strat_lower_id), 
+	predicate=CRM_TYPE("P7"), inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.strat_lower_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.strat_lower_id), 
+	predicate=CRM_TYPE("P120"), inverse=CRM_TYPE("P120i"), 
+	object=CRMEH_URI(options.base_uri, "EHE1001", data.context_id)	
+)$
+$endif$
+
+$if(data.strat_equal_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.context_id), 
+	predicate=CRM_TYPE("P7"), inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.context_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.strat_equal_id), 
+	predicate=CRM_TYPE("P7"), inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.strat_equal_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1001", data.strat_equal_id), 
+	predicate=CRM_TYPE("P114"), inverse=CRM_TYPE("P114"), 
+	object=CRMEH_URI(options.base_uri, "EHE1001", data.context_id)	
+)$$endif$	
+
+$else$
+$RDF_COMMENT("context_id is not present")$
+$endif$
+>>
+// End of CRMEH_CONTEXT

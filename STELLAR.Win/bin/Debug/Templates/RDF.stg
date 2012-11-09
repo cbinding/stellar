@@ -1,0 +1,83 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : RDF.stg
+// Version : 002
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Initially created template group
+// 002 11/01/2012 CFB $if(type)$ clause used in RDF_ENTITY,
+//			xmlencode(s) used throughout. md5encode added
+//============================================================================//
+delimiters "$", "$"
+
+// template to create RDFXML header
+RDF_HEADER() ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+     xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#" 
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:crm="http://erlangen-crm.org/101001/"
+     xmlns:crmeh="http://purl.org/crmeh#">
+>>
+
+// template to create RDFXML footer
+RDF_FOOTER() ::= "</rdf:RDF>"
+
+xmlencode(s) ::= "$s;format=\"XMLENCODE\"$"
+urlencode(s) ::= "$s;format=\"URLENCODE\"$"
+md5encode(s) ::= "$s;format=\"MD5ENCODE\"$"
+toLower(s) ::= "$s;format=\"LOWERCASE\"$"
+toLowerAndUrlEncode(s) ::= "$urlencode(s=(toLower(s=s)))$"
+
+RDF_ENTITY(uri=false, type=false, label=false, language=false) ::= <<
+$if(type)$
+<$type$$if(uri)$ rdf:about="$uri$"$endif$>
+$else$
+<rdf:Description$if(uri)$ rdf:about="$uri$"$endif$>
+$endif$
+$if(label)$
+$if(language)$
+	<rdfs:label xml:lang="$language$">$xmlencode(label)$</rdfs:label>
+$else$
+	<rdfs:label xml:lang="en">$xmlencode(label)$</rdfs:label>
+$endif$
+$endif$
+$if(type)$
+</$type$>
+$else$
+</rdf:Description>
+$endif$
+>>
+
+RDF_PROPERTY(subject, predicate, inverse=false, object=false, literal=false, language=false) ::= <<
+<rdf:Description rdf:about="$subject$">
+$if(object)$
+	<$predicate$ rdf:resource="$object$"/>
+$elseif(literal)$
+	$if(language)$
+	<$predicate$ xml:lang="$language$">$xmlencode(literal)$</$predicate$>
+	$else$
+	<$predicate$ xml:lang="en">$xmlencode(literal)$</$predicate$>
+	$endif$
+$endif$
+</rdf:Description>
+$if(object && inverse)$
+<rdf:Description rdf:about="$object$">
+	<$inverse$ rdf:resource="$subject$"/>
+</rdf:Description>
+$endif$
+>>
+
+RDF_COMMENT(comment) ::= <<
+<!-- xmlencode(comment) -->
+>>

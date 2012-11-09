@@ -1,0 +1,25 @@
+group books_to_html;
+
+HEADER() ::= <<
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+	<html>
+	<head>
+		<title>List of books</title>
+	</head>
+	<body>
+	<h1>List of books:</h1>
+	<table border=1>
+>>
+
+FOOTER() ::= "</table></body></html>"
+
+RECORD(data) ::= <<	
+	<tr>
+	<td>$data.isbn$</td>
+	<td>$data.title$</td>
+	<td>$data.author$</td>
+	</tr>
+>>
+
+
+

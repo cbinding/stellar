@@ -1,0 +1,5 @@
+#STELLAR commands to import the thornhill CSV data to a database. Usage: stellar < thornhill_csv2db.txt
+csv2db /db:thornhill /csv:"C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_CTX.csv"
+csv2db /db:thornhill /csv:"C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_FIND.csv"
+csv2db /db:thornhill /csv:"C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_FTF2_VER_3.csv"
+csv2db /db:thornhill /csv:"C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_OBJECT.csv"

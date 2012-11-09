@@ -1,0 +1,70 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_SAMPLE_MEASUREMENTS.stg
+// Version : 002
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+// 001 20/10/2011 CFB Created template group
+// 002 29/02/2012 CFB Now using entity/property templates e.g. EHE0001() etc.
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_SAMPLE_MEASUREMENT(options, data)$"
+
+// CRMEH_SAMPLE_MEASUREMENT. Fields anticipated:
+// data.sample_id [mandatory]
+// data.measurement_type
+// data.measurement_type_uri
+// data.measurement_unit
+// data.measurement_unit_uri
+// data.measurement_value
+// options.base_uri
+CRMEH_SAMPLE_MEASUREMENT(options, data) ::= <<
+$if(data.sample_id)$
+$CRMEH_EHE0018(uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), label=data.sample_id)$
+$CRMEH_EHE2015(uri=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]))$
+$CRMEH_EHE0049(uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]))$
+
+$CRM_P39(source_uri=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id))$
+$CRM_P40(source_uri=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]))$
+
+$if(data.measurement_type)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=CRMEH_URI(options.base_uri, "E55", data.measurement_type))$
+$endif$
+
+$if(data.measurement_type_uri)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=data.measurement_type_uri)$
+$endif$
+
+$if(data.measurement_unit)$
+$CRM_P91(source_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=CRMEH_URI(options.base_uri, "E55", data.measurement_unit))$
+$endif$
+
+$if(data.measurement_unit_uri)$
+$CRM_P91(source_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	target_uri=data.measurement_unit_uri)$
+$endif$
+
+$if(data.measurement_value)$
+$CRM_P90(source_uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	literal=data.measurement_value)$
+$endif$
+
+$else$
+$RDF_COMMENT("sample_id is not present")$
+$endif$
+>> 
+// end of CRMEH_SAMPLE_MEASUREMENT
+

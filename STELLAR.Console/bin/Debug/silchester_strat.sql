@@ -1,0 +1,1 @@
+SELECT DISTINCT con2 AS context_id, con1 AS strat_lower_id FROM strat

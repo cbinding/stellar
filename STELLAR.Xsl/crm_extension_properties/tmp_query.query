@@ -1,0 +1,14 @@
+
+(:query-type :sparql :query-name "" :query-string
+ "PREFIX crm: <http://cidoc.ics.forth.gr/rdfs/cidoc_v4.2.rdfs#> 
+PREFIX crmeh: <http://purl.org/crmeh#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+SELECT ?a ?c WHERE {
+ ?a crm:P3F.has_note ?c .
+ ?a crm:P3F.has_note ?c FILTER(regex(?c, \"(?i)building\")) .
+ #?a crmeh:EHPXXX.has_interpretation ?c .
+ #?a crmeh:EHPXXX.has_interpretation ?c FILTER(regex(?c, \"(?i)building\")) .
+}
+")

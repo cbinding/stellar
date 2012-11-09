@@ -9,6 +9,7 @@ License : http://creativecommons.org/licenses/by/3.0/
 History :
 
 14/09/2011  CFB Created classes
+21/10/2011  CFB Added functionality to pass options file data to STG templates
 ================================================================================
 */
 using System;
@@ -33,12 +34,13 @@ namespace STELLAR.Console
             String dataFileName = System.IO.Path.GetFileName(a["data"].Trim());
             String stgFileName = System.IO.Path.GetFileName(a["stg"].Trim());
             String outFileName = a["out"] == null ? "" : a["out"].Trim();
+            String optFileName = a["opt"] == null ? "" : a["opt"].Trim();
             Char delimiter = a["delimiter"] == null ? ',' : a["delimiter"].Trim().ToCharArray(0, 1).First();            
             this.Out.WriteLine("Convert '{0}' using template '{1}'", dataFileName, stgFileName);
 
             try
             {
-                int rowCount = STELLAR.Data.API.Delimited2STG(dataFileName, stgFileName, outFileName, delimiter);
+                int rowCount = STELLAR.Data.API.Delimited2STG(dataFileName, stgFileName, outFileName, optFileName, delimiter);
                 this.Out.WriteLine("{0} rows converted", rowCount);
             }
             catch (Exception ex)
@@ -49,7 +51,7 @@ namespace STELLAR.Console
 
         protected override string Usage()
         {
-            return ("delim2stg /data:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/delimiter:\"CHAR\"]");
+            return ("delim2stg /data:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"] [/delimiter:\"CHAR\"]");
         }
 
         protected override bool ValidateArguments()

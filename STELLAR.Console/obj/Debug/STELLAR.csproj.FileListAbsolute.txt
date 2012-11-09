@@ -1,0 +1,10 @@
+C:\Projects\stellar\src\STELLAR\bin\Debug\STELLAR.exe
+C:\Projects\stellar\src\STELLAR\bin\Debug\STELLAR.pdb
+C:\Projects\stellar\src\STELLAR\bin\Debug\STELLAR.Data.dll
+C:\Projects\stellar\src\STELLAR\bin\Debug\STELLAR.Xsl.dll
+C:\Projects\stellar\src\STELLAR\bin\Debug\FileHelpers.dll
+C:\Projects\stellar\src\STELLAR\bin\Debug\STELLAR.Data.pdb
+C:\Projects\stellar\src\STELLAR\bin\Debug\FileHelpers.xml
+C:\Projects\stellar\src\STELLAR\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\stellar\src\STELLAR\obj\Debug\STELLAR.exe
+C:\Projects\stellar\src\STELLAR\obj\Debug\STELLAR.pdb

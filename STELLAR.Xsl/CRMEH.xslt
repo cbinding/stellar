@@ -1913,7 +1913,7 @@ Ref		Date		   Who	Description
 		
 		<!--CONTEXT_TYPE_URI-->
 		<xsl:if test="normalize-space($CONTEXT_TYPE_URI) != ''">
-			<!--Group has_type Type-->
+			<!--Context has_type Type-->
 			<xsl:call-template name="ECRM_X_P2_Y">
 				<xsl:with-param name="X_URI" select="$EHE0007_URI"/>
 				<xsl:with-param name="Y_URI" select="normalize-space($CONTEXT_TYPE_URI)"/>

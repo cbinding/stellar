@@ -1,0 +1,4 @@
+group_id, group_type_uri, group_type
+101, http://types#xyz, wall
+102, http://types#yyz,
+103, ,building

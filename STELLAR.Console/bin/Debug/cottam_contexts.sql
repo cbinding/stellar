@@ -1,0 +1,5 @@
+SELECT DISTINCT
+ContextNumber AS CONTEXT_ID,
+Type AS CONTEXT_TYPE,
+Description AS CONTEXT_NOTE
+FROM Contexts

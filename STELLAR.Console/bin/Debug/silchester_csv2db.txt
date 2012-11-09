@@ -1,0 +1,12 @@
+#STELLAR commands to import the silchester CSV data to a database. Usage: stellar < silchester_csv2db.txt
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\contexts.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\finds.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\finds_dims.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\finds_treat.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\objects.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\olinks.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\photos.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\plinks.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\strat.csv"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\SILCHESTER_STAR_FINDS.csv" /table:"star_finds"
+csv2db /db:silchester /csv:"C:\Projects\stellar\data\ADS_datasets\silchester\SILCHESTER_STAR_CONTEXTS.csv" /table:"star_contexts"

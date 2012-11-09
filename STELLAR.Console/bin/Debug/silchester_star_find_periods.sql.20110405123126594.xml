@@ -1,0 +1,1099 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row id="1">
+    <col name="find_id">10171</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="2">
+    <col name="find_id">10175</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="3">
+    <col name="find_id">10451</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="4">
+    <col name="find_id">10531</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="5">
+    <col name="find_id">1062</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="6">
+    <col name="find_id">1063</col>
+    <col name="production_period">155/185</col>
+  </row>
+  <row id="7">
+    <col name="find_id">1077</col>
+    <col name="production_period">65/85</col>
+  </row>
+  <row id="8">
+    <col name="find_id">1078</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="9">
+    <col name="find_id">1121</col>
+    <col name="production_period">1837/1901</col>
+  </row>
+  <row id="10">
+    <col name="find_id">11221</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="11">
+    <col name="find_id">1142</col>
+    <col name="production_period">140/165</col>
+  </row>
+  <row id="12">
+    <col name="find_id">1158</col>
+    <col name="production_period">117/161</col>
+  </row>
+  <row id="13">
+    <col name="find_id">1166</col>
+    <col name="production_period">117/161</col>
+  </row>
+  <row id="14">
+    <col name="find_id">1180</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="15">
+    <col name="find_id">1204</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="16">
+    <col name="find_id">1214</col>
+    <col name="production_period">145/175</col>
+  </row>
+  <row id="17">
+    <col name="find_id">1231</col>
+    <col name="production_period">367/375</col>
+  </row>
+  <row id="18">
+    <col name="find_id">1232</col>
+    <col name="production_period">43/80</col>
+  </row>
+  <row id="19">
+    <col name="find_id">1247</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="20">
+    <col name="find_id">1250</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="21">
+    <col name="find_id">12531</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="22">
+    <col name="find_id">1255</col>
+    <col name="production_period">-4000/43</col>
+  </row>
+  <row id="23">
+    <col name="find_id">12561</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="24">
+    <col name="find_id">1257</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="25">
+    <col name="find_id">1260</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="26">
+    <col name="find_id">12681</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="27">
+    <col name="find_id">12711</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="28">
+    <col name="find_id">12751</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="29">
+    <col name="find_id">12755</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="30">
+    <col name="find_id">1286</col>
+    <col name="production_period">43/80</col>
+  </row>
+  <row id="31">
+    <col name="find_id">12881</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="32">
+    <col name="find_id">12885</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="33">
+    <col name="find_id">12961</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="34">
+    <col name="find_id">12965</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="35">
+    <col name="find_id">13081</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="36">
+    <col name="find_id">1320</col>
+    <col name="production_period">140/160</col>
+  </row>
+  <row id="37">
+    <col name="find_id">13321</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="38">
+    <col name="find_id">13441</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="39">
+    <col name="find_id">13491</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="40">
+    <col name="find_id">13741</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="41">
+    <col name="find_id">13831</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="42">
+    <col name="find_id">14001</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="43">
+    <col name="find_id">14051</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="44">
+    <col name="find_id">14071</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="45">
+    <col name="find_id">14141</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="46">
+    <col name="find_id">14151</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="47">
+    <col name="find_id">14201</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="48">
+    <col name="find_id">14221</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="49">
+    <col name="find_id">14231</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="50">
+    <col name="find_id">14261</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="51">
+    <col name="find_id">14341</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="52">
+    <col name="find_id">14481</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="53">
+    <col name="find_id">14521</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="54">
+    <col name="find_id">14541</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="55">
+    <col name="find_id">1461</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="56">
+    <col name="find_id">1476</col>
+    <col name="production_period">364/378</col>
+  </row>
+  <row id="57">
+    <col name="find_id">1489</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="58">
+    <col name="find_id">14895</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="59">
+    <col name="find_id">15051</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="60">
+    <col name="find_id">15091</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="61">
+    <col name="find_id">15645</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="62">
+    <col name="find_id">16651</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="63">
+    <col name="find_id">16901</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="64">
+    <col name="find_id">1711</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="65">
+    <col name="find_id">17321</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="66">
+    <col name="find_id">17325</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="67">
+    <col name="find_id">17331</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="68">
+    <col name="find_id">17981</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="69">
+    <col name="find_id">17985</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="70">
+    <col name="find_id">2013</col>
+    <col name="production_period">40/55</col>
+  </row>
+  <row id="71">
+    <col name="find_id">2022</col>
+    <col name="production_period">70/90</col>
+  </row>
+  <row id="72">
+    <col name="find_id">2079</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="73">
+    <col name="find_id">2155</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="74">
+    <col name="find_id">2194</col>
+    <col name="production_period">70/90</col>
+  </row>
+  <row id="75">
+    <col name="find_id">2197</col>
+    <col name="production_period">200/299</col>
+  </row>
+  <row id="76">
+    <col name="find_id">2198</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="77">
+    <col name="find_id">2202</col>
+    <col name="production_period">160/190</col>
+  </row>
+  <row id="78">
+    <col name="find_id">2205</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="79">
+    <col name="find_id">2207</col>
+    <col name="production_period">145/175</col>
+  </row>
+  <row id="80">
+    <col name="find_id">2214</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="81">
+    <col name="find_id">2225</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="82">
+    <col name="find_id">2249</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="83">
+    <col name="find_id">2257</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="84">
+    <col name="find_id">2263</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="85">
+    <col name="find_id">2269</col>
+    <col name="production_period">43/65</col>
+  </row>
+  <row id="86">
+    <col name="find_id">2271</col>
+    <col name="production_period">140/170</col>
+  </row>
+  <row id="87">
+    <col name="find_id">2304</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="88">
+    <col name="find_id">2313</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="89">
+    <col name="find_id">2331</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="90">
+    <col name="find_id">2344</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="91">
+    <col name="find_id">2348</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="92">
+    <col name="find_id">2355</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="93">
+    <col name="find_id">2382</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="94">
+    <col name="find_id">2389</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="95">
+    <col name="find_id">2391</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="96">
+    <col name="find_id">2422</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="97">
+    <col name="find_id">2437</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="98">
+    <col name="find_id">2477</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="99">
+    <col name="find_id">2486</col>
+    <col name="production_period">40/80</col>
+  </row>
+  <row id="100">
+    <col name="find_id">2535</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="101">
+    <col name="find_id">2547</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="102">
+    <col name="find_id">2549</col>
+    <col name="production_period">1/99</col>
+  </row>
+  <row id="103">
+    <col name="find_id">2574</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="104">
+    <col name="find_id">2575</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="105">
+    <col name="find_id">2576</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="106">
+    <col name="find_id">2587</col>
+    <col name="production_period">160/190</col>
+  </row>
+  <row id="107">
+    <col name="find_id">2589</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="108">
+    <col name="find_id">2613</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="109">
+    <col name="find_id">2614</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="110">
+    <col name="find_id">2615</col>
+    <col name="production_period">69/79</col>
+  </row>
+  <row id="111">
+    <col name="find_id">2617</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="112">
+    <col name="find_id">2635</col>
+    <col name="production_period">1/99</col>
+  </row>
+  <row id="113">
+    <col name="find_id">2639</col>
+    <col name="production_period">43/85</col>
+  </row>
+  <row id="114">
+    <col name="find_id">2686</col>
+    <col name="production_period">150/175</col>
+  </row>
+  <row id="115">
+    <col name="find_id">2691</col>
+    <col name="production_period">160/190</col>
+  </row>
+  <row id="116">
+    <col name="find_id">2727</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="117">
+    <col name="find_id">2740</col>
+    <col name="production_period">69/79</col>
+  </row>
+  <row id="118">
+    <col name="find_id">2745</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="119">
+    <col name="find_id">2747</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="120">
+    <col name="find_id">2752</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="121">
+    <col name="find_id">2756</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="122">
+    <col name="find_id">2760</col>
+    <col name="production_period">43/80</col>
+  </row>
+  <row id="123">
+    <col name="find_id">2763</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="124">
+    <col name="find_id">2767</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="125">
+    <col name="find_id">2772</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="126">
+    <col name="find_id">2773</col>
+    <col name="production_period">50/65</col>
+  </row>
+  <row id="127">
+    <col name="find_id">2776</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="128">
+    <col name="find_id">2783</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="129">
+    <col name="find_id">2786</col>
+    <col name="production_period">-4000/50</col>
+  </row>
+  <row id="130">
+    <col name="find_id">2793</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="131">
+    <col name="find_id">2815</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="132">
+    <col name="find_id">2824</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="133">
+    <col name="find_id">2828</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="134">
+    <col name="find_id">2846</col>
+    <col name="production_period">300/399</col>
+  </row>
+  <row id="135">
+    <col name="find_id">2856</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="136">
+    <col name="find_id">2866</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="137">
+    <col name="find_id">2877</col>
+    <col name="production_period">1/199</col>
+  </row>
+  <row id="138">
+    <col name="find_id">2883</col>
+    <col name="production_period">100/120</col>
+  </row>
+  <row id="139">
+    <col name="find_id">2924</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="140">
+    <col name="find_id">2926</col>
+    <col name="production_period">72/73</col>
+  </row>
+  <row id="141">
+    <col name="find_id">2942</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="142">
+    <col name="find_id">2952</col>
+    <col name="production_period">45/65</col>
+  </row>
+  <row id="143">
+    <col name="find_id">2958</col>
+    <col name="production_period">40/55</col>
+  </row>
+  <row id="144">
+    <col name="find_id">2961</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="145">
+    <col name="find_id">2963</col>
+    <col name="production_period">40/59</col>
+  </row>
+  <row id="146">
+    <col name="find_id">2964</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="147">
+    <col name="find_id">2965</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="148">
+    <col name="find_id">2975</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="149">
+    <col name="find_id">2985</col>
+    <col name="production_period">66/133</col>
+  </row>
+  <row id="150">
+    <col name="find_id">2990</col>
+    <col name="production_period">84/84</col>
+  </row>
+  <row id="151">
+    <col name="find_id">2999</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="152">
+    <col name="find_id">3001</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="153">
+    <col name="find_id">3002</col>
+    <col name="production_period">-100/43</col>
+  </row>
+  <row id="154">
+    <col name="find_id">3011</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="155">
+    <col name="find_id">3017</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="156">
+    <col name="find_id">3022</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="157">
+    <col name="find_id">3025</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="158">
+    <col name="find_id">3037</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="159">
+    <col name="find_id">3044</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="160">
+    <col name="find_id">3048</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="161">
+    <col name="find_id">3049</col>
+    <col name="production_period">43/61</col>
+  </row>
+  <row id="162">
+    <col name="find_id">3075</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="163">
+    <col name="find_id">3079</col>
+    <col name="production_period">120/145</col>
+  </row>
+  <row id="164">
+    <col name="find_id">3082</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="165">
+    <col name="find_id">3084</col>
+    <col name="production_period">10/50</col>
+  </row>
+  <row id="166">
+    <col name="find_id">3085</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="167">
+    <col name="find_id">3086</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="168">
+    <col name="find_id">3098</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="169">
+    <col name="find_id">3112</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="170">
+    <col name="find_id">3129</col>
+    <col name="production_period">95/96</col>
+  </row>
+  <row id="171">
+    <col name="find_id">3133</col>
+    <col name="production_period">43/80</col>
+  </row>
+  <row id="172">
+    <col name="find_id">3155</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="173">
+    <col name="find_id">3164</col>
+    <col name="production_period">100/120</col>
+  </row>
+  <row id="174">
+    <col name="find_id">3175</col>
+    <col name="production_period">150/180</col>
+  </row>
+  <row id="175">
+    <col name="find_id">3179</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="176">
+    <col name="find_id">3256</col>
+    <col name="production_period">66/166</col>
+  </row>
+  <row id="177">
+    <col name="find_id">3288</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="178">
+    <col name="find_id">3292</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="179">
+    <col name="find_id">3295</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="180">
+    <col name="find_id">3297</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="181">
+    <col name="find_id">3309</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="182">
+    <col name="find_id">3320</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="183">
+    <col name="find_id">3338</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="184">
+    <col name="find_id">3340</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="185">
+    <col name="find_id">3363</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="186">
+    <col name="find_id">3381</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="187">
+    <col name="find_id">3384</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="188">
+    <col name="find_id">3385</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="189">
+    <col name="find_id">3439</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="190">
+    <col name="find_id">3484</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="191">
+    <col name="find_id">3493</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="192">
+    <col name="find_id">3506</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="193">
+    <col name="find_id">3554</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="194">
+    <col name="find_id">3581</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="195">
+    <col name="find_id">3628</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="196">
+    <col name="find_id">3635</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="197">
+    <col name="find_id">3648</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="198">
+    <col name="find_id">3679</col>
+    <col name="production_period">43/85</col>
+  </row>
+  <row id="199">
+    <col name="find_id">3697</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="200">
+    <col name="find_id">3758</col>
+    <col name="production_period">10/50</col>
+  </row>
+  <row id="201">
+    <col name="find_id">3764</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="202">
+    <col name="find_id">3777</col>
+    <col name="production_period">40/60</col>
+  </row>
+  <row id="203">
+    <col name="find_id">3778</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="204">
+    <col name="find_id">3779</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="205">
+    <col name="find_id">3783</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="206">
+    <col name="find_id">3790</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="207">
+    <col name="find_id">3793</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="208">
+    <col name="find_id">3812</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="209">
+    <col name="find_id">3815</col>
+    <col name="production_period">50/70</col>
+  </row>
+  <row id="210">
+    <col name="find_id">3829</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="211">
+    <col name="find_id">3836</col>
+    <col name="production_period">66/68</col>
+  </row>
+  <row id="212">
+    <col name="find_id">3843</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="213">
+    <col name="find_id">3854</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="214">
+    <col name="find_id">3875</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="215">
+    <col name="find_id">3879</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="216">
+    <col name="find_id">3890</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="217">
+    <col name="find_id">3913</col>
+    <col name="production_period">43/85</col>
+  </row>
+  <row id="218">
+    <col name="find_id">3922</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="219">
+    <col name="find_id">3928</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="220">
+    <col name="find_id">3932</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="221">
+    <col name="find_id">3933</col>
+    <col name="production_period">50/70</col>
+  </row>
+  <row id="222">
+    <col name="find_id">3939</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="223">
+    <col name="find_id">3946</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="224">
+    <col name="find_id">3948</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="225">
+    <col name="find_id">3953</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="226">
+    <col name="find_id">3962</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="227">
+    <col name="find_id">3985</col>
+    <col name="production_period">41/99</col>
+  </row>
+  <row id="228">
+    <col name="find_id">4003</col>
+    <col name="production_period">-50/50</col>
+  </row>
+  <row id="229">
+    <col name="find_id">4018</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="230">
+    <col name="find_id">4027</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="231">
+    <col name="find_id">4028</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="232">
+    <col name="find_id">4043</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="233">
+    <col name="find_id">4044</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="234">
+    <col name="find_id">4045</col>
+    <col name="production_period">10/50</col>
+  </row>
+  <row id="235">
+    <col name="find_id">4046</col>
+    <col name="production_period">1/87</col>
+  </row>
+  <row id="236">
+    <col name="find_id">4058</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="237">
+    <col name="find_id">4065</col>
+    <col name="production_period">1/50</col>
+  </row>
+  <row id="238">
+    <col name="find_id">4077</col>
+    <col name="production_period">-100/99</col>
+  </row>
+  <row id="239">
+    <col name="find_id">4089</col>
+    <col name="production_period">43/85</col>
+  </row>
+  <row id="240">
+    <col name="find_id">4095</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="241">
+    <col name="find_id">6402</col>
+    <col name="production_period">160/260</col>
+  </row>
+  <row id="242">
+    <col name="find_id">651</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="243">
+    <col name="find_id">652</col>
+    <col name="production_period">271/285</col>
+  </row>
+  <row id="244">
+    <col name="find_id">674</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="245">
+    <col name="find_id">678</col>
+    <col name="production_period">322/399</col>
+  </row>
+  <row id="246">
+    <col name="find_id">683</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="247">
+    <col name="find_id">702</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="248">
+    <col name="find_id">742</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="249">
+    <col name="find_id">7435</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="250">
+    <col name="find_id">746</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="251">
+    <col name="find_id">774</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="252">
+    <col name="find_id">7775</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="253">
+    <col name="find_id">7885</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="254">
+    <col name="find_id">789</col>
+    <col name="production_period">1901/2100</col>
+  </row>
+  <row id="255">
+    <col name="find_id">7965</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="256">
+    <col name="find_id">801</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="257">
+    <col name="find_id">803</col>
+    <col name="production_period">43/85</col>
+  </row>
+  <row id="258">
+    <col name="find_id">805</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="259">
+    <col name="find_id">827</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="260">
+    <col name="find_id">830</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="261">
+    <col name="find_id">838</col>
+    <col name="production_period">200/399</col>
+  </row>
+  <row id="262">
+    <col name="find_id">8515</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="263">
+    <col name="find_id">854</col>
+    <col name="production_period">70/90</col>
+  </row>
+  <row id="264">
+    <col name="find_id">8975</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="265">
+    <col name="find_id">904</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="266">
+    <col name="find_id">945</col>
+    <col name="production_period">350/399</col>
+  </row>
+  <row id="267">
+    <col name="find_id">962</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="268">
+    <col name="find_id">963</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="269">
+    <col name="find_id">965</col>
+    <col name="production_period">130/155</col>
+  </row>
+  <row id="270">
+    <col name="find_id">966</col>
+    <col name="production_period">65/85</col>
+  </row>
+  <row id="271">
+    <col name="find_id">971</col>
+    <col name="production_period">300/399</col>
+  </row>
+  <row id="272">
+    <col name="find_id">975</col>
+    <col name="production_period">100/199</col>
+  </row>
+  <row id="273">
+    <col name="find_id">979</col>
+    <col name="production_period">43/410</col>
+  </row>
+  <row id="274">
+    <col name="find_id">983</col>
+    <col name="production_period">364/378</col>
+  </row>
+</data>

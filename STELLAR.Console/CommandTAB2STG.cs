@@ -9,6 +9,7 @@ License : http://creativecommons.org/licenses/by/3.0/
 History :
 
 12/01/2011  CFB Created classes
+21/10/2011  CFB Added functionality to pass options file data to STG templates
 ================================================================================
 */
 using System;
@@ -34,11 +35,12 @@ namespace STELLAR.Console
             String tabFileName = System.IO.Path.GetFileName(a["tab"].Trim());
             String stgFileName = System.IO.Path.GetFileName(a["stg"].Trim());
             String outFileName = a["out"] == null ? "" : a["out"].Trim();
+            String optFileName = a["opt"] == null ? "" : a["opt"].Trim();
             this.Out.WriteLine("Convert '{0}' using template '{1}'", tabFileName, stgFileName);
 
             try
             {
-                int rowCount = STELLAR.Data.API.Delimited2STG(tabFileName, stgFileName, outFileName, '\t');
+                int rowCount = STELLAR.Data.API.Delimited2STG(tabFileName, stgFileName, outFileName, optFileName, '\t');
                 this.Out.WriteLine("{0} rows converted", rowCount);
             }
             catch (Exception ex)
@@ -49,7 +51,7 @@ namespace STELLAR.Console
 
         protected override string Usage()
         {
-            return ("tab2stg /tab:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]");
+            return ("tab2stg /tab:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]");
         }
 
         protected override bool ValidateArguments()

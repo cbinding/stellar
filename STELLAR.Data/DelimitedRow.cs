@@ -24,4 +24,13 @@ namespace STELLAR.Data
         [FieldQuoted('"', QuoteMode.OptionalForBoth)]
         public string[] fieldValues = {}; 
     }
+
+    // 15/03/2012 experimental; not used yet
+    [DelimitedRecord(";")]
+    class SubDelimitedRow
+    {
+        [FieldNullValue(typeof(string), "")]
+        [FieldQuoted('"', QuoteMode.OptionalForBoth)]
+        public string[] fieldValues = { };
+    }
 }

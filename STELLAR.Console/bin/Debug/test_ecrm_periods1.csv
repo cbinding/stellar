@@ -1,0 +1,2 @@
+period_id, period_type, period_note, min_start_year, max_start_year, min_end_year, max_end_year
+123, monarchy,"test period 123", -40,-20,156,185

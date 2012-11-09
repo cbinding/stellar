@@ -1,0 +1,15 @@
+STELLAR.Console v1.0 (type HELP for instructions)
+
+STELLAR.Console>
+STELLAR.Console>
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_FIND.csv' to db 'thornhill'
+3916 rows imported
+finished [elapsed: 00:04:58.861]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_FTF2' to db 'thornhill'
+finished [elapsed: 00:00:00.015]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\thornhill\FTF97_OBJECT.csv' to db 'thornhill'
+finished [elapsed: 00:00:03.703]
+
+STELLAR.Console>

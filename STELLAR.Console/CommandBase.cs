@@ -9,6 +9,7 @@ License : Creative Commons Attribution http://creativecommons.org/licenses/by/3.
 History :
 
 12/01/2011  CFB Created classes
+26/10/2011  CFB Added logging of commands
 ================================================================================
 */
 using System;
@@ -20,8 +21,8 @@ namespace STELLAR.Console
 {   
     public abstract class CommandBase
     {
-        private string[] m_args;        
-        protected DateTime started = DateTime.Now;
+        private string[] m_args;
+        private DateTime started = DateTime.Now;
         protected bool ReadInput = true;
         protected bool showTimings = false;
         protected System.IO.TextReader In = null;
@@ -46,8 +47,7 @@ namespace STELLAR.Console
             //String appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             Version appVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
             System.Console.Title = String.Format("{0} v{1}.{2}", appName, appVersion.Major, appVersion.Minor);
-            //DateTime startTime = DateTime.Now;  
-            //System.Console.WriteLine("{0} started {1}", System.Console.Title, started.ToLongTimeString());
+            
             this.Out.Write("\n{0}>", appName);           
 
             if (this.ValidateArguments())
@@ -58,6 +58,7 @@ namespace STELLAR.Console
                     string currentLine = this.In.ReadLine();
                     while (currentLine != null)
                     {
+                        Log.append(currentLine, Log.MessageType.Information); // new 26/10/2011
                         this.ProcessLine(currentLine);
                         this.Out.Write("\n{0}>", appName);           
                         currentLine = this.In.ReadLine();
@@ -66,7 +67,7 @@ namespace STELLAR.Console
                 this.PostProcess();
                 if (this.showTimings)
                 {
-                    TimeSpan elapsed = DateTime.Now.Subtract(this.started);
+                    TimeSpan elapsed = DateTime.Now.Subtract(started);
                     this.Out.WriteLine("[elapsed: {0:00}:{1:00}:{2:00}.{3:000}]", (int)elapsed.TotalHours, elapsed.Minutes, elapsed.Seconds, elapsed.Milliseconds);
                 }
             }

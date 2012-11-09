@@ -1,0 +1,270 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : SKOS.stg
+// Version : 001
+// Summary : string template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Initially created template group
+//============================================================================//
+delimiters "$", "$"
+import "RDF.stg"
+import "DCTERMS.stg"
+
+// Usage: $SKOS_TYPE.PREFLABEL$ etc.
+SKOS_TYPE(type) ::= "$SKOS_TYPE.(type)$"
+SKOS_TYPE ::= [
+"COLLECTABLEPROPERTY"	: "skos:CollectableProperty",
+"COLLECTION"		: "skos:Collection",
+"CONCEPT"		: "skos:Concept",
+"CONCEPTSCHEME"		: "skos:ConceptScheme",
+"ORDEREDCOLLECTION"	: "skos:OrderedCollection",		
+"ALTLABEL"		: "skos:altLabel",
+"ALTSYMBOL"		: "skos:altSymbol",
+"BROADER"		: "skos:broader",
+"CHANGENOTE"		: "skos:changeNote",
+"DEFINITION"		: "skos:definition",
+"EDITORIALNOTE"		: "skos:editorialNote",
+"EXAMPLE"		: "skos:example",
+"HASTOPCONCEPT"		: "skos:hasTopConcept",
+"HIDDENLABEL"		: "skos:hiddenLabel",
+"HISTORYNOTE"		: "skos:historyNote",
+"INSCHEME"		: "skos:inScheme",
+"ISPRIMARYSUBJECTOF"	: "skos:isPrimarySubjectOf",
+"ISSUBJECTOF"		: "skos:isSubjectOf",
+"MEMBER"		: "skos:member",
+"MEMBERLIST"		: "skos:memberList",
+"NARROWER"		: "skos:narrower",
+"NOTE"			: "skos:note",
+"PREFLABEL"		: "skos:prefLabel",
+"PREFSYMBOL"		: "skos:prefSymbol",
+"PRIMARYSUBJECT"	: "skos:primarySubject",
+"RELATED"		: "skos:related",
+"SCOPENOTE"		: "skos:scopeNote",
+"SEMANTICRELATION"	: "skos:semanticRelation",
+"SUBJECT"		: "skos:subject",
+"SUBJECTINDICATOR"	: "skos:subjectIndicator",
+"SYMBOL"		: "skos:symbol",
+default			: key
+]
+
+// Build consistently formatted identifiers (URIs) for SKOS entity instances
+// Usage e.g. CONCEPT_URI("http://tmp#", "123") => "http://tmp#CONCEPT_123"
+// Usage e.g. SCHEME_URI("http://tmp#", "123") => "http://tmp#SCHEME_123"
+CONCEPT_URI(prefix, id) ::= "$trim(prefix)$CONCEPT_$id;format=\"UrlEncode\"$"
+SCHEME_URI(prefix, id) ::= "$trim(prefix)$SCHEME_$id;format=\"UrlEncode\"$"
+
+// SKOS_CONCEPT. Fields anticipated:
+// data.concept_id [mandatory]
+// data.scheme_id
+// data.preflabel
+// data.altlabel
+// data.hiddenlabel
+// data.note
+// data.scopenote
+// data.changenote
+// data.definition
+// data.editorialnote
+// data.example
+// data.historynote
+// data.broader_id
+// data.related_id
+// data.language
+SKOS_CONCEPT(options, data) ::= <<
+$if(data.concept_id)$
+$RDF_ENTITY(
+	uri=CONCEPT_URI(options.base_uri, data.concept_id), 
+	type=SKOS_TYPE.CONCEPT, 
+	label=data.concept_id, 
+	language=data.language
+)$
+
+$if(data.scheme_id)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.INSCHEME, 
+	object=SCHEME_URI(options.base_uri, data.scheme_id)
+)$
+$endif$
+
+$if(data.preflabel)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.PREFLABEL, 
+	literal=data.preflabel, 
+	language=data.language
+)$
+$endif$
+
+$if(data.altlabel)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.ALTLABEL, 
+	literal=data.altlabel, 
+	language=data.language
+)$
+$endif$
+
+$if(data.hiddenlabel)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.HIDDENLABEL, 
+	literal=data.hiddenlabel, 
+	language=data.language
+)$
+$endif$
+
+$if(data.note)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.HIDDENLABEL, 
+	literal=data.note, 
+	language=data.language
+)$
+$endif$
+
+$if(data.scopenote)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.SCOPENOTE,
+	literal=data.scopenote, 
+	language=data.language
+)$
+$endif$
+
+$if(data.changenote)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.CHANGENOTE, 
+	literal=data.changenote, 
+	language=data.language
+)$
+$endif$
+
+$if(data.definition)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.DEFINITION, 
+	literal=data.definition, 
+	language=data.language
+)$
+$endif$
+
+$if(data.editorialnote)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.EDITORIALNOTE, 
+	literal=data.editorialnote, 
+	language=data.language
+)$
+$endif$
+
+$if(data.example)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.EXAMPLE, 
+	literal=data.example, 
+	language=data.language
+)$
+$endif$
+
+$if(data.historynote)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.HISTORYNOTE, 
+	literal=data.historynote, 
+	language=data.language
+)$
+$endif$
+
+$if(data.broader_id)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.BROADER, 
+	inverse=SKOS_TYPE.NARROWER, 
+	object=CONCEPT_URI(options.base_uri, data.broader_id)
+)$
+$endif$
+
+$if(data.related_id)$
+$RDF_PROPERTY(
+	subject=CONCEPT_URI(options.base_uri, data.concept_id), 
+	predicate=SKOS_TYPE.RELATED, 
+	object=CONCEPT_URI(options.base_uri, data.related_id)
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("concept_id is not present")$
+$endif$
+$! TODO: SKOS SKOS_XL & SKOS match relationships !$
+>>
+
+// SKOS_CONCEPTSCHEME. Fields anticipated:
+// data.scheme_id [mandatory]
+// data.title
+// data.description
+// data.creator
+// data.topconcept_id
+// data.language
+SKOS_CONCEPTSCHEME(options, data) ::= <<
+$if(data.scheme_id)$
+$RDF_ENTITY(
+	uri=SCHEME_URI(options.base_uri, data.scheme_id),
+	type=SKOS_TYPE.CONCEPTSCHEME, 
+	label=data.scheme_id, 
+	language=data.language
+)$
+
+$if(data.title)$
+$RDF_PROPERTY(
+	subject=SCHEME_URI(options.base_uri, data.scheme_id),
+	predicate=DCTERMS_TYPE("TITLE"), 
+	literal=data.title, 
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=SCHEME_URI(options.base_uri, data.scheme_id),
+	predicate="rdfs:label", 
+	literal=data.title, 
+	language=data.language
+)$
+$endif$	
+
+$if(data.description)$
+$RDF_PROPERTY(
+	subject=SCHEME_URI(options.base_uri, data.scheme_id),
+	predicate=DCTERMS_TYPE("DESCRIPTION"), 
+	literal=data.description, 
+	language=data.language
+)$
+$endif$
+
+$if(data.creator)$
+$RDF_PROPERTY(
+	subject=SCHEME_URI(options.base_uri, data.scheme_id),
+	predicate=DCTERMS_TYPE("CREATOR"), 
+	literal=data.creator, 
+	language=data.language
+)$
+$endif$
+
+$if(data.topconcept_id)$
+$RDF_PROPERTY(
+	subject=SCHEME_URI(options.base_uri, data.scheme_id),
+	predicate=SKOS_TYPE.HASTOPCONCEPT, 
+	object=CONCEPT_URI(options.base_uri, data.topconcept_id)
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("scheme_id is not present")$
+$endif$
+>>
+
+
+
+

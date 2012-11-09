@@ -1,0 +1,3287 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://stellar/" xmlns:core="http://www.w3.org/2004/02/skos/core#" xmlns:ns="http://purl.org/dc/elements/1.1/">
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg001">
+		<ns:title>English Heritage Glossary of Simple Names for Masonry Structural Elements</ns:title>
+		<ns:description>Data from English Heritage Recording Manual (2006), created in SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan</ns:creator>
+		<ns:date>19/12/2007</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.34">
+		<core:prefLabel>3-centred arch</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.33">
+				<core:prefLabel>&lt;arch style&gt;</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.34" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.37">
+						<core:prefLabel>4-centred arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>4 arcs</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.36">
+						<core:prefLabel>corbelled arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.35">
+						<core:prefLabel>drop arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>pointed with span &gt; radius</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.40">
+						<core:prefLabel>equilateral arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>2 curves, each with radius = span</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.38">
+						<core:prefLabel>lancet arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>pointed with radius &gt; span</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.39">
+						<core:prefLabel>ogee arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.41">
+						<core:prefLabel>relieving arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>arch placed over an opening to discharge weight from above</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.42">
+						<core:prefLabel>segmental arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>2 centres below the springing line</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.43">
+						<core:prefLabel>shouldered arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>arch with stepped square central section</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.44">
+						<core:prefLabel>strainer arch</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>preventing walls from leaning</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.45">
+						<core:prefLabel>tud</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.33" />
+						<core:scopeNote>late medieval - quarter circles with straight lines running to apex</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>3 arcs</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.9">
+		<core:prefLabel>3/4 circle</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.24">
+		<core:prefLabel>&lt;arch component&gt;</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.20">
+				<core:prefLabel>abutment</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+				<core:scopeNote>masonry placed to counteract the thrust of a vault or arch</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.28">
+				<core:prefLabel>centre</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.32">
+				<core:prefLabel>crown</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.26">
+				<core:prefLabel>extrados</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.31">
+				<core:prefLabel>haunch</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.86">
+				<core:prefLabel>impost</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+				<core:scopeNote>projecting bracket-like moulding on which the end of an arch appears to rest</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.27">
+				<core:prefLabel>intrados</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.89">
+				<core:prefLabel>keystone</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+				<core:scopeNote>central stone of arch or vault</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.29">
+				<core:prefLabel>span</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.30">
+				<core:prefLabel>springing line</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.25">
+				<core:prefLabel>voussoir</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg001.24" />
+			</core:Concept>
+		</core:narrower>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.19">
+		<core:prefLabel>abacus</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>flat slab on top of capital</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.21">
+		<core:prefLabel>alcove</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>recess or niche in a wall</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.57">
+		<core:prefLabel>angled buttress</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.56">
+				<core:prefLabel>buttress</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.57" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.58">
+						<core:prefLabel>clasping buttress</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.56" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.59">
+						<core:prefLabel>diagonal buttress</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.56" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.60">
+						<core:prefLabel>flying buttress</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.56" />
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>mass of masonry or brickwork projecting from or built into a wall to give strength</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.22">
+		<core:prefLabel>apex stone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>top stone of a gable end</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.17">
+		<core:prefLabel>apophyge</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.97">
+				<core:prefLabel>mouldings</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.17" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.115">
+						<core:prefLabel>astragal</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.102">
+						<core:prefLabel>bead moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.106">
+						<core:prefLabel>beaded chamfer</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.116">
+						<core:prefLabel>billet</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.103">
+						<core:prefLabel>bowtell</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.111">
+						<core:prefLabel>cable moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.98">
+						<core:prefLabel>chamfer (moulding)</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.107">
+						<core:prefLabel>flush bead moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.101">
+						<core:prefLabel>hollow chamfer</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.105">
+						<core:prefLabel>keel moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.16">
+						<core:prefLabel>nailhead</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+						<core:scopeNote>pyramids in a line</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.110">
+						<core:prefLabel>ogee moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.112">
+						<core:prefLabel>reverse ogee</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.100">
+						<core:prefLabel>roll moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.113">
+						<core:prefLabel>scotia</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.108">
+						<core:prefLabel>scroll</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.104">
+						<core:prefLabel>sunk chamfer</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.109">
+						<core:prefLabel>wave moulding</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.97" />
+					</core:Concept>
+				</core:narrower>
+				<core:related>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.73">
+						<core:prefLabel>cornice</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg001.97" />
+						<core:scopeNote>projecting ornamental moulding at the top of a building</core:scopeNote>
+					</core:Concept>
+				</core:related>
+				<core:related>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.117">
+						<core:prefLabel>fillet</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg001.97" />
+						<core:scopeNote>a flat dividing two mouldings</core:scopeNote>
+					</core:Concept>
+				</core:related>
+				<core:scopeNote>the carved contours given to elements of a building structure (eg door arch)</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.23">
+		<core:prefLabel>arch</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>spanning of an opening by means other than that of a lintel</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.46">
+		<core:prefLabel>band</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>projecting string course</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.18">
+		<core:prefLabel>bar tracery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.47">
+		<core:prefLabel>batter</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>inclined face of wall</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.48">
+		<core:prefLabel>bay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>vertical division, internal or external, not necessarily marked by walls</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.49">
+		<core:prefLabel>blind tracery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>tracery applied to the surface of walls</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.50">
+		<core:prefLabel>blind window</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>elements applied to a wall without an opening</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.51">
+		<core:prefLabel>boss</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.129">
+				<core:prefLabel>rib</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.51" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.131">
+						<core:prefLabel>diagonal rib</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.135">
+						<core:prefLabel>liernes</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.133">
+						<core:prefLabel>longitudinal ridge-rib</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.134">
+						<core:prefLabel>tiercerons</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.130">
+						<core:prefLabel>transverse rib</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.132">
+						<core:prefLabel>transverse ridge-rib</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.129" />
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>projecting band on a ceiling or vault</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>ornamental projection at the intersection of ribs</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.52">
+		<core:prefLabel>bracket</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>projecting stone to carry weight</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.53">
+		<core:prefLabel>brickwork</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.54">
+		<core:prefLabel>bridge</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.55">
+		<core:prefLabel>bulls eye window</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>circular window</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.2">
+		<core:prefLabel>Caernarfon-headed arch</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.61">
+		<core:prefLabel>capital</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the top part of a column</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.62">
+		<core:prefLabel>casement window</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>vertically hung sash opening in or out</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.6">
+		<core:prefLabel>cavetto</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.63">
+		<core:prefLabel>chamfer</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>formed when the right-angled edge of a piece of wood or stone is cut away</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.64">
+		<core:prefLabel>chimney breast</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the stone or brick projection containing the flue</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.65">
+		<core:prefLabel>chimney stack</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>stone or brick containing several flues</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.66">
+		<core:prefLabel>cladding</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>external covering to wall for aesthetic or protective purposes</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.67">
+		<core:prefLabel>cob</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>walling material made of clay, gravel, straw and sand (or combination)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.68">
+		<core:prefLabel>column</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>free standing upright, circular in section</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.69">
+		<core:prefLabel>compound pier</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.123">
+				<core:prefLabel>pier</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.69" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.124">
+						<core:prefLabel>pilaster</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.123" />
+						<core:scopeNote>shallow pier projecting only slightly from the wall face</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>solid masonry support, distinct from a column</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>pier with several shafts</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.99">
+		<core:prefLabel>concave moulding</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.14">
+				<core:prefLabel>moulding</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.99" />
+			</core:Concept>
+		</core:broader>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.7">
+		<core:prefLabel>convex moulding</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.70">
+		<core:prefLabel>coping</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>capping or covering of a wall, either flat or moulded, to throw water off</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.71">
+		<core:prefLabel>corbel</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>projecting block, usually stone, supporting beam or other member</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.72">
+		<core:prefLabel>corbelling</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>brick or masonry with courses built out beyond the one below</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.74">
+		<core:prefLabel>course</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>layer of stones or brick binding face of wall with core</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.75">
+		<core:prefLabel>curtain wall</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>outer wall of castle, usually with towers</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.146">
+		<core:prefLabel>curvilinear tracery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg001.142">
+				<core:prefLabel>tracery</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg001.146" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.144">
+						<core:prefLabel>geometrical tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+						<core:scopeNote>C13</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.143">
+						<core:prefLabel>intersecting tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+						<core:scopeNote>C13-14</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.148">
+						<core:prefLabel>late C14 tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.149">
+						<core:prefLabel>panel tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+						<core:scopeNote>C15</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.147">
+						<core:prefLabel>plate tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+						<core:scopeNote>C13</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg001.145">
+						<core:prefLabel>reticulated tracery</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg001.142" />
+						<core:scopeNote>C13-14</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>decorative forms of window openings</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>C14</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.15">
+		<core:prefLabel>cyma recta</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.4">
+		<core:prefLabel>cyma reversa</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.76">
+		<core:prefLabel>dais</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>raised platform at end of medieval hall for head of house</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.77">
+		<core:prefLabel>door</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.78">
+		<core:prefLabel>dormer</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>window opening on a sloping roof</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.79">
+		<core:prefLabel>drip mould</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>projection above opening to divert water</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.10">
+		<core:prefLabel>edge roll</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.80">
+		<core:prefLabel>embrasure</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>recess for a window or door opening</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.81">
+		<core:prefLabel>facing</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the finishing applied to the outer surface of a building</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.5">
+		<core:prefLabel>flowing tracery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.155">
+		<core:prefLabel>foundations</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.82">
+		<core:prefLabel>gable</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>triangular upper portion of wall at the end of a pitched roof</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.83">
+		<core:prefLabel>garderobe</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>medieval lavatory</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.84">
+		<core:prefLabel>herringbone work</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>stone, brick or tile laid diagonally, with courses alternating in direction</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.85">
+		<core:prefLabel>hip</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>external angle formed by the meeting of two sloping roof surfaces</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.13">
+		<core:prefLabel>hood mould</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.87">
+		<core:prefLabel>jamb</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>vertical face of an archway, doorway or window - the part of the jamb that lies between the glass or door and the outer wall surface is called the reveal</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.88">
+		<core:prefLabel>joggled joint</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>a notch or tooth in the joining surface of any piece of building material to prevent slipping</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.11">
+		<core:prefLabel>lacing course</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.90">
+		<core:prefLabel>lintel</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>horizontal beam or stone bridging an opening</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.91">
+		<core:prefLabel>loggia</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>gallery or room open on one or more sides</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.92">
+		<core:prefLabel>long and short work</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>eg Saxon quoins</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.93">
+		<core:prefLabel>machicolation</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>parapet projecting on brackets on the outside of a wall with openings in the floor for weapons\oil etc</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.114">
+		<core:prefLabel>mailhead</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.94">
+		<core:prefLabel>mantelpiece</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>wood, brick or stone surrounding a fire</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.95">
+		<core:prefLabel>mathematical tiles</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>tiles applied to timber-framed walls to make them appear brick built</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.96">
+		<core:prefLabel>mortar</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>lime-based material used for bonding building fabric</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.118">
+		<core:prefLabel>mullion</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>Vertical element of a window</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.119">
+		<core:prefLabel>nogging</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>brickwork infilling timber framing</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.120">
+		<core:prefLabel>padstone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>term for a stone block used variously as the base for a post, as the springing point of an arch, or as a supporting block within a wall for a timber member</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.121">
+		<core:prefLabel>panel</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>flat surface, sunk or raised within a framework</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.122">
+		<core:prefLabel>parapet</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>low wall, sometimes battlemented, placed to protect any spot where there’s a drop</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.125">
+		<core:prefLabel>pillar</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>free-standing upright member - doesn't have to be cylindrical</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.1">
+		<core:prefLabel>plat band</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.126">
+		<core:prefLabel>plinth</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the projecting base of a wall or column</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.127">
+		<core:prefLabel>quoins</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>dressed stones at the corners of a building, laid so their faces alternate long and short</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.128">
+		<core:prefLabel>rendering</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>plastering of an outer wall</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.136">
+		<core:prefLabel>shaft</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the trunk of a column between the base and capital</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.137">
+		<core:prefLabel>sill</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the horizontal member at the base of a timber-framed wall, or the base of a door or of a window frame</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.138">
+		<core:prefLabel>skirting</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the edging attached to the base of an internal wall</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.3">
+		<core:prefLabel>soffit</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.139">
+		<core:prefLabel>spandrel</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the triangular space to the outside of the haunch of an arch</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.140">
+		<core:prefLabel>splay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>the sloping chamfered cut into walls, eg for a window opening</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.141">
+		<core:prefLabel>string course</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>horizontal band set into and projecting from the surface of</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.8">
+		<core:prefLabel>torus</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.150">
+		<core:prefLabel>transom</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>horizontal bar in a window</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.151">
+		<core:prefLabel>tusking</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>stones left projecting from a wall for subsequent bonding into another wall</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.152">
+		<core:prefLabel>undercroft</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>vaulted room beneath an upper room</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.153">
+		<core:prefLabel>vault</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.154">
+		<core:prefLabel>wall</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.12">
+		<core:prefLabel>wall footings</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>material used to form a structurally sound base for the construction of the wall above. The depth and width of the footings and material used varies greatly and depends on the nature of the site and on the available building material</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.156">
+		<core:prefLabel>web</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+		<core:scopeNote>compartment of vault</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.157">
+		<core:prefLabel>well</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg001.158">
+		<core:prefLabel>window</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg001" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg002">
+		<ns:title>English Heritage Glossary of Simple Names for Timber Structural Elements</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan</ns:creator>
+		<ns:date>19/12/2007</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.1">
+		<core:prefLabel>&lt;door component&gt;</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.16">
+				<core:prefLabel>architrave</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.25">
+				<core:prefLabel>bottom panel</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.26">
+				<core:prefLabel>bottom rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.21">
+				<core:prefLabel>frieze rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.19">
+				<core:prefLabel>hanging stile</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.24">
+				<core:prefLabel>lock rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.23">
+				<core:prefLabel>middle panel</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.22">
+				<core:prefLabel>muntin</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.18">
+				<core:prefLabel>shutting stile</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.20">
+				<core:prefLabel>top panel</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.17">
+				<core:prefLabel>top rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.1" />
+			</core:Concept>
+		</core:narrower>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.2">
+		<core:prefLabel>&lt;timber framing component&gt;</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.11">
+				<core:prefLabel>brace</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>a diagonal timber used to strengthen a timber frame</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.13">
+				<core:prefLabel>cross rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>a horizontal member of a timber framed wall</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.33">
+				<core:prefLabel>post</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.6" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.35" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.3" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.4">
+						<core:prefLabel>queen post</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.33" />
+						<core:related>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg002.37">
+								<core:prefLabel>queen post roof</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg002.4" />
+								<core:scopeNote>roof consisting of trusses with a pair of vertical timbers</core:scopeNote>
+							</core:Concept>
+						</core:related>
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>in wall frames, vertical timbers that are the full height of the frame (shorter uprights are studs). In roofs – posts are the vertical timbers that carry longitudinal ones</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.44">
+				<core:prefLabel>rail</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>short horizontal timber in a timber framed wall</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.56">
+				<core:prefLabel>stud</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>intermediate posts between the main posts in a timber frame</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.62">
+				<core:prefLabel>wall plate</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>horizontal timber along the wall top to receive the rafters of a roof</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.64">
+				<core:prefLabel>window sill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.2" />
+				<core:scopeNote>the lowest horizontal member of a window frame</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.8">
+		<core:prefLabel>beam</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.9">
+				<core:prefLabel>collar beam</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.8" />
+				<core:scopeNote>beam tying together a pair of rafters, distinct from a tie beam</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.10">
+				<core:prefLabel>tie beam</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.8" />
+				<core:scopeNote>beam tying together the feet of principal rafters preventing</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:scopeNote>a horizontal timber member</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.39">
+		<core:prefLabel>butt purlin</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.38">
+				<core:prefLabel>purlin</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.39" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.40">
+						<core:prefLabel>collar purlin</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.38" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.43">
+						<core:prefLabel>ridge purlin</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.38" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.41">
+						<core:prefLabel>side purlin</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.38" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.42">
+						<core:prefLabel>trenched purlin</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.38" />
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>a horizontal longitudinal timber</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.12">
+		<core:prefLabel>close studding</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>walls constructed of timber posts set very close together, the spaces infilled with plastered panels</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.47">
+		<core:prefLabel>common rafter</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.45">
+				<core:prefLabel>rafter</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.47" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.46">
+						<core:prefLabel>principal rafter</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg002.45" />
+						<core:scopeNote>rafters that are the main structural inclined timbers</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:scopeNote>inclined timbers sloping from the wall top to the apex and</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>rafters that infill between the principal rafters</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.6">
+		<core:prefLabel>crown post</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg002.33" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.34">
+				<core:prefLabel>crown post roof</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg002.49">
+						<core:prefLabel>roof</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.34" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.50" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg002.52">
+								<core:prefLabel>hipped roof</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+								<core:scopeNote>roof with sloped instead of vertical gable ends</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.36" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg002.53">
+								<core:prefLabel>lean-to</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+								<core:scopeNote>roof with one slope only and built against a vertical wall</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg002.54">
+								<core:prefLabel>mansard</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+								<core:scopeNote>roof has 2 pitch angles, the lower being longer and steeper than the upper</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg002.51">
+								<core:prefLabel>pitched roof</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+								<core:scopeNote>roof with gables at both ends</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg002.37" />
+					</core:Concept>
+				</core:broader>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg002.6" />
+				<core:scopeNote>roof with a crown post standing on a tie beam to support</core:scopeNote>
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.14">
+		<core:prefLabel>crucks</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>truss formed from pairs of curved timbers, known as blades, the pair frequently derived from the same tree</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.15">
+		<core:prefLabel>door</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.35">
+		<core:prefLabel>hammer post</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg002.33" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.50">
+				<core:prefLabel>hammerbeam roof</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg002.35" />
+				<core:scopeNote>roof consisting of trusses that have a pair of brackets</core:scopeNote>
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.27">
+		<core:prefLabel>jetty</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>the projection of an upper storey beyond the one below – created by beams and joists of the lower storey projecting beyond the external elevation</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.28">
+		<core:prefLabel>joist</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>horizontally laid timbers between the walls and beams of a building to carry the floorboards</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.3">
+		<core:prefLabel>king post</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg002.33" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg002.36">
+				<core:prefLabel>king post roof</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg002.49" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg002.3" />
+				<core:scopeNote>roof consisting of trusses with a single timber from the tie</core:scopeNote>
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.29">
+		<core:prefLabel>lath and plaster</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>strips of wood (laths) nailed to other timbers that are coated in plaster to form a wall finish</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.30">
+		<core:prefLabel>louvre</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>lantern-like structure in a roof with an opening in the sides for the venting of smoke</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.31">
+		<core:prefLabel>pargetting</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>exterior plastering of a timber framed building, usually decorated into naturalistic patterns, eg foliage, figures</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.32">
+		<core:prefLabel>plank</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>a wide piece of sawn timber, usually 1½ to 4½ inches thick and 6 inches or more wide</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.48">
+		<core:prefLabel>ridge</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>the horizontal timber at the apex of the roof supporting the top ends of the rafters</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.55">
+		<core:prefLabel>sill beam</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>the lowest member of a wall frame into which the posts and studs of the frame are tenoned</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.7">
+		<core:prefLabel>sole plate</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.57">
+		<core:prefLabel>strut</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>sloping supporting timbers in a frame</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.58">
+		<core:prefLabel>tenon</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>projection from the end of a timber to sit in a mortice</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.59">
+		<core:prefLabel>timber framing</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>a method of construction where walls are built of jointed</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.60">
+		<core:prefLabel>truss</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>triangular framework within the roof, self-supporting and dividing the building into bays</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.61">
+		<core:prefLabel>wattle and daub</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>system used to infill panels in timber-framed structures,</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.63">
+		<core:prefLabel>weather boarding</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>form of wall cladding composed of overlapping horizontal boards on a timber framework</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg002.65">
+		<core:prefLabel>wind brace</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg002" />
+		<core:scopeNote>brace running from principal rafter to purlin to strengthen the frame</core:scopeNote>
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg003">
+		<ns:title>XSLT file transformation result</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan</ns:creator>
+		<ns:date>19/12/2007</ns:date>
+		<core:hasTopConcept>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.137">
+				<core:prefLabel>&lt;context type&gt;</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.135">
+						<core:prefLabel>cut</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.137" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.7" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.10" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.12" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.20">
+								<core:prefLabel>ditch</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>ditch overall</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.72">
+										<core:prefLabel>ring ditch</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.20" />
+										<core:scopeNote>Circular or near circular ditches, usually seen as cropmarks. Use the term where the function is unknown. Ring ditches may be the remains of ploughed out round barrows, round houses, or of modern features such as searchlight emplacements. (from EH Monument Type thesaurus)</core:scopeNote>
+									</core:Concept>
+								</core:narrower>
+								<core:related>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.133">
+										<core:prefLabel>ditch: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.20" />
+									</core:Concept>
+								</core:related>
+								<core:scopeNote>A long and narrow hollow or trench dug in the ground, often used to carry water though it may be dry for much of the year. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.22">
+								<core:prefLabel>ditch segment</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.23">
+										<core:prefLabel>ditch segment: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.22" />
+									</core:Concept>
+								</core:related>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.100">
+								<core:prefLabel>drain: construction trench</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.101">
+										<core:prefLabel>drain: construction trench fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.100" />
+									</core:Concept>
+								</core:related>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.31">
+								<core:prefLabel>foundation: cut</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.32">
+										<core:prefLabel>foundation: layer</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.31" />
+									</core:Concept>
+								</core:related>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.35" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.36">
+								<core:prefLabel>gully</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.109" />
+								<core:scopeNote>A deep gutter, drain or sink. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.42">
+								<core:prefLabel>hoof print</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.43" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.40">
+								<core:prefLabel>interface</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.48" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.53">
+								<core:prefLabel>palaeochannel</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.54" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.55" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.60" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.62">
+								<core:prefLabel>post-hole</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>post hole</core:altLabel>
+								<core:altLabel>posthole</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.63" />
+								<core:related>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.64">
+										<core:prefLabel>post-hole: group</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.62" />
+									</core:Concept>
+								</core:related>
+								<core:scopeNote>A hole dug to provide a firm base for an upright post, often with stone packing. Use broader monument type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.67">
+								<core:prefLabel>post-pipe</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.68" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.74">
+								<core:prefLabel>robbing trench</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>robber trench</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.75" />
+								<core:scopeNote>Use broader site type where known (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.77">
+								<core:prefLabel>stake-hole</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>stake hole</core:altLabel>
+								<core:altLabel>stakehole</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.76" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.78" />
+								<core:scopeNote>A hole in the ground which has been created by driving or hammering an upright stake into the ground. As a feature of some archaeological sites they may often represent the only surviving evidence for the former presence of an above-ground structure. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.79">
+								<core:prefLabel>stoke hole</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>stoke-hole</core:altLabel>
+								<core:altLabel>stokehole</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.80" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.88">
+								<core:prefLabel>tree hollow</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.89" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.127">
+								<core:prefLabel>wall: construction trench</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.93" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.128" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.95">
+								<core:prefLabel>wheel rut</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.96" />
+							</core:Concept>
+						</core:narrower>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.136">
+						<core:prefLabel>deposit</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.137" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.98" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.15" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.142" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.44">
+								<core:prefLabel>layer</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:altLabel>spread</core:altLabel>
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.29" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.32" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.114">
+										<core:prefLabel>layer: accumulation</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>accumulation layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.115">
+										<core:prefLabel>layer: buried soil</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>buried soil layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.116">
+										<core:prefLabel>layer: levelling</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>levelling layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.117">
+										<core:prefLabel>layer: natural</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>natural layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.118">
+										<core:prefLabel>layer: occupation</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>occupation layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.119">
+										<core:prefLabel>layer: plough soil</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>plough soil layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.120">
+										<core:prefLabel>layer: redeposited natural</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>redeposited natural layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.121">
+										<core:prefLabel>layer: rubble</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>rubble layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.122">
+										<core:prefLabel>layer: subsoil</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>subsoil layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.123">
+										<core:prefLabel>layer: topsoil</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>topsoil layer</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.69">
+										<core:prefLabel>pottery: spread</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+									</core:Concept>
+								</core:narrower>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.45">
+								<core:prefLabel>lens</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.82">
+								<core:prefLabel>surface</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.73" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.83">
+										<core:prefLabel>surface: earth/clay</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>clay surface</core:altLabel>
+										<core:altLabel>earth surface</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.82" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.84">
+										<core:prefLabel>surface: metalled</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>metalled surface</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.82" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.85">
+										<core:prefLabel>surface: mortar</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>mortar surface</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.82" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.86">
+										<core:prefLabel>surface: paved</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:altLabel>paved surface</core:altLabel>
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.82" />
+									</core:Concept>
+								</core:narrower>
+							</core:Concept>
+						</core:narrower>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.27">
+						<core:prefLabel>feature</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.137" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.46">
+								<core:prefLabel>linear feature</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.27" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.47" />
+								<core:scopeNote>A length of straight, curved or angled earthwork or cropmark of uncertain date or function. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.50">
+								<core:prefLabel>natural feature</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.27" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.51" />
+								<core:scopeNote>Use only for natural features mistakenly assumed to be archaeological or natural features with archaeological significance. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:related>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.28">
+								<core:prefLabel>feature: fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.47">
+										<core:prefLabel>linear feature: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.28" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.46" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.51">
+										<core:prefLabel>natural feature: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.28" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.50" />
+									</core:Concept>
+								</core:narrower>
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.27" />
+							</core:Concept>
+						</core:related>
+						<core:scopeNote>Areas of indeterminate function. (from EH Monument Type thesaurus)</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.81">
+						<core:prefLabel>structure</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.137" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.5">
+								<core:prefLabel>bank</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:scopeNote>Linear or curvilinear construction of earth, turf and stone, often, but not always accompanied by a ditch. Use specific type where known. (from EH Monument Types thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.6" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.9">
+								<core:prefLabel>building</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:scopeNote>Monument with a roof and walls or evidence of these. (from EH Evidence thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.14">
+								<core:prefLabel>corn-drying oven: wall</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.24" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.99">
+								<core:prefLabel>drain: capping</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.103">
+								<core:prefLabel>drain: lining</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.104">
+								<core:prefLabel>drain: packing</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.105">
+								<core:prefLabel>drain: pipe</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.26">
+								<core:prefLabel>enclosure</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:scopeNote>An area of land enclosed by a boundary ditch, bank, wall, palisade or other similar barrier. Use specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.30" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.33">
+								<core:prefLabel>four-post structure</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.34">
+								<core:prefLabel>furnace</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:scopeNote>A chamber in which minerals, metals, etc, are subjected to the continuous action of intense heat. Use specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.37" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.41" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.112">
+								<core:prefLabel>kiln: lining</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.52" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.125">
+								<core:prefLabel>pit: lining</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.64" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.65">
+								<core:prefLabel>post-hole: packing</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.66">
+								<core:prefLabel>post-pad</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.87">
+								<core:prefLabel>threshold</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.93">
+								<core:prefLabel>wall</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.127" />
+								<core:scopeNote>An enclosing structure composed of bricks, stones or similar materials, laid in courses. Use specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.94">
+								<core:prefLabel>well</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.129" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.132" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.131">
+								<core:prefLabel>well: lining</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+							</core:Concept>
+						</core:narrower>
+						<core:scopeNote>A construction of unknown function, either extant or implied by archaeological evidence. If known, use more specific type. (from EH Monument Type thesaurus)</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+			</core:Concept>
+		</core:hasTopConcept>
+		<core:hasTopConcept>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.141">
+				<core:prefLabel>&lt;unassigned&gt;</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.76">
+						<core:prefLabel>stake</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.141" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.77" />
+						<core:scopeNote>A piece of pointed wood, usually to be driven into the ground. (from MDA Object Type thesaurus)</core:scopeNote>
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.92">
+						<core:prefLabel>vessel</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.141" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.18" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.126" />
+					</core:Concept>
+				</core:narrower>
+			</core:Concept>
+		</core:hasTopConcept>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.1">
+		<core:prefLabel>animal disturbance</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.48">
+				<core:prefLabel>modern intrusion</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.1" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.90">
+						<core:prefLabel>trial trench</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.48" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.91" />
+					</core:Concept>
+				</core:narrower>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.49" />
+			</core:Concept>
+		</core:broader>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.2">
+				<core:prefLabel>animal disturbance: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.49">
+						<core:prefLabel>modern intrusion: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.2" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.91">
+								<core:prefLabel>trial trench: fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.49" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.90" />
+							</core:Concept>
+						</core:narrower>
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.48" />
+					</core:Concept>
+				</core:broader>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.1" />
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.3">
+		<core:prefLabel>ard mark</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.60">
+				<core:prefLabel>plough mark</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.3" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.58" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.61" />
+				<core:scopeNote>The subsoil traces of cultivation, presumed to have been caused by the use of a plough to till the soil. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.4">
+				<core:prefLabel>ard mark: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.61">
+						<core:prefLabel>plough mark: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.4" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.59" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.60" />
+					</core:Concept>
+				</core:broader>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.3" />
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>The subsoil traces of prehistoric cultivation, presumed to have been caused by the use of an ard to till the soil. (from EH Monument Types thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.6">
+		<core:prefLabel>beam</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.7">
+				<core:prefLabel>beam slot</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.6" />
+				<core:related>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.8">
+						<core:prefLabel>beam slot: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.142">
+								<core:prefLabel>fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.8" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.97" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.13" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.23" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.133" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.101" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.102" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.28" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.107">
+										<core:prefLabel>flue: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.30" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.108">
+										<core:prefLabel>grave: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.35" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.109">
+										<core:prefLabel>gully: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.36" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.110">
+										<core:prefLabel>hearth: debris</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.37" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.43">
+										<core:prefLabel>hoof print: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.42" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.111">
+										<core:prefLabel>kiln: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.113" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.41" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.49" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.54">
+										<core:prefLabel>palaeochannel: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.53" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.124" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.61" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.63">
+										<core:prefLabel>post-hole: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.62" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.68">
+										<core:prefLabel>post-pipe: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.67" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.75">
+										<core:prefLabel>robbing trench: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.74" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.78">
+										<core:prefLabel>stake-hole: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.77" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.80">
+										<core:prefLabel>stoke hole: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.79" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.89">
+										<core:prefLabel>tree hollow: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.88" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.126" />
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.128">
+										<core:prefLabel>wall: construction trench fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.127" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.132">
+										<core:prefLabel>well: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.94" />
+									</core:Concept>
+								</core:narrower>
+								<core:narrower>
+									<core:Concept rdf:about="http://tempuri/star/concept#ehg003.96">
+										<core:prefLabel>wheel rut: fill</core:prefLabel>
+										<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+										<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+										<core:related rdf:resource="http://tempuri/star/concept#ehg003.95" />
+									</core:Concept>
+								</core:narrower>
+							</core:Concept>
+						</core:broader>
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.7" />
+					</core:Concept>
+				</core:related>
+				<core:scopeNote>A trench dug to contain a sill beam, a horizontal timber beam used as a foundation for the wall of a building. Use wider site type where known. (from EH Monument Types thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.56">
+		<core:prefLabel>cesspit</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:altLabel>cess pit</core:altLabel>
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.55">
+				<core:prefLabel>pit</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.56" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.16" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.38" />
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.70">
+						<core:prefLabel>quarry pit</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.55" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.71" />
+					</core:Concept>
+				</core:narrower>
+				<core:narrower>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.129">
+						<core:prefLabel>well: construction pit</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.55" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.94" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.130" />
+					</core:Concept>
+				</core:narrower>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.124" />
+				<core:scopeNote>A hole or cavity in the ground, either natural or the result of excavation. Use more specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.57">
+				<core:prefLabel>cesspit: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.124">
+						<core:prefLabel>pit: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.57" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.17" />
+						<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.39" />
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.71">
+								<core:prefLabel>quarry pit: fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.124" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.70" />
+							</core:Concept>
+						</core:narrower>
+						<core:narrower>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.130">
+								<core:prefLabel>well: construction pit fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.124" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.129" />
+							</core:Concept>
+						</core:narrower>
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.55" />
+					</core:Concept>
+				</core:broader>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.56" />
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>A pit for the reception of night-soil and refuse. (from EH Monument Type thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.10">
+		<core:prefLabel>coffin</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.97">
+				<core:prefLabel>coffin: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.10" />
+			</core:Concept>
+		</core:related>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.98">
+				<core:prefLabel>coffin: stain</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.10" />
+			</core:Concept>
+		</core:related>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.35">
+				<core:prefLabel>grave</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.10" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.16" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.108" />
+				<core:scopeNote>A place of burial. Use more specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>A chest made of stone, wood or lead, used to enclose a dead body. (from EH Monument Types thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.11">
+		<core:prefLabel>corn-drying oven</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.52">
+				<core:prefLabel>oven</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.11" />
+				<core:scopeNote>A brick, stone or iron receptacle for baking bread or other food in. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.12">
+				<core:prefLabel>corn-drying oven: cut</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.135" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.11" />
+			</core:Concept>
+		</core:related>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.13">
+				<core:prefLabel>corn-drying oven: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.11" />
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>A heated stone, brick or iron chamber used for drying corn. (from EH Monument Types thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.15">
+		<core:prefLabel>cremation</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.136" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.16">
+				<core:prefLabel>cremation pit</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.55" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.15" />
+				<core:related>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.17">
+						<core:prefLabel>cremation pit: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader rdf:resource="http://tempuri/star/concept#ehg003.124" />
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.16" />
+					</core:Concept>
+				</core:related>
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.35" />
+				<core:scopeNote>A burial site in which the corpse has been burnt on a pyre above a pit into which the remains of the pyre and the body, collapse and are buried. Occasionally accompanied by burnt grave goods placed with the body on the pyre. (from EH Monument Types thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:related>
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.18">
+				<core:prefLabel>cremation vessel</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.92" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.15" />
+				<core:related>
+					<core:Concept rdf:about="http://tempuri/star/concept#ehg003.19">
+						<core:prefLabel>cremation vessel: fill</core:prefLabel>
+						<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+						<core:broader>
+							<core:Concept rdf:about="http://tempuri/star/concept#ehg003.126">
+								<core:prefLabel>vessel: fill</core:prefLabel>
+								<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+								<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+								<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.19" />
+								<core:related rdf:resource="http://tempuri/star/concept#ehg003.92" />
+							</core:Concept>
+						</core:broader>
+						<core:related rdf:resource="http://tempuri/star/concept#ehg003.18" />
+					</core:Concept>
+				</core:related>
+				<core:scopeNote>A vessel for keeping the ashes of the dead after cremation. (from MDA Object Type thesaurus "CINERARY VESSEL")</core:scopeNote>
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>A funeral rite in which the human body is burnt leaving fragmentary charred or completely combusted remains. Generally found buried, occasionally in a container associated with grave goods. (from EH Monument Types thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.24">
+		<core:prefLabel>drain</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:altLabel>drainage</core:altLabel>
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.102">
+				<core:prefLabel>drain: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.142" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.24" />
+			</core:Concept>
+		</core:related>
+		<core:scopeNote>An artificial channel for draining water or carrying it off. (from EH Monument Type thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.25">
+		<core:prefLabel>drove way</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:altLabel>drove road</core:altLabel>
+		<core:altLabel>droveway</core:altLabel>
+		<core:broader>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.73">
+				<core:prefLabel>road</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.82" />
+				<core:narrower rdf:resource="http://tempuri/star/concept#ehg003.25" />
+				<core:scopeNote>A way between different places, used by horses, travellers on foot and vehicles. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:broader>
+		<core:scopeNote>A road or track specifically used by drovers or herders to drive their animals to market. (from EH Monument Type thesaurus "DROVE ROAD")</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.29">
+		<core:prefLabel>floor</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.44" />
+		<core:narrower>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.106">
+				<core:prefLabel>floor: tessellated</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:altLabel>tessellated floor</core:altLabel>
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.29" />
+				<core:scopeNote>Floor cover in Roman time, where small cubes (tesserea) of one or more colours were laid in a geometric pattern. (from EH Monument Type thesaurus)</core:scopeNote>
+			</core:Concept>
+		</core:narrower>
+		<core:scopeNote>A layer of stone, brick or boards, etc, on which people tread. Use broader site type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.30">
+		<core:prefLabel>flue</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+		<core:related rdf:resource="http://tempuri/star/concept#ehg003.107" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.37">
+		<core:prefLabel>hearth</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+		<core:related rdf:resource="http://tempuri/star/concept#ehg003.110" />
+		<core:scopeNote>The slab or place on which a fire is made. (from EH Monument Type thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.38">
+		<core:prefLabel>hearth pit</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.55" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.39">
+				<core:prefLabel>hearth pit: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.124" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.38" />
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.41">
+		<core:prefLabel>kiln</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.81" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.113">
+				<core:prefLabel>kiln: debris</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.111" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.41" />
+			</core:Concept>
+		</core:related>
+		<core:related rdf:resource="http://tempuri/star/concept#ehg003.111" />
+		<core:scopeNote>A furnace or oven for burning, baking or drying. Use specific type where known. (from EH Monument Type thesaurus)</core:scopeNote>
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg003.58">
+		<core:prefLabel>plough furrow</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+		<core:altLabel>furrow</core:altLabel>
+		<core:broader rdf:resource="http://tempuri/star/concept#ehg003.60" />
+		<core:related>
+			<core:Concept rdf:about="http://tempuri/star/concept#ehg003.59">
+				<core:prefLabel>plough furrow: fill</core:prefLabel>
+				<core:inScheme rdf:resource="http://tempuri/star/concept#ehg003" />
+				<core:broader rdf:resource="http://tempuri/star/concept#ehg003.61" />
+				<core:related rdf:resource="http://tempuri/star/concept#ehg003.58" />
+			</core:Concept>
+		</core:related>
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg004">
+		<ns:title>English Heritage Glossary of DEPOSIT.Compaction</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg004.5">
+		<core:prefLabel>Cemented</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg004" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg004.3">
+		<core:prefLabel>Compact</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg004" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg004.2">
+		<core:prefLabel>Friable</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg004" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg004.4">
+		<core:prefLabel>Hard</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg004" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg004.1">
+		<core:prefLabel>Loose</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg004" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg005">
+		<ns:title>English Heritage glossary of DEPOSIT.Inclusions.Frequency</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg005.3">
+		<core:prefLabel>Frequent</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg005" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg005.2">
+		<core:prefLabel>Moderate</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg005" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg005.1">
+		<core:prefLabel>Occasional</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg005" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg006">
+		<ns:title>English Heritage glossary of DEPOSIT.Inclusions.Size</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg006.1">
+		<core:prefLabel>Flecks</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg006" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg006.4">
+		<core:prefLabel>Large</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg006" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg006.3">
+		<core:prefLabel>Medium</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg006" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg006.2">
+		<core:prefLabel>Small</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg006" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg007">
+		<ns:title>English Heritage glossary of DEPOSIT.Inclusions.Shape</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.2">
+		<core:prefLabel>Angular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.5">
+		<core:prefLabel>Rounded</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.3">
+		<core:prefLabel>Sub-angular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.4">
+		<core:prefLabel>Sub-rounded</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.1">
+		<core:prefLabel>Very angular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg007.6">
+		<core:prefLabel>Well-rounded</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg007" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg008">
+		<ns:title>English Heritage glossary of DEPOSIT.Inclusions.Material</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg008.3">
+		<core:prefLabel>Boulders</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg008" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg008.2">
+		<core:prefLabel>Cobbles</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg008" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg008.1">
+		<core:prefLabel>Pebbles</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg008" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg009">
+		<ns:title>English Heritage glossary of DEPOSIT.Contamination</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg009.3">
+		<core:prefLabel>Possible</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg009" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg009.2">
+		<core:prefLabel>Probable</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg009" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg009.1">
+		<core:prefLabel>Unlikely</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg009" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg010">
+		<ns:title>English Heritage glossary of CUT.Shape in plan</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.5">
+		<core:prefLabel>Circular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.8">
+		<core:prefLabel>Irregular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.4">
+		<core:prefLabel>Linear</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.7">
+		<core:prefLabel>Oval</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.2">
+		<core:prefLabel>Rectangular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.1">
+		<core:prefLabel>Square</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.6">
+		<core:prefLabel>Sub-circular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg010.3">
+		<core:prefLabel>Sub-rectangular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg010" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg011">
+		<ns:title>English Heritage glossary of CUT.Breaks of slope</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg011.2">
+		<core:prefLabel>Gradual</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg011" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg011.3">
+		<core:prefLabel>Imperceptible</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg011" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg011.1">
+		<core:prefLabel>Sharp</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg011" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg012">
+		<ns:title>English Heritage glossary of CUT.Breaks of slope.Slope and shape of sides</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg012.5">
+		<core:prefLabel>Concave</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg012" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg012.4">
+		<core:prefLabel>Convex</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg012" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg012.2">
+		<core:prefLabel>Irregular</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg012" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg012.1">
+		<core:prefLabel>Smooth</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg012" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg012.3">
+		<core:prefLabel>Straight</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg012" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg013">
+		<ns:title>English Heritage glossary of Cut.Breaks of slope.Properties of base</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.3">
+		<core:prefLabel>Concave</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.2">
+		<core:prefLabel>Flat</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.4">
+		<core:prefLabel>Sloping</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.7">
+		<core:prefLabel>U-shaped</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.5">
+		<core:prefLabel>Uneven</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg013.6">
+		<core:prefLabel>V-shaped</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg013" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg014">
+		<ns:title>English Heritage glossary of CUT.Breaks of slope.Post stake hole shape</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg014.2">
+		<core:prefLabel>Tapered blunt point</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg014" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg014.1">
+		<core:prefLabel>Tapered point</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg014" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg014.3">
+		<core:prefLabel>Tapered rounded point</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg014" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg014.4">
+		<core:prefLabel>Vertical with a flat base</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg014" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg015">
+		<ns:title>English Heritage glossary of SITE AND CONTEXT DETAILS.Finish</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg015.4">
+		<core:prefLabel>Ashlar</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg015" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg015.5">
+		<core:prefLabel>Eroded</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg015" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg015.1">
+		<core:prefLabel>Roughly hewn</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg015" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg015.2">
+		<core:prefLabel>Roughly squared</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg015" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg015.3">
+		<core:prefLabel>Squared</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg015" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg016">
+		<ns:title>English Heritage glossary of SITE AND CONTEXT DETAILS.Condition</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.4">
+		<core:prefLabel>Charred</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.1">
+		<core:prefLabel>Complete</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.7">
+		<core:prefLabel>Decayed</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.8">
+		<core:prefLabel>Insect attack</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.3">
+		<core:prefLabel>Modern break</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.2">
+		<core:prefLabel>Old break</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.5">
+		<core:prefLabel>Sooted</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg016.6">
+		<core:prefLabel>Worn</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg016" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg017">
+		<ns:title>English Heritage glossary of SMALL FIND FORM.Condition</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.5">
+		<core:prefLabel>Burnt</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.6">
+		<core:prefLabel>Damaged</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.4">
+		<core:prefLabel>Damp</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.2">
+		<core:prefLabel>Organic remains</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.1">
+		<core:prefLabel>Unrecognisable</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg017.3">
+		<core:prefLabel>Waterlogged</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg017" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg018">
+		<ns:title>English Heritage glossary of SMALL FIND FORM.Completeness</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg018.3">
+		<core:prefLabel>Almost complete</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg018" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg018.2">
+		<core:prefLabel>Complete</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg018" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg018.4">
+		<core:prefLabel>Incomplete</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg018" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg018.5">
+		<core:prefLabel>Unknown</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg018" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg019">
+		<ns:title>English Heritage glossary of BOX INDEX FORM.Material</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.2">
+		<core:prefLabel>Animal bone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.3">
+		<core:prefLabel>Bone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.4">
+		<core:prefLabel>Ceramic building material</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.5">
+		<core:prefLabel>Clay tobacco pipes</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.6">
+		<core:prefLabel>Copper alloy</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.7">
+		<core:prefLabel>Fired clay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.8">
+		<core:prefLabel>Flint</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.9">
+		<core:prefLabel>Glass</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.10">
+		<core:prefLabel>Human bone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.11">
+		<core:prefLabel>Iron</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.12">
+		<core:prefLabel>Lead</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.13">
+		<core:prefLabel>Leather</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.14">
+		<core:prefLabel>Metal: general</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.15">
+		<core:prefLabel>Miscellaneous</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.16">
+		<core:prefLabel>Plaster</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.17">
+		<core:prefLabel>Pottery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.18">
+		<core:prefLabel>Shell</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.19">
+		<core:prefLabel>Slag</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.20">
+		<core:prefLabel>Stone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg019.21">
+		<core:prefLabel>Wood</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg019" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg020">
+		<ns:title>English Heritage glossary of BOX INDEX FORM.Find type</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg020.1">
+		<core:prefLabel>Bulk</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg020" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg020.4">
+		<core:prefLabel>Sample</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg020" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg020.3">
+		<core:prefLabel>Skeleton</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg020" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg020.2">
+		<core:prefLabel>Small find</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg020" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg021">
+		<ns:title>English Heritage glossary of BOX INDEX FORM.Box type</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg021.4">
+		<core:prefLabel>Bucket</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg021" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg021.1">
+		<core:prefLabel>Skull</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg021" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg021.2">
+		<core:prefLabel>Standard</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg021" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg021.3">
+		<core:prefLabel>Stewart</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg021" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg021.5">
+		<core:prefLabel>Unboxed</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg021" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg022">
+		<ns:title>English Heritage glossary of SAMPLE RECORD FORM.Simple name</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg022.1">
+		<core:prefLabel>Coarse-sieved</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg022" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg022.2">
+		<core:prefLabel>Flotation</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg022" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg022.3">
+		<core:prefLabel>Specialist</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg022" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg023">
+		<ns:title>English Heritage glossary of SAMPLE RECORD FORM.Condition</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg023.3">
+		<core:prefLabel>Damp</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg023" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg023.1">
+		<core:prefLabel>Desiccated</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg023" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg023.2">
+		<core:prefLabel>Dry</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg023" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg023.5">
+		<core:prefLabel>Waterlogged</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg023" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg023.4">
+		<core:prefLabel>Wet</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg023" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg024">
+		<ns:title>English Heritage glossary of SKELETON FORM.Body position</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.6">
+		<core:prefLabel>Crouched on left hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.5">
+		<core:prefLabel>Crouched on right hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.4">
+		<core:prefLabel>Extended on left hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.3">
+		<core:prefLabel>Extended on right hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.9">
+		<core:prefLabel>Flexed on left hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.8">
+		<core:prefLabel>Flexed on right hand side</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.10">
+		<core:prefLabel>Knees bent</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.2">
+		<core:prefLabel>Prone extended face down</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.1">
+		<core:prefLabel>Supine extended face down</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg024.7">
+		<core:prefLabel>Tucked or curled up position, knees by chin</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg024" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg025">
+		<ns:title>English Heritage glossary of SKELETON FORM.Condition</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg025.2">
+		<core:prefLabel>Fair</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg025" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg025.1">
+		<core:prefLabel>Good</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg025" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg025.3">
+		<core:prefLabel>Poor</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg025" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg026">
+		<ns:title>English Heritage glossary of SMALL FINDS FORM</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.1">
+		<core:prefLabel>Amber</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.2">
+		<core:prefLabel>Antler</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.3">
+		<core:prefLabel>Baked clay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.4">
+		<core:prefLabel>Bone: worked</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.6">
+		<core:prefLabel>Ceramic moulds</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.5">
+		<core:prefLabel>Ceramic objects</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.7">
+		<core:prefLabel>Copper alloy</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.8">
+		<core:prefLabel>Crucibles</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.9">
+		<core:prefLabel>Fired clay objects</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.10">
+		<core:prefLabel>Flint</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.11">
+		<core:prefLabel>Gemstones</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.12">
+		<core:prefLabel>Glass</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.13">
+		<core:prefLabel>Gold</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.14">
+		<core:prefLabel>Horn</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.15">
+		<core:prefLabel>Iron</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.16">
+		<core:prefLabel>Jet</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.17">
+		<core:prefLabel>Lead</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.18">
+		<core:prefLabel>Leather</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.19">
+		<core:prefLabel>Litharge</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.20">
+		<core:prefLabel>Pewter</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.21">
+		<core:prefLabel>Shale</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.22">
+		<core:prefLabel>Shell: worked</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.23">
+		<core:prefLabel>Silver</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.24">
+		<core:prefLabel>Stone: objects and architectural</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.25">
+		<core:prefLabel>Textile</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.26">
+		<core:prefLabel>Unknown</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg026.27">
+		<core:prefLabel>Wood</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg026" />
+	</core:Concept>
+	<core:ConceptScheme rdf:about="http://tempuri/star/concept#ehg027">
+		<ns:title>English Heritage glossary of BULK FINDS MATERIAL LIST</ns:title>
+		<ns:description>XSLT file transformation from XMLSpy imported MultiTes CSV format to SWAD-Europe SKOS-Core 1.0 format</ns:description>
+		<ns:creator>Ceri Binding, University of Glamorgan (based on EH Recording Manual)</ns:creator>
+		<ns:date>15/04/2008</ns:date>
+	</core:ConceptScheme>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.1">
+		<core:prefLabel>Animal bone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.4">
+		<core:prefLabel>Brick</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.17">
+		<core:prefLabel>Charcoal</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.16">
+		<core:prefLabel>Clay pipe</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.6">
+		<core:prefLabel>Daub / burnt clay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.5">
+		<core:prefLabel>Fired clay</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.7">
+		<core:prefLabel>Flint</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.18">
+		<core:prefLabel>Glass</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.15">
+		<core:prefLabel>Human bone</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.10">
+		<core:prefLabel>Mortar</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.9">
+		<core:prefLabel>Plaster</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.2">
+		<core:prefLabel>Pottery</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.11">
+		<core:prefLabel>Shell</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.12">
+		<core:prefLabel>Slag</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.13">
+		<core:prefLabel>Slate</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.8">
+		<core:prefLabel>Stone flooring / roof</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.3">
+		<core:prefLabel>Tile</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+	<core:Concept rdf:about="http://tempuri/star/concept#ehg027.14">
+		<core:prefLabel>Wood</core:prefLabel>
+		<core:inScheme rdf:resource="http://tempuri/star/concept#ehg027" />
+	</core:Concept>
+</rdf:RDF>

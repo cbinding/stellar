@@ -1,0 +1,181 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_FINDS.stg
+// Version : 001
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_FIND(options, data)$"
+
+// CRMEH_FIND. Fields anticipated:
+// data.find_id [mandatory]
+// data.find_note
+// data.find_type
+// data.find_type_uri
+// data.find_material
+// data.find_material_uri
+// data.production_period
+// data.within_context_id
+// data.within_investigation_id
+// data.language
+// options.base_uri
+CRMEH_FIND(options, data) ::= <<
+$if(data.find_id)$
+
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	type=CRMEH_TYPE("EHE0009"), 
+	label=data.find_id, 
+	language=data.language
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE2013", data.find_id), 
+	type=CRMEH_TYPE("EHE2013")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0043", data.find_id), 
+	type=CRMEH_TYPE("EHE0043"), 
+	label=data.find_id, 
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P1"), inverse=CRM_TYPE("P1i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0043", data.find_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2013", data.find_id), 
+	predicate=CRM_TYPE("P140"), inverse=CRM_TYPE("P140i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0009", data.find_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2013", data.find_id), 
+	predicate=CRM_TYPE("P37"), inverse=CRM_TYPE("P37i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0043", data.find_id)	
+)$
+
+
+$if(data.find_note)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P3"),  
+	literal=data.find_note, 
+	language=data.language
+)$
+$endif$
+
+$! crmeh:EHE0009_ContextFind -> crm:P2_has_type -> crm:E55_Type !$
+$if(data.find_type)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"), 
+	object=CRMEH_URI(options.base_uri, "E55", data.find_type)	
+)$
+$endif$
+
+$if(data.find_type_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"), 
+	object=data.find_type_uri	
+)$
+$endif$
+
+$if(data.find_material)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0030", data.find_material), 
+	type=CRMEH_TYPE("EHE0030"), 
+	label=data.find_material, 
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P45"), inverse=CRM_TYPE("P45i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0030", data.find_material)	
+)$
+$endif$
+
+$if(data.find_material_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P45"), inverse=CRM_TYPE("P45i"), 
+	object=data.find_material_uri	
+)$
+$endif$
+
+$if(data.production_period)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE1002", data.find_id), 
+	type=CRMEH_TYPE("EHE1002")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0038", data.production_period), 
+	type=CRMEH_TYPE("EHE0038")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0039", data.production_period), 
+	type=CRMEH_TYPE("EHE0039")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1002", data.find_id), 
+	predicate=CRM_TYPE("P108"), inverse=CRM_TYPE("P108i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0009", data.find_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1002", data.find_id), 
+	predicate=CRM_TYPE("P4"), inverse=CRM_TYPE("P4i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0038", data.production_period)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0038", data.production_period), 
+	predicate=CRM_TYPE("P1"), inverse=CRM_TYPE("P1i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0039", data.production_period)	
+)$
+$endif$
+
+$if(data.within_context_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE1004", data.find_id), 
+	type=CRMEH_TYPE("EHE1004")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1004", data.find_id), 
+	predicate=CRM_TYPE("P25"), inverse=CRM_TYPE("P25i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0009", data.find_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1004", data.find_id), 
+	predicate=CRM_TYPE("P26"), inverse=CRM_TYPE("P26i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id)	
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P53"), inverse=CRM_TYPE("P53i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id)	
+)$
+$endif$
+
+$if(data.within_investigation_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), 
+	predicate=CRM_TYPE("P53"), inverse=CRM_TYPE("P53i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id)	
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("find_id is not present")$
+$endif$
+>> 
+// end of CRMEH_FIND

@@ -9,6 +9,7 @@ License : http://creativecommons.org/licenses/by/3.0/
 History :
 
 12/01/2011  CFB Created classes
+21/10/2011  CFB Added functionality to pass options file data to STG templates
 ================================================================================
 */
 using System;
@@ -31,14 +32,17 @@ namespace STELLAR.Console
         protected override void PostProcess()
         {
             Arguments a = new Arguments(this.Arguments);
-            String csvFileName = System.IO.Path.GetFileName(a["csv"].Trim());
-            String stgFileName = System.IO.Path.GetFileName(a["stg"].Trim());
-            String outFileName = a["out"] == null ? "" : a["out"].Trim(); 
+            //String csvFileName = System.IO.Path.GetFileName(a["csv"].Trim());
+            //String stgFileName = System.IO.Path.GetFileName(a["stg"].Trim());
+            String csvFileName = a["csv"] == null ? "" : a["csv"].Trim();
+            String stgFileName = a["stg"] == null ? "" : a["stg"].Trim();
+            String outFileName = a["out"] == null ? "" : a["out"].Trim();
+            String optFileName = a["opt"] == null ? "" : a["opt"].Trim(); 
             this.Out.WriteLine("Convert '{0}' using template '{1}'", csvFileName, stgFileName);
             
             try 
             {
-                int rowCount = STELLAR.Data.API.Delimited2STG(csvFileName, stgFileName, outFileName, ',');
+                int rowCount = STELLAR.Data.API.Delimited2STG(csvFileName, stgFileName, outFileName, optFileName, ',');
                 this.Out.WriteLine("{0} rows converted", rowCount);               
             }
             catch (Exception ex)
@@ -49,7 +53,7 @@ namespace STELLAR.Console
 
         protected override string Usage()
         {
-            return ("csv2stg /csv:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"]");
+            return ("csv2stg /csv:\"FILE\" /stg:\"FILE\" [/out:\"FILE\"] [/opt:\"FILE\"]");
         }
 
         protected override bool ValidateArguments()

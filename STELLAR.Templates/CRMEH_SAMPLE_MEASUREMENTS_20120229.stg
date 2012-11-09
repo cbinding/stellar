@@ -1,0 +1,101 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_SAMPLE_MEASUREMENTS.stg
+// Version : 001
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_SAMPLE_MEASUREMENT(options, data)$"
+
+// CRMEH_SAMPLE_MEASUREMENT. Fields anticipated:
+// data.sample_id [mandatory]
+// data.measurement_type
+// data.measurement_type_uri
+// data.measurement_unit
+// data.measurement_unit_uri
+// data.measurement_value
+// options.base_uri
+CRMEH_SAMPLE_MEASUREMENT(options, data) ::= <<
+$if(data.sample_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	type=CRMEH_TYPE("EHE0018"),
+	label=data.sample_id,
+	language=data.language
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]), 
+	type=CRMEH_TYPE("EHE2015")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	type=CRMEH_TYPE("EHE0049")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]),
+	predicate=CRM_TYPE("P39"), inverse=CRM_TYPE("P39i"),
+	object=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id)
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2015", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P40"), inverse=CRM_TYPE("P40i"),
+	object=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type])
+)$
+
+$if(data.measurement_type)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"),
+	object=CRMEH_URI(options.base_uri, "E55", data.measurement_type)
+)$
+$endif$
+
+$if(data.measurement_type_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P2"), inverse=CRM_TYPE("P2i"),
+	object=data.measurement_type_uri
+)$
+$endif$
+
+$if(data.measurement_unit)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P91"), inverse=CRM_TYPE("P91i"), 
+	object=CRMEH_URI(options.base_uri, "E55", data.measurement_unit)
+)$
+$endif$
+
+$if(data.measurement_unit_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P91"), inverse=CRM_TYPE("P91i"), 
+	object=data.measurement_unit_uri
+)$
+$endif$
+
+$if(data.measurement_value)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0049", [data.sample_id, "_", data.measurement_type]), 
+	predicate=CRM_TYPE("P901"),  
+	literal=data.measurement_value
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("sample_id is not present")$
+$endif$
+>> 
+// end of CRMEH_SAMPLE_MEASUREMENT
+

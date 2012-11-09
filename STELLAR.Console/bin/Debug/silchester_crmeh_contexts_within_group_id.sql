@@ -1,0 +1,6 @@
+SELECT
+	contexts.context AS context_id,
+	olinks.object AS within_group_id
+FROM contexts 
+INNER JOIN olinks 
+ON	olinks.member = 'C' || contexts.context;

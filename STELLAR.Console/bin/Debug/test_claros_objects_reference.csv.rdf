@@ -1,0 +1,17 @@
+
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ecrm="http://purl.org/NET/crm-owl#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:claros="http://purl.org/NET/Claros/vocab#">
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj101" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref101" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj101" /></rdf:Description><rdf:Description rdf:about="http://data/obj101" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref101" /></rdf:Description>
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj102" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref102" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj102" /></rdf:Description><rdf:Description rdf:about="http://data/obj102" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref102" /></rdf:Description>
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj103" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref103" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj103" /></rdf:Description><rdf:Description rdf:about="http://data/obj103" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref103" /></rdf:Description>
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj104" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref104" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj104" /></rdf:Description><rdf:Description rdf:about="http://data/obj104" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref104" /></rdf:Description>
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj105" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref105" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj105" /></rdf:Description><rdf:Description rdf:about="http://data/obj105" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref105" /></rdf:Description>
+					
+				<ecrm:E22_Man-Made_Object rdf:about="http://data/obj106" xmlns:ecrm="http://erlangen-crm.org/101001/" /><rdf:Description rdf:about="http://data/ref106" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67_refers_to rdf:resource="http://data/obj106" /></rdf:Description><rdf:Description rdf:about="http://data/obj106" xmlns:ecrm="http://erlangen-crm.org/101001/"><ecrm:P67i_is_referred_to_by rdf:resource="http://data/ref106" /></rdf:Description>
+			
+		</rdf:RDF>
+	

@@ -1,0 +1,589 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRM.stg
+// Version : 002
+// Summary : string template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+// 001 20/10/2011  CFB Created template group
+// 002 13/01/2012  CFB Entity and Property templates added
+//============================================================================//
+delimiters "$", "$"
+import "RDF.stg"
+
+// URIs. Usage: $CRM_TYPE.P1$ $CRM_TYPE("P1")$ etc.
+CRM_TYPE(type) ::= "$CRM_TYPE.(type)$"
+CRM_TYPE ::= [
+"E1"	: "crm:E1_CRM_Entity",
+"E2"	: "crm:E2_Temporal_Entity",
+"E3"	: "crm:E3_Condition_State",
+"E4"	: "crm:E4_Period",
+"E5"	: "crm:E5_Event",
+"E6"	: "crm:E6_Destruction",
+"E7"	: "crm:E7_Activity",
+"E8"	: "crm:E8_Acquisition",
+"E9"	: "crm:E9_Move",
+"E10"	: "crm:E10_Transfer_of_Custody",
+"E11"	: "crm:E11_Modification",
+"E12"	: "crm:E12_Production",
+"E13"	: "crm:E13_Attribute_Assignment",
+"E14"	: "crm:E14_Condition_Assessment",
+"E15"	: "crm:E15_Identifier_Assignment",
+"E16"	: "crm:E16_Measurement",
+"E17"	: "crm:E17_Type_Assignment",
+"E18"	: "crm:E18_Physical_Thing",
+"E19"	: "crm:E19_Physical_Object",
+"E20"	: "crm:E20_Biological_Object",
+"E21"	: "crm:E21_Person",
+"E22"	: "crm:E22_Man-Made_Object",
+"E24"	: "crm:E24_Physical_Man-Made_Thing",
+"E25"	: "crm:E25_Man-Made_Feature",
+"E26"	: "crm:E26_Physical_Feature",
+"E27"	: "crm:E27_Site",
+"E28"	: "crm:E28_Conceptual_Object",
+"E29"	: "crm:E29_Design_or_Procedure",
+"E30"	: "crm:E30_Right",
+"E31"	: "crm:E31_Document",
+"E32"	: "crm:E32_Authority_Document",
+"E33"	: "crm:E33_Linguistic_Object",
+"E34"	: "crm:E34_Inscription",
+"E35"	: "crm:E35_Title",
+"E36"	: "crm:E36_Visual_Item",
+"E37"	: "crm:E37_Mark",
+"E38"	: "crm:E38_Image",
+"E39"	: "crm:E39_Actor",
+"E40"	: "crm:E40_Legal_Body",
+"E41"	: "crm:E41_Appellation",
+"E42"	: "crm:E42_Identifier",
+"E44"	: "crm:E44_Place_Appellation",
+"E45"	: "crm:E45_Address",
+"E46"	: "crm:E46_Section_Definition",
+"E47"	: "crm:E47_Spatial_Coordinates",
+"E48"	: "crm:E48_Place_Name",
+"E49"	: "crm:E49_Time_Appellation",
+"E50"	: "crm:E50_Date",
+"E51"	: "crm:E51_Contact_Point",
+"E52"	: "crm:E52_Time-Span",
+"E53"	: "crm:E53_Place",
+"E54"	: "crm:E54_Dimension",
+"E55"	: "crm:E55_Type",
+"E56"	: "crm:E56_Language",
+"E57"	: "crm:E57_Material",
+"E58"	: "crm:E58_Measurement_Unit",
+"E59"	: "crm:E59_Primitive_Value",
+"E60"	: "crm:E60_Number",
+"E61"	: "crm:E61_Time_Primitive",
+"E62"	: "crm:E62_String",
+"E63"	: "crm:E63_Beginning_of_Existence",
+"E64"	: "crm:E64_End_of_Existence",
+"E65"	: "crm:E65_Creation",
+"E66"	: "crm:E66_Formation",
+"E67"	: "crm:E67_Birth",
+"E68"	: "crm:E68_Dissolution",
+"E69"	: "crm:E69_Death",
+"E70"	: "crm:E70_Thing",
+"E71"	: "crm:E71_Man-Made_Thing",
+"E72"	: "crm:E72_Legal_Object",
+"E73"	: "crm:E73_Information_Object",
+"E74"	: "crm:E74_Group",
+"E75"	: "crm:E75_Conceptual_Object_Appellation",
+"E77"	: "crm:E77_Persistent_Item",
+"E78"	: "crm:E78_Collection",
+"E79"	: "crm:E79_Part_Addition",
+"E80"	: "crm:E80_Part_Removal",
+"E81"	: "crm:E81_Transformation",
+"E82"	: "crm:E82_Actor_Appellation",
+"E83"	: "crm:E83_Type_Creation",
+"E84"	: "crm:E84_Information_Carrier",
+"E85"	: "crm:E85_Joining",
+"E86"	: "crm:E86_Leaving",
+"E87"	: "crm:E87_Curation_Activity",
+"E89"	: "crm:E89_Propositional_Object",
+"E90"	: "crm:E90_Symbolic_Object",
+"P1"	: "crm:P1_is_identified_by",
+"P1i"	: "crm:P1i_identifies",
+"P2"	: "crm:P2_has_type",
+"P2i"	: "crm:P2i_is_type_of",
+"P3"	: "crm:P3_has_note",
+"P4"	: "crm:P4_has_time-span",
+"P4i"	: "crm:P4i_is_time-span_of",
+"P5"	: "crm:P5_consists_of",
+"P5i"	: "crm:P5i_forms_part_of",
+"P7"	: "crm:P7_took_place_at",
+"P7i"	: "crm:P7i_witnessed",
+"P8"	: "crm:P8_took_place_on_or_within",
+"P8i"	: "crm:P8i_witnessed",
+"P9"	: "crm:P9_consists_of",
+"P9i"	: "crm:P9i_forms_part_of",
+"P10"	: "crm:P10_falls_within",
+"P10i"	: "crm:P10i_contains",
+"P11"	: "crm:P11_had_participant",
+"P11i"	: "crm:P11i_participated_in",
+"P12"	: "crm:P12_occurred_in_the_presence_of",
+"P12i"	: "crm:P12i_was_present_at",
+"P13"	: "crm:P13_destroyed",
+"P13i"	: "crm:P13i_was_destroyed_by",
+"P14"	: "crm:P14_carried_out_by",
+"P14i"	: "crm:P14i_performed",
+"P15"	: "crm:P15_was_influenced_by",
+"P15i"	: "crm:P15i_influenced",
+"P16"	: "crm:P16_used_specific_object",
+"P16i"	: "crm:P16i_was_used_for",
+"P17"	: "crm:P17_was_motivated_by",
+"P17i"	: "crm:P17i_motivated",
+"P19"	: "crm:P19_was_intended_use_of",
+"P19i"	: "crm:P19i_was_made_for",
+"P20"	: "crm:P20_had_specific_purpose",
+"P20i"	: "crm:P20i_was_purpose_of",
+"P21"	: "crm:P21_had_general_purpose",
+"P21i"	: "crm:P21i_was_purpose_of",
+"P22"	: "crm:P22_transferred_title_to",
+"P22i"	: "crm:P22i_acquired_title_through",
+"P23"	: "crm:P23_transferred_title_from",
+"P23i"	: "crm:P23i_surrendered_title_through",
+"P24"	: "crm:P24_transferred_title_of",
+"P24i"	: "crm:P24i_changed_ownership_through",
+"P25"	: "crm:P25_moved",
+"P25i"	: "crm:P25i_moved_by",
+"P26"	: "crm:P26_moved_to",
+"P26i"	: "crm:P26i_was_destination_of",
+"P27"	: "crm:P27_moved_from",
+"P27i"	: "crm:P27i_was_origin_of",
+"P28"	: "crm:P28_custody_surrendered_by",
+"P28i"	: "crm:P28i_surrendered_custody_through",
+"P29"	: "crm:P29_custody_received_by",
+"P29i"	: "crm:P29i_received_custody_through",
+"P30"	: "crm:P30_transferred_custody_of",
+"P30i"	: "crm:P30i_custody_transferred_through",
+"P31"	: "crm:P31_has_modified",
+"P31i"	: "crm:P31i_was_modified_by",
+"P32"	: "crm:P32_used_general_technique",
+"P32i"	: "crm:P32i_was_technique_of",
+"P33"	: "crm:P33_used_specific_technique",
+"P33i"	: "crm:P33i_was_used_by",
+"P34"	: "crm:P34_concerned",
+"P34i"	: "crm:P34i_was_assessed_by",
+"P35"	: "crm:P35_has_identified",
+"P35i"	: "crm:P35i_was_identified_by",
+"P37"	: "crm:P37_assigned",
+"P37i"	: "crm:P37i_was_assigned_by",
+"P38"	: "crm:P38_deassigned",
+"P38i"	: "crm:P38i_was_deassigned_by",
+"P39"	: "crm:P39_measured",
+"P39i"	: "crm:P39i_was_measured_by",
+"P40"	: "crm:P40_observed_dimension",
+"P40i"	: "crm:P40i_was_observed_in",
+"P41"	: "crm:P41_classified",
+"P41i"	: "crm:P41i_was_classified_by",
+"P42"	: "crm:P42_assigned",
+"P42i"	: "crm:P42i_was_assigned_by",
+"P43"	: "crm:P43_has_dimension",
+"P43i"	: "crm:P43i_is_dimension_of",
+"P44"	: "crm:P44_has_condition",
+"P44i"	: "crm:P44i_is_condition_of",
+"P45"	: "crm:P45_consists_of",
+"P45i"	: "crm:P45i_is_incorporated_in",
+"P46"	: "crm:P46_is_composed_of",
+"P46i"	: "crm:P46i_forms_part_of",
+"P48"	: "crm:P48_has_preferred_identifier",
+"P48i"	: "crm:P48i_is_preferred_identifier_of",
+"P49"	: "crm:P49_has_former_or_current_keeper",
+"P49i"	: "crm:P49i_is_former_or_current_keeper_of",
+"P50"	: "crm:P50_has_current_keeper",
+"P50i"	: "crm:P50i_is_current_keeper_of",
+"P51"	: "crm:P51_has_former_or_current_owner",
+"P51i"	: "crm:P51i_is_former_or_current_owner_of",
+"P52"	: "crm:P52_has_current_owner",
+"P52i"	: "crm:P52i_is_current_owner_of",
+"P53"	: "crm:P53_has_former_or_current_location",
+"P53i"	: "crm:P53i_is_former_or_current_location_of",
+"P54"	: "crm:P54_has_current_permanent_location",
+"P54i"	: "crm:P54i_is_current_permanent_location_of",
+"P55"	: "crm:P55_has_current_location",
+"P55i"	: "crm:P55i_currently_holds",
+"P56"	: "crm:P56_bears_feature",
+"P56i"	: "crm:P56i_is_found_on",
+"P57"	: "crm:P57_has_number_of_parts",
+"P58"	: "crm:P58_has_section_definition",
+"P58i"	: "crm:P58i_defines_section",
+"P59"	: "crm:P59_has_section",
+"P59i"	: "crm:P59i_is_located_on_or_within",
+"P62"	: "crm:P62_depicts",
+"P62i"	: "crm:P62i_is_depicted_by",
+"P65"	: "crm:P65_shows_visual_item",
+"P65i"	: "crm:P65i_is_shown_by",
+"P67"	: "crm:P67_refers_to",
+"P67i"	: "crm:P67i_is_referred_to_by",
+"P68"	: "crm:P68_foresees_use_of",
+"P68i"	: "crm:P68i_use_foreseen_by",
+"P69"	: "crm:P69_is_associated_with",
+"P70"	: "crm:P70_documents",
+"P70i"	: "crm:P70i_is_documented_in",
+"P71"	: "crm:P71_lists",
+"P71i"	: "crm:P71i_is_listed_in",
+"P72"	: "crm:P72_has_language",
+"P72i"	: "crm:P72i_is_language_of",
+"P73"	: "crm:P73_has_translation",
+"P73i"	: "crm:P73i_is_translation_of",
+"P74"	: "crm:P74_has_current_or_former_residence",
+"P74i"	: "crm:P74i_is_current_or_former_residence_of",
+"P75"	: "crm:P75_possesses",
+"P75i"	: "crm:P75i_is_possessed_by",
+"P76"	: "crm:P76_has_contact_point",
+"P76i"	: "crm:P76i_provides_access_to",
+"P78"	: "crm:P78_is_identified_by",
+"P78i"	: "crm:P78i_identifies",
+"P79"	: "crm:P79_beginning_is_qualified_by",
+"P80"	: "crm:P80_end_is_qualified_by",
+"P81"	: "crm:P81_ongoing_throughout",
+"P82"	: "crm:P82_at_some_time_within",
+"P83"	: "crm:P83_had_at_least_duration",
+"P83i"	: "crm:P83i_was_minimum_duration_of",
+"P84"	: "crm:P84_had_at_most_duration",
+"P84i"	: "crm:P84i_was_maximum_duration_of",
+"P86"	: "crm:P86_falls_within",
+"P86i"	: "crm:P86i_contains",
+"P87"	: "crm:P87_is_identified_by",
+"P87i"	: "crm:P87i_identifies",
+"P88"	: "crm:P88_consists_of",
+"P88i"	: "crm:P88i_forms_part_of",
+"P89"	: "crm:P89_falls_within",
+"P89i"	: "crm:P89i_contains",
+"P90"	: "crm:P90_has_value",
+"P91"	: "crm:P91_has_unit",
+"P91i"	: "crm:P91i_is_unit_of",
+"P92"	: "crm:P92_brought_into_existence",
+"P92i"	: "crm:P92i_was_brought_into_existence_by",
+"P93"	: "crm:P93_took_out_of_existence",
+"P93i"	: "crm:P93i_was_taken_out_of_existence_by",
+"P94"	: "crm:P94_has_created",
+"P94i"	: "crm:P94i_was_created_by",
+"P95"	: "crm:P95_has_formed",
+"P95i"	: "crm:P95i_was_formed_by",
+"P96"	: "crm:P96_by_mother",
+"P96i"	: "crm:P96i_gave_birth",
+"P97"	: "crm:P97_from_father",
+"P97i"	: "crm:P97i_was_father_for",
+"P98"	: "crm:P98_brought_into_life",
+"P98i"	: "crm:P98i_was_born",
+"P99"	: "crm:P99_dissolved",
+"P99i"	: "crm:P99i_was_dissolved_by",
+"P100"	: "crm:P100_was_death_of",
+"P100i"	: "crm:P100i_died_in",
+"P101"	: "crm:P101_had_as_general_use",
+"P101i"	: "crm:P101i_was_use_of",
+"P102"	: "crm:P102_has_title",
+"P102i"	: "crm:P102i_is_title_of",
+"P103"	: "crm:P103_was_intended_for",
+"P103i"	: "crm:P103i_was_intention_of",
+"P104"	: "crm:P104_is_subject_to",
+"P104i"	: "crm:P104i_applies_to",
+"P105"	: "crm:P105_right_held_by",
+"P105i"	: "crm:P105i_has_right_on",
+"P106"	: "crm:P106_is_composed_of",
+"P106i"	: "crm:P106i_forms_part_of",
+"P107"	: "crm:P107_has_current_or_former_member",
+"P107i"	: "crm:P107i_is_current_or_former_member_of",
+"P108"	: "crm:P108_has_produced",
+"P108i"	: "crm:P108i_was_produced_by",
+"P109"	: "crm:P109_has_current_or_former_curator",
+"P109i"	: "crm:P109i_is_current_or_former_curator_of",
+"P110"	: "crm:P110_augmented",
+"P110i"	: "crm:P110i_was_augmented_by",
+"P111"	: "crm:P111_added",
+"P111i"	: "crm:P111i_was_added_by",
+"P112"	: "crm:P112_diminished",
+"P112i"	: "crm:P112i_was_diminished_by",
+"P113"	: "crm:P113_removed",
+"P113i"	: "crm:P113i_was_removed_by",
+"P114"	: "crm:P114_is_equal_in_time_to",
+"P115"	: "crm:P115_finishes",
+"P115i"	: "crm:P115i_is_finished_by",
+"P116"	: "crm:P116_starts",
+"P116i"	: "crm:P116i_is_started_by",
+"P117"	: "crm:P117_occurs_during",
+"P117i"	: "crm:P117i_includes",
+"P118"	: "crm:P118_overlaps_in_time_with",
+"P118i"	: "crm:P118i_is_overlapped_in_time_by",
+"P119"	: "crm:P119_meets_in_time_with",
+"P119i"	: "crm:P119i_is_met_in_time_by",
+"P120"	: "crm:P120_occurs_before",
+"P120i"	: "crm:P120i_occurs_after",
+"P121"	: "crm:P121_overlaps_with",
+"P122"	: "crm:P122_borders_with",
+"P123"	: "crm:P123_resulted_in",
+"P123i"	: "crm:P123i_resulted_from",
+"P124"	: "crm:P124_transformed",
+"P124i"	: "crm:P124i_was_transformed_by",
+"P125"	: "crm:P125_used_object_of_type",
+"P125i"	: "crm:P125i_was_type_of_object_used_in",
+"P126"	: "crm:P126_employed",
+"P126i"	: "crm:P126i_was_employed_in",
+"P127"	: "crm:P127_has_broader_term",
+"P127i"	: "crm:P127i_has_narrower_term",
+"P128"	: "crm:P128_carries",
+"P128i"	: "crm:P128i_is_carried_by",
+"P129"	: "crm:P129_is_about",
+"P129i"	: "crm:P129i_is_subject_of",
+"P130"	: "crm:P130_shows_features_of",
+"P130i"	: "crm:P130i_features_are_also_found_on",
+"P131"	: "crm:P131_is_identified_by",
+"P131i"	: "crm:P131i_identifies",
+"P132"	: "crm:P132_overlaps_with",
+"P133"	: "crm:P133_is_separated_from",
+"P134"	: "crm:P134_continued",
+"P134i"	: "crm:P134i_was_continued_by",
+"P135"	: "crm:P135_created_type",
+"P135i"	: "crm:P135i_was_created_by",
+"P136"	: "crm:P136_was_based_on",
+"P136i"	: "crm:P136i_supported_type_creation",
+"P137"	: "crm:P137_exemplifies",
+"P137i"	: "crm:P137i_is_exemplified_by",
+"P138"	: "crm:P138_represents",
+"P138i"	: "crm:P138i_has_representation",
+"P139"	: "crm:P139_has_alternative_form",
+"P140"	: "crm:P140_assigned_attribute_to",
+"P140i"	: "crm:P140i_was_attributed_by",
+"P141"	: "crm:P141_assigned",
+"P141i"	: "crm:P141i_was_assigned_by",
+"P142"	: "crm:P142_used_constituent",
+"P142i"	: "crm:P142i_was_used_in",
+"P143"	: "crm:P143_joined",
+"P143i"	: "crm:P143i_was_joined_by",
+"P144"	: "crm:P144_joined_with",
+"P144i"	: "crm:P144i_gained_member_by",
+"P145"	: "crm:P145_separated",
+"P145i"	: "crm:P145i_left_by",
+"P146"	: "crm:P146_separated_from",
+"P146i"	: "crm:P146i_lost_member_by",
+"P147"	: "crm:P147_curated",
+"P147i"	: "crm:P147i_was_curated_by",
+"P148"	: "crm:P148_has_component",
+"P148i"	: "crm:P148i_is_component_of",
+default : key
+]
+
+// Entities. Usage: $CRM_E1(uri="http://tmp/123", label="123", language="en")$ etc.
+CRM_E1(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E1, label=label, language=language)$"
+CRM_E2(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E2, label=label, language=language)$"
+CRM_E3(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E3, label=label, language=language)$"
+CRM_E4(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E4, label=label, language=language)$"
+CRM_E5(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E5, label=label, language=language)$"
+CRM_E6(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E6, label=label, language=language)$"
+CRM_E7(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E7, label=label, language=language)$"
+CRM_E8(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E8, label=label, language=language)$"
+CRM_E9(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E9, label=label, language=language)$"
+CRM_E10(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E10, label=label, language=language)$"
+CRM_E11(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E11, label=label, language=language)$"
+CRM_E12(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E12, label=label, language=language)$"
+CRM_E13(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E13, label=label, language=language)$"
+CRM_E14(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E14, label=label, language=language)$"
+CRM_E15(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E15, label=label, language=language)$"
+CRM_E16(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E16, label=label, language=language)$"
+CRM_E17(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E17, label=label, language=language)$"
+CRM_E18(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E18, label=label, language=language)$"
+CRM_E19(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E19, label=label, language=language)$"
+CRM_E20(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E20, label=label, language=language)$"
+CRM_E21(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E21, label=label, language=language)$"
+CRM_E22(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E22, label=label, language=language)$"
+CRM_E24(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E24, label=label, language=language)$"
+CRM_E25(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E25, label=label, language=language)$"
+CRM_E26(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E26, label=label, language=language)$"
+CRM_E27(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E27, label=label, language=language)$"
+CRM_E28(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E28, label=label, language=language)$"
+CRM_E29(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E29, label=label, language=language)$"
+CRM_E30(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E30, label=label, language=language)$"
+CRM_E31(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E31, label=label, language=language)$"
+CRM_E32(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E32, label=label, language=language)$"
+CRM_E33(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E33, label=label, language=language)$"
+CRM_E34(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E34, label=label, language=language)$"
+CRM_E35(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E35, label=label, language=language)$"
+CRM_E36(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E36, label=label, language=language)$"
+CRM_E37(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E37, label=label, language=language)$"
+CRM_E38(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E38, label=label, language=language)$"
+CRM_E39(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E39, label=label, language=language)$"
+CRM_E40(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E40, label=label, language=language)$"
+CRM_E41(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E41, label=label, language=language)$"
+CRM_E42(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E42, label=label, language=language)$"
+CRM_E44(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E44, label=label, language=language)$"
+CRM_E45(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E45, label=label, language=language)$"
+CRM_E46(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E46, label=label, language=language)$"
+CRM_E47(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E47, label=label, language=language)$"
+CRM_E48(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E48, label=label, language=language)$"
+CRM_E49(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E49, label=label, language=language)$"
+CRM_E50(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E50, label=label, language=language)$"
+CRM_E51(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E51, label=label, language=language)$"
+CRM_E52(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E52, label=label, language=language)$"
+CRM_E53(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E53, label=label, language=language)$"
+CRM_E54(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E54, label=label, language=language)$"
+CRM_E55(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E55, label=label, language=language)$"
+CRM_E56(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E56, label=label, language=language)$"
+CRM_E57(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E57, label=label, language=language)$"
+CRM_E58(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E58, label=label, language=language)$"
+CRM_E63(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E63, label=label, language=language)$"
+CRM_E64(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E64, label=label, language=language)$"
+CRM_E65(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E65, label=label, language=language)$"
+CRM_E66(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E66, label=label, language=language)$"
+CRM_E67(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E67, label=label, language=language)$"
+CRM_E68(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E68, label=label, language=language)$"
+CRM_E69(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E69, label=label, language=language)$"
+CRM_E70(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E70, label=label, language=language)$"
+CRM_E71(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E71, label=label, language=language)$"
+CRM_E72(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E72, label=label, language=language)$"
+CRM_E73(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E73, label=label, language=language)$"
+CRM_E74(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E74, label=label, language=language)$"
+CRM_E75(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E75, label=label, language=language)$"
+CRM_E77(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E77, label=label, language=language)$"
+CRM_E78(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E78, label=label, language=language)$"
+CRM_E79(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E79, label=label, language=language)$"
+CRM_E80(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E80, label=label, language=language)$"
+CRM_E81(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E81, label=label, language=language)$"
+CRM_E82(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E82, label=label, language=language)$"
+CRM_E83(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E83, label=label, language=language)$"
+CRM_E84(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E84, label=label, language=language)$"
+CRM_E85(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E85, label=label, language=language)$"
+CRM_E86(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E86, label=label, language=language)$"
+CRM_E87(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E87, label=label, language=language)$"
+CRM_E89(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E89, label=label, language=language)$"
+CRM_E90(uri, label=false, language=false) ::= "$RDF_ENTITY(uri=uri, type=CRM_TYPE.E90, label=label, language=language)$"
+
+// CRM properties
+CRM_P1(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P1, inverse=CRM_TYPE.P1i, object=target_uri)$"
+CRM_P2(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P2, inverse=CRM_TYPE.P2i, object=target_uri)$"
+CRM_P3(source_uri, literal, language=false) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P3, literal=literal, language=language)$"
+CRM_P4(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P4, inverse=CRM_TYPE.P4i, object=target_uri)$"
+CRM_P5(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P5, inverse=CRM_TYPE.P5i, object=target_uri)$"
+CRM_P7(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P7, inverse=CRM_TYPE.P7i, object=target_uri)$"
+CRM_P8(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P8, inverse=CRM_TYPE.P8i, object=target_uri)$"
+CRM_P9(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P9, inverse=CRM_TYPE.P9i, object=target_uri)$"
+CRM_P10(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P10, inverse=CRM_TYPE.P10i, object=target_uri)$"
+CRM_P11(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P11, inverse=CRM_TYPE.P11i, object=target_uri)$"
+CRM_P12(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P12, inverse=CRM_TYPE.P12i, object=target_uri)$"
+CRM_P13(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P13, inverse=CRM_TYPE.P13i, object=target_uri)$"
+CRM_P14(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P14, inverse=CRM_TYPE.P14i, object=target_uri)$"
+CRM_P15(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P15, inverse=CRM_TYPE.P15i, object=target_uri)$"
+CRM_P16(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P16, inverse=CRM_TYPE.P16i, object=target_uri)$"
+CRM_P17(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P17, inverse=CRM_TYPE.P17i, object=target_uri)$"
+CRM_P19(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P19, inverse=CRM_TYPE.P19i, object=target_uri)$"
+CRM_P20(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P20, inverse=CRM_TYPE.P20i, object=target_uri)$"
+CRM_P21(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P21, inverse=CRM_TYPE.P21i, object=target_uri)$"
+CRM_P22(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P22, inverse=CRM_TYPE.P22i, object=target_uri)$"
+CRM_P23(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P23, inverse=CRM_TYPE.P23i, object=target_uri)$"
+CRM_P24(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P24, inverse=CRM_TYPE.P24i, object=target_uri)$"
+CRM_P25(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P25, inverse=CRM_TYPE.P25i, object=target_uri)$"
+CRM_P26(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P26, inverse=CRM_TYPE.P26i, object=target_uri)$"
+CRM_P27(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P27, inverse=CRM_TYPE.P27i, object=target_uri)$"
+CRM_P28(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P28, inverse=CRM_TYPE.P28i, object=target_uri)$"
+CRM_P29(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P29, inverse=CRM_TYPE.P29i, object=target_uri)$"
+CRM_P30(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P30, inverse=CRM_TYPE.P30i, object=target_uri)$"
+CRM_P31(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P31, inverse=CRM_TYPE.P31i, object=target_uri)$"
+CRM_P32(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P32, inverse=CRM_TYPE.P32i, object=target_uri)$"
+CRM_P33(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P33, inverse=CRM_TYPE.P33i, object=target_uri)$"
+CRM_P34(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P34, inverse=CRM_TYPE.P34i, object=target_uri)$"
+CRM_P35(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P35, inverse=CRM_TYPE.P35i, object=target_uri)$"
+CRM_P37(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P37, inverse=CRM_TYPE.P37i, object=target_uri)$"
+CRM_P38(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P38, inverse=CRM_TYPE.P38i, object=target_uri)$"
+CRM_P39(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P39, inverse=CRM_TYPE.P39i, object=target_uri)$"
+CRM_P40(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P40, inverse=CRM_TYPE.P40i, object=target_uri)$"
+CRM_P41(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P41, inverse=CRM_TYPE.P41i, object=target_uri)$"
+CRM_P42(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P42, inverse=CRM_TYPE.P42i, object=target_uri)$"
+CRM_P43(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P43, inverse=CRM_TYPE.P43i, object=target_uri)$"
+CRM_P44(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P44, inverse=CRM_TYPE.P44i, object=target_uri)$"
+CRM_P45(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P45, inverse=CRM_TYPE.P45i, object=target_uri)$"
+CRM_P46(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P46, inverse=CRM_TYPE.P46i, object=target_uri)$"
+CRM_P48(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P48, inverse=CRM_TYPE.P48i, object=target_uri)$"
+CRM_P49(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P49, inverse=CRM_TYPE.P49i, object=target_uri)$"
+CRM_P50(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P50, inverse=CRM_TYPE.P50i, object=target_uri)$"
+CRM_P51(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P51, inverse=CRM_TYPE.P51i, object=target_uri)$"
+CRM_P52(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P52, inverse=CRM_TYPE.P52i, object=target_uri)$"
+CRM_P53(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P53, inverse=CRM_TYPE.P53i, object=target_uri)$"
+CRM_P54(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P54, inverse=CRM_TYPE.P54i, object=target_uri)$"
+CRM_P55(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P55, inverse=CRM_TYPE.P55i, object=target_uri)$"
+CRM_P56(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P56, inverse=CRM_TYPE.P56i, object=target_uri)$"
+CRM_P57(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P57, literal=literal)$"
+CRM_P58(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P58, inverse=CRM_TYPE.P58i, object=target_uri)$"
+CRM_P59(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P59, inverse=CRM_TYPE.P59i, object=target_uri)$"
+CRM_P62(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P62, inverse=CRM_TYPE.P62i, object=target_uri)$"
+CRM_P65(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P65, inverse=CRM_TYPE.P65i, object=target_uri)$"
+CRM_P67(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P67, inverse=CRM_TYPE.P67i, object=target_uri)$"
+CRM_P68(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P68, inverse=CRM_TYPE.P68i, object=target_uri)$"
+CRM_P69(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P69, inverse=CRM_TYPE.P69i, object=target_uri)$"
+CRM_P70(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P70, inverse=CRM_TYPE.P70i, object=target_uri)$"
+CRM_P71(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P71, inverse=CRM_TYPE.P71i, object=target_uri)$"
+CRM_P72(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P72, inverse=CRM_TYPE.P72i, object=target_uri)$"
+CRM_P73(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P73, inverse=CRM_TYPE.P73i, object=target_uri)$"
+CRM_P74(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P74, inverse=CRM_TYPE.P74i, object=target_uri)$"
+CRM_P75(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P75, inverse=CRM_TYPE.P75i, object=target_uri)$"
+CRM_P76(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P76, inverse=CRM_TYPE.P76i, object=target_uri)$"
+CRM_P78(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P78, inverse=CRM_TYPE.P78i, object=target_uri)$"
+CRM_P79(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P79, literal=literal)$"
+CRM_P80(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P80, literal=literal)$"
+CRM_P81(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P81, literal=literal)$"
+CRM_P82(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P82, literal=literal)$"
+CRM_P83(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P83, inverse=CRM_TYPE.P83i, object=target_uri)$"
+CRM_P84(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P84, inverse=CRM_TYPE.P84i, object=target_uri)$"
+CRM_P86(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P86, inverse=CRM_TYPE.P86i, object=target_uri)$"
+CRM_P87(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P87, inverse=CRM_TYPE.P87i, object=target_uri)$"
+CRM_P88(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P88, inverse=CRM_TYPE.P88i, object=target_uri)$"
+CRM_P89(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P89, inverse=CRM_TYPE.P89i, object=target_uri)$"
+CRM_P90(source_uri, literal) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P90, literal=literal)$"
+CRM_P91(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P91, inverse=CRM_TYPE.P91i, object=target_uri)$"
+CRM_P92(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P92, inverse=CRM_TYPE.P92i, object=target_uri)$"
+CRM_P93(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P93, inverse=CRM_TYPE.P93i, object=target_uri)$"
+CRM_P94(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P94, inverse=CRM_TYPE.P94i, object=target_uri)$"
+CRM_P95(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P95, inverse=CRM_TYPE.P95i, object=target_uri)$"
+CRM_P96(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P96, inverse=CRM_TYPE.P96i, object=target_uri)$"
+CRM_P97(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P97, inverse=CRM_TYPE.P97i, object=target_uri)$"
+CRM_P98(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P98, inverse=CRM_TYPE.P98i, object=target_uri)$"
+CRM_P99(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P99, inverse=CRM_TYPE.P99i, object=target_uri)$"
+CRM_P100(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P100, inverse=CRM_TYPE.P100i, object=target_uri)$"
+CRM_P101(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P101, inverse=CRM_TYPE.P101i, object=target_uri)$"
+CRM_P102(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P102, inverse=CRM_TYPE.P102i, object=target_uri)$"
+CRM_P103(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P103, inverse=CRM_TYPE.P103i, object=target_uri)$"
+CRM_P104(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P104, inverse=CRM_TYPE.P104i, object=target_uri)$"
+CRM_P105(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P105, inverse=CRM_TYPE.P105i, object=target_uri)$"
+CRM_P106(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P106, inverse=CRM_TYPE.P106i, object=target_uri)$"
+CRM_P107(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P107, inverse=CRM_TYPE.P107i, object=target_uri)$"
+CRM_P108(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P108, inverse=CRM_TYPE.P108i, object=target_uri)$"
+CRM_P109(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P109, inverse=CRM_TYPE.P109i, object=target_uri)$"
+CRM_P110(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P110, inverse=CRM_TYPE.P110i, object=target_uri)$"
+CRM_P111(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P111, inverse=CRM_TYPE.P111i, object=target_uri)$"
+CRM_P112(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P112, inverse=CRM_TYPE.P112i, object=target_uri)$"
+CRM_P113(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P113, inverse=CRM_TYPE.P113i, object=target_uri)$"
+CRM_P114(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P114, inverse=CRM_TYPE.P114, object=target_uri)$"
+CRM_P115(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P115, inverse=CRM_TYPE.P115i, object=target_uri)$"
+CRM_P116(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P116, inverse=CRM_TYPE.P116i, object=target_uri)$"
+CRM_P117(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P117, inverse=CRM_TYPE.P117i, object=target_uri)$"
+CRM_P118(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P118, inverse=CRM_TYPE.P118i, object=target_uri)$"
+CRM_P119(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P119, inverse=CRM_TYPE.P119i, object=target_uri)$"
+CRM_P120(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P120, inverse=CRM_TYPE.P120i, object=target_uri)$"
+CRM_P121(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P121, inverse=CRM_TYPE.P121, object=target_uri)$"
+CRM_P122(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P122, inverse=CRM_TYPE.P122, object=target_uri)$"
+CRM_P123(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P123, inverse=CRM_TYPE.P123i, object=target_uri)$"
+CRM_P124(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P124, inverse=CRM_TYPE.P124i, object=target_uri)$"
+CRM_P125(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P125, inverse=CRM_TYPE.P125i, object=target_uri)$"
+CRM_P126(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P126, inverse=CRM_TYPE.P126i, object=target_uri)$"
+CRM_P127(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P127, inverse=CRM_TYPE.P127i, object=target_uri)$"
+CRM_P128(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P128, inverse=CRM_TYPE.P128i, object=target_uri)$"
+CRM_P129(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P129, inverse=CRM_TYPE.P129i, object=target_uri)$"
+CRM_P130(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P130, inverse=CRM_TYPE.P130i, object=target_uri)$"
+CRM_P131(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P131, inverse=CRM_TYPE.P131i, object=target_uri)$"
+CRM_P132(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P132, inverse=CRM_TYPE.P132, object=target_uri)$"
+CRM_P133(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P133, inverse=CRM_TYPE.P133, object=target_uri)$"
+CRM_P134(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P134, inverse=CRM_TYPE.P134i, object=target_uri)$"
+CRM_P135(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P135, inverse=CRM_TYPE.P135i, object=target_uri)$"
+CRM_P136(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P136, inverse=CRM_TYPE.P136i, object=target_uri)$"
+CRM_P137(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P137, inverse=CRM_TYPE.P137i, object=target_uri)$"
+CRM_P138(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P138, inverse=CRM_TYPE.P138i, object=target_uri)$"
+CRM_P139(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P139, inverse=CRM_TYPE.P139, object=target_uri)$"
+CRM_P140(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P140, inverse=CRM_TYPE.P140i, object=target_uri)$"
+CRM_P141(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P141, inverse=CRM_TYPE.P141i, object=target_uri)$"
+CRM_P142(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P142, inverse=CRM_TYPE.P142i, object=target_uri)$"
+CRM_P143(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P143, inverse=CRM_TYPE.P143i, object=target_uri)$"
+CRM_P144(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P144, inverse=CRM_TYPE.P144i, object=target_uri)$"
+CRM_P145(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P145, inverse=CRM_TYPE.P145i, object=target_uri)$"
+CRM_P146(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P146, inverse=CRM_TYPE.P146i, object=target_uri)$"
+CRM_P147(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P147, inverse=CRM_TYPE.P147i, object=target_uri)$"
+CRM_P148(source_uri, target_uri) ::= "$RDF_PROPERTY(subject=source_uri, predicate=CRM_TYPE.P148, inverse=CRM_TYPE.P148i, object=target_uri)$"

@@ -1,0 +1,108 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_SAMPLES.stg
+// Version : 001
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_SAMPLE(options, data)$"
+
+// CRMEH_SAMPLE. Fields anticipated:
+// data.sample_id [mandatory]
+// data.sample_note
+// data.sample_type
+// data.sample_type_uri
+// data.within_context_id
+// data.within_investigation_id
+// data.language
+// options.base_uri
+CRMEH_SAMPLE(options, data) ::= <<
+$if(data.sample_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	type=CRMEH_TYPE("EHE0018"), 
+	label=data.sample_id, 
+	language=data.language
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id), 
+	type=CRMEH_TYPE("EHE2006")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id), 
+	predicate=CRM_TYPE("P113"), 
+	inverse=CRM_TYPE("P113i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0018", data.sample)
+)$
+
+$if(data.sample_note)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	predicate=CRM_TYPE("P3"), 
+	literal=data.sample_note, 
+	language=data.language
+)$
+$endif$
+
+$if(data.sample_type)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	predicate=CRM_TYPE("P2"), 
+	inverse=CRM_TYPE("P2i"), 
+	object=CRMEH_URI(options.base_uri, "E55", data.sample_type)
+)$
+$endif$
+
+$if(data.sample_type_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	predicate=CRM_TYPE("P2"), 
+	inverse=CRM_TYPE("P2i"), 
+	object=data.sample_type_uri
+)$
+$endif$
+
+$if(data.within_context_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0008", data.within_context_id), 
+	type=CRMEH_TYPE("EHE0008")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0008", data.sample_id), 
+	predicate=CRM_TYPE("P53"), 
+	inverse=CRM_TYPE("P53i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id)
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id), 
+	predicate=CRM_TYPE("P112"), 
+	inverse=CRM_TYPE("P112i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0008", data.within_context_id)
+)$
+$endif$
+
+$if(data.within_investigation_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), 
+	predicate=CRM_TYPE("P53"), 
+	inverse=CRM_TYPE("P53i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id)
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("sample_id is not present")$
+$endif$
+>> 
+// end of CRMEH_SAMPLE

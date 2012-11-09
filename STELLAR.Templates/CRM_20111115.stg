@@ -1,0 +1,1570 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRM.stg
+// Version : 001
+// Summary : string template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+// 001 20/10/2011  CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "RDF.stg"
+
+// URIs. Usage: $CRM_TYPE.P1$ $CRM_TYPE("P1")$ etc.
+CRM_TYPE(type) ::= "$CRM_TYPE.(type)$"
+CRM_TYPE ::= [
+"E1"	: "crm:E1_CRM_Entity",
+"E2"	: "crm:E2_Temporal_Entity",
+"E3"	: "crm:E3_Condition_State",
+"E4"	: "crm:E4_Period",
+"E5"	: "crm:E5_Event",
+"E6"	: "crm:E6_Destruction",
+"E7"	: "crm:E7_Activity",
+"E8"	: "crm:E8_Acquisition",
+"E9"	: "crm:E9_Move",
+"E10"	: "crm:E10_Transfer_of_Custody",
+"E11"	: "crm:E11_Modification",
+"E12"	: "crm:E12_Production",
+"E13"	: "crm:E13_Attribute_Assignment",
+"E14"	: "crm:E14_Condition_Assessment",
+"E15"	: "crm:E15_Identifier_Assignment",
+"E16"	: "crm:E16_Measurement",
+"E17"	: "crm:E17_Type_Assignment",
+"E18"	: "crm:E18_Physical_Thing",
+"E19"	: "crm:E19_Physical_Object",
+"E20"	: "crm:E20_Biological_Object",
+"E21"	: "crm:E21_Person",
+"E22"	: "crm:E22_Man-Made_Object",
+"E24"	: "crm:E24_Physical_Man-Made_Thing",
+"E25"	: "crm:E25_Man-Made_Feature",
+"E26"	: "crm:E26_Physical_Feature",
+"E27"	: "crm:E27_Site",
+"E28"	: "crm:E28_Conceptual_Object",
+"E29"	: "crm:E29_Design_or_Procedure",
+"E30"	: "crm:E30_Right",
+"E31"	: "crm:E31_Document",
+"E32"	: "crm:E32_Authority_Document",
+"E33"	: "crm:E33_Linguistic_Object",
+"E34"	: "crm:E34_Inscription",
+"E35"	: "crm:E35_Title",
+"E36"	: "crm:E36_Visual_Item",
+"E37"	: "crm:E37_Mark",
+"E38"	: "crm:E38_Image",
+"E39"	: "crm:E39_Actor",
+"E40"	: "crm:E40_Legal_Body",
+"E41"	: "crm:E41_Appellation",
+"E42"	: "crm:E42_Identifier",
+"E44"	: "crm:E44_Place_Appellation",
+"E45"	: "crm:E45_Address",
+"E46"	: "crm:E46_Section_Definition",
+"E47"	: "crm:E47_Spatial_Coordinates",
+"E48"	: "crm:E48_Place_Name",
+"E49"	: "crm:E49_Time_Appellation",
+"E50"	: "crm:E50_Date",
+"E51"	: "crm:E51_Contact_Point",
+"E52"	: "crm:E52_Time-Span",
+"E53"	: "crm:E53_Place",
+"E54"	: "crm:E54_Dimension",
+"E55"	: "crm:E55_Type",
+"E56"	: "crm:E56_Language",
+"E57"	: "crm:E57_Material",
+"E58"	: "crm:E58_Measurement_Unit",
+"E59"	: "crm:E59_Primitive_Value",
+"E60"	: "crm:E60_Number",
+"E61"	: "crm:E61_Time_Primitive",
+"E62"	: "crm:E62_String",
+"E63"	: "crm:E63_Beginning_of_Existence",
+"E64"	: "crm:E64_End_of_Existence",
+"E65"	: "crm:E65_Creation",
+"E66"	: "crm:E66_Formation",
+"E67"	: "crm:E67_Birth",
+"E68"	: "crm:E68_Dissolution",
+"E69"	: "crm:E69_Death",
+"E70"	: "crm:E70_Thing",
+"E71"	: "crm:E71_Man-Made_Thing",
+"E72"	: "crm:E72_Legal_Object",
+"E73"	: "crm:E73_Information_Object",
+"E74"	: "crm:E74_Group",
+"E75"	: "crm:E75_Conceptual_Object_Appellation",
+"E77"	: "crm:E77_Persistent_Item",
+"E78"	: "crm:E78_Collection",
+"E79"	: "crm:E79_Part_Addition",
+"E80"	: "crm:E80_Part_Removal",
+"E81"	: "crm:E81_Transformation",
+"E82"	: "crm:E82_Actor_Appellation",
+"E83"	: "crm:E83_Type_Creation",
+"E84"	: "crm:E84_Information_Carrier",
+"E85"	: "crm:E85_Joining",
+"E86"	: "crm:E86_Leaving",
+"E87"	: "crm:E87_Curation_Activity",
+"E89"	: "crm:E89_Propositional_Object",
+"E90"	: "crm:E90_Symbolic_Object",
+"P1"	: "crm:P1_is_identified_by",
+"P1i"	: "crm:P1i_identifies",
+"P2"	: "crm:P2_has_type",
+"P2i"	: "crm:P2i_is_type_of",
+"P3"	: "crm:P3_has_note",
+"P4"	: "crm:P4_has_time-span",
+"P4i"	: "crm:P4i_is_time-span_of",
+"P5"	: "crm:P5_consists_of",
+"P5i"	: "crm:P5i_forms_part_of",
+"P7"	: "crm:P7_took_place_at",
+"P7i"	: "crm:P7i_witnessed",
+"P8"	: "crm:P8_took_place_on_or_within",
+"P8i"	: "crm:P8i_witnessed",
+"P9"	: "crm:P9_consists_of",
+"P9i"	: "crm:P9i_forms_part_of",
+"P10"	: "crm:P10_falls_within",
+"P10i"	: "crm:P10i_contains",
+"P11"	: "crm:P11_had_participant",
+"P11i"	: "crm:P11i_participated_in",
+"P12"	: "crm:P12_occurred_in_the_presence_of",
+"P12i"	: "crm:P12i_was_present_at",
+"P13"	: "crm:P13_destroyed",
+"P13i"	: "crm:P13i_was_destroyed_by",
+"P14"	: "crm:P14_carried_out_by",
+"P14i"	: "crm:P14i_performed",
+"P15"	: "crm:P15_was_influenced_by",
+"P15i"	: "crm:P15i_influenced",
+"P16"	: "crm:P16_used_specific_object",
+"P16i"	: "crm:P16i_was_used_for",
+"P17"	: "crm:P17_was_motivated_by",
+"P17i"	: "crm:P17i_motivated",
+"P19"	: "crm:P19_was_intended_use_of",
+"P19i"	: "crm:P19i_was_made_for",
+"P20"	: "crm:P20_had_specific_purpose",
+"P20i"	: "crm:P20i_was_purpose_of",
+"P21"	: "crm:P21_had_general_purpose",
+"P21i"	: "crm:P21i_was_purpose_of",
+"P22"	: "crm:P22_transferred_title_to",
+"P22i"	: "crm:P22i_acquired_title_through",
+"P23"	: "crm:P23_transferred_title_from",
+"P23i"	: "crm:P23i_surrendered_title_through",
+"P24"	: "crm:P24_transferred_title_of",
+"P24i"	: "crm:P24i_changed_ownership_through",
+"P25"	: "crm:P25_moved",
+"P25i"	: "crm:P25i_moved_by",
+"P26"	: "crm:P26_moved_to",
+"P26i"	: "crm:P26i_was_destination_of",
+"P27"	: "crm:P27_moved_from",
+"P27i"	: "crm:P27i_was_origin_of",
+"P28"	: "crm:P28_custody_surrendered_by",
+"P28i"	: "crm:P28i_surrendered_custody_through",
+"P29"	: "crm:P29_custody_received_by",
+"P29i"	: "crm:P29i_received_custody_through",
+"P30"	: "crm:P30_transferred_custody_of",
+"P30i"	: "crm:P30i_custody_transferred_through",
+"P31"	: "crm:P31_has_modified",
+"P31i"	: "crm:P31i_was_modified_by",
+"P32"	: "crm:P32_used_general_technique",
+"P32i"	: "crm:P32i_was_technique_of",
+"P33"	: "crm:P33_used_specific_technique",
+"P33i"	: "crm:P33i_was_used_by",
+"P34"	: "crm:P34_concerned",
+"P34i"	: "crm:P34i_was_assessed_by",
+"P35"	: "crm:P35_has_identified",
+"P35i"	: "crm:P35i_was_identified_by",
+"P37"	: "crm:P37_assigned",
+"P37i"	: "crm:P37i_was_assigned_by",
+"P38"	: "crm:P38_deassigned",
+"P38i"	: "crm:P38i_was_deassigned_by",
+"P39"	: "crm:P39_measured",
+"P39i"	: "crm:P39i_was_measured_by",
+"P40"	: "crm:P40_observed_dimension",
+"P40i"	: "crm:P40i_was_observed_in",
+"P41"	: "crm:P41_classified",
+"P41i"	: "crm:P41i_was_classified_by",
+"P42"	: "crm:P42_assigned",
+"P42i"	: "crm:P42i_was_assigned_by",
+"P43"	: "crm:P43_has_dimension",
+"P43i"	: "crm:P43i_is_dimension_of",
+"P44"	: "crm:P44_has_condition",
+"P44i"	: "crm:P44i_is_condition_of",
+"P45"	: "crm:P45_consists_of",
+"P45i"	: "crm:P45i_is_incorporated_in",
+"P46"	: "crm:P46_is_composed_of",
+"P46i"	: "crm:P46i_forms_part_of",
+"P48"	: "crm:P48_has_preferred_identifier",
+"P48i"	: "crm:P48i_is_preferred_identifier_of",
+"P49"	: "crm:P49_has_former_or_current_keeper",
+"P49i"	: "crm:P49i_is_former_or_current_keeper_of",
+"P50"	: "crm:P50_has_current_keeper",
+"P50i"	: "crm:P50i_is_current_keeper_of",
+"P51"	: "crm:P51_has_former_or_current_owner",
+"P51i"	: "crm:P51i_is_former_or_current_owner_of",
+"P52"	: "crm:P52_has_current_owner",
+"P52i"	: "crm:P52i_is_current_owner_of",
+"P53"	: "crm:P53_has_former_or_current_location",
+"P53i"	: "crm:P53i_is_former_or_current_location_of",
+"P54"	: "crm:P54_has_current_permanent_location",
+"P54i"	: "crm:P54i_is_current_permanent_location_of",
+"P55"	: "crm:P55_has_current_location",
+"P55i"	: "crm:P55i_currently_holds",
+"P56"	: "crm:P56_bears_feature",
+"P56i"	: "crm:P56i_is_found_on",
+"P57"	: "crm:P57_has_number_of_parts",
+"P58"	: "crm:P58_has_section_definition",
+"P58i"	: "crm:P58i_defines_section",
+"P59"	: "crm:P59_has_section",
+"P59i"	: "crm:P59i_is_located_on_or_within",
+"P62"	: "crm:P62_depicts",
+"P62i"	: "crm:P62i_is_depicted_by",
+"P65"	: "crm:P65_shows_visual_item",
+"P65i"	: "crm:P65i_is_shown_by",
+"P67"	: "crm:P67_refers_to",
+"P67i"	: "crm:P67i_is_referred_to_by",
+"P68"	: "crm:P68_foresees_use_of",
+"P68i"	: "crm:P68i_use_foreseen_by",
+"P69"	: "crm:P69_is_associated_with",
+"P70"	: "crm:P70_documents",
+"P70i"	: "crm:P70i_is_documented_in",
+"P71"	: "crm:P71_lists",
+"P71i"	: "crm:P71i_is_listed_in",
+"P72"	: "crm:P72_has_language",
+"P72i"	: "crm:P72i_is_language_of",
+"P73"	: "crm:P73_has_translation",
+"P73i"	: "crm:P73i_is_translation_of",
+"P74"	: "crm:P74_has_current_or_former_residence",
+"P74i"	: "crm:P74i_is_current_or_former_residence_of",
+"P75"	: "crm:P75_possesses",
+"P75i"	: "crm:P75i_is_possessed_by",
+"P76"	: "crm:P76_has_contact_point",
+"P76i"	: "crm:P76i_provides_access_to",
+"P78"	: "crm:P78_is_identified_by",
+"P78i"	: "crm:P78i_identifies",
+"P79"	: "crm:P79_beginning_is_qualified_by",
+"P80"	: "crm:P80_end_is_qualified_by",
+"P81"	: "crm:P81_ongoing_throughout",
+"P82"	: "crm:P82_at_some_time_within",
+"P83"	: "crm:P83_had_at_least_duration",
+"P83i"	: "crm:P83i_was_minimum_duration_of",
+"P84"	: "crm:P84_had_at_most_duration",
+"P84i"	: "crm:P84i_was_maximum_duration_of",
+"P86"	: "crm:P86_falls_within",
+"P86i"	: "crm:P86i_contains",
+"P87"	: "crm:P87_is_identified_by",
+"P87i"	: "crm:P87i_identifies",
+"P88"	: "crm:P88_consists_of",
+"P88i"	: "crm:P88i_forms_part_of",
+"P89"	: "crm:P89_falls_within",
+"P89i"	: "crm:P89i_contains",
+"P90"	: "crm:P90_has_value",
+"P91"	: "crm:P91_has_unit",
+"P91i"	: "crm:P91i_is_unit_of",
+"P92"	: "crm:P92_brought_into_existence",
+"P92i"	: "crm:P92i_was_brought_into_existence_by",
+"P93"	: "crm:P93_took_out_of_existence",
+"P93i"	: "crm:P93i_was_taken_out_of_existence_by",
+"P94"	: "crm:P94_has_created",
+"P94i"	: "crm:P94i_was_created_by",
+"P95"	: "crm:P95_has_formed",
+"P95i"	: "crm:P95i_was_formed_by",
+"P96"	: "crm:P96_by_mother",
+"P96i"	: "crm:P96i_gave_birth",
+"P97"	: "crm:P97_from_father",
+"P97i"	: "crm:P97i_was_father_for",
+"P98"	: "crm:P98_brought_into_life",
+"P98i"	: "crm:P98i_was_born",
+"P99"	: "crm:P99_dissolved",
+"P99i"	: "crm:P99i_was_dissolved_by",
+"P100"	: "crm:P100_was_death_of",
+"P100i"	: "crm:P100i_died_in",
+"P101"	: "crm:P101_had_as_general_use",
+"P101i"	: "crm:P101i_was_use_of",
+"P102"	: "crm:P102_has_title",
+"P102i"	: "crm:P102i_is_title_of",
+"P103"	: "crm:P103_was_intended_for",
+"P103i"	: "crm:P103i_was_intention_of",
+"P104"	: "crm:P104_is_subject_to",
+"P104i"	: "crm:P104i_applies_to",
+"P105"	: "crm:P105_right_held_by",
+"P105i"	: "crm:P105i_has_right_on",
+"P106"	: "crm:P106_is_composed_of",
+"P106i"	: "crm:P106i_forms_part_of",
+"P107"	: "crm:P107_has_current_or_former_member",
+"P107i"	: "crm:P107i_is_current_or_former_member_of",
+"P108"	: "crm:P108_has_produced",
+"P108i"	: "crm:P108i_was_produced_by",
+"P109"	: "crm:P109_has_current_or_former_curator",
+"P109i"	: "crm:P109i_is_current_or_former_curator_of",
+"P110"	: "crm:P110_augmented",
+"P110i"	: "crm:P110i_was_augmented_by",
+"P111"	: "crm:P111_added",
+"P111i"	: "crm:P111i_was_added_by",
+"P112"	: "crm:P112_diminished",
+"P112i"	: "crm:P112i_was_diminished_by",
+"P113"	: "crm:P113_removed",
+"P113i"	: "crm:P113i_was_removed_by",
+"P114"	: "crm:P114_is_equal_in_time_to",
+"P115"	: "crm:P115_finishes",
+"P115i"	: "crm:P115i_is_finished_by",
+"P116"	: "crm:P116_starts",
+"P116i"	: "crm:P116i_is_started_by",
+"P117"	: "crm:P117_occurs_during",
+"P117i"	: "crm:P117i_includes",
+"P118"	: "crm:P118_overlaps_in_time_with",
+"P118i"	: "crm:P118i_is_overlapped_in_time_by",
+"P119"	: "crm:P119_meets_in_time_with",
+"P119i"	: "crm:P119i_is_met_in_time_by",
+"P120"	: "crm:P120_occurs_before",
+"P120i"	: "crm:P120i_occurs_after",
+"P121"	: "crm:P121_overlaps_with",
+"P122"	: "crm:P122_borders_with",
+"P123"	: "crm:P123_resulted_in",
+"P123i"	: "crm:P123i_resulted_from",
+"P124"	: "crm:P124_transformed",
+"P124i"	: "crm:P124i_was_transformed_by",
+"P125"	: "crm:P125_used_object_of_type",
+"P125i"	: "crm:P125i_was_type_of_object_used_in",
+"P126"	: "crm:P126_employed",
+"P126i"	: "crm:P126i_was_employed_in",
+"P127"	: "crm:P127_has_broader_term",
+"P127i"	: "crm:P127i_has_narrower_term",
+"P128"	: "crm:P128_carries",
+"P128i"	: "crm:P128i_is_carried_by",
+"P129"	: "crm:P129_is_about",
+"P129i"	: "crm:P129i_is_subject_of",
+"P130"	: "crm:P130_shows_features_of",
+"P130i"	: "crm:P130i_features_are_also_found_on",
+"P131"	: "crm:P131_is_identified_by",
+"P131i"	: "crm:P131i_identifies",
+"P132"	: "crm:P132_overlaps_with",
+"P133"	: "crm:P133_is_separated_from",
+"P134"	: "crm:P134_continued",
+"P134i"	: "crm:P134i_was_continued_by",
+"P135"	: "crm:P135_created_type",
+"P135i"	: "crm:P135i_was_created_by",
+"P136"	: "crm:P136_was_based_on",
+"P136i"	: "crm:P136i_supported_type_creation",
+"P137"	: "crm:P137_exemplifies",
+"P137i"	: "crm:P137i_is_exemplified_by",
+"P138"	: "crm:P138_represents",
+"P138i"	: "crm:P138i_has_representation",
+"P139"	: "crm:P139_has_alternative_form",
+"P140"	: "crm:P140_assigned_attribute_to",
+"P140i"	: "crm:P140i_was_attributed_by",
+"P141"	: "crm:P141_assigned",
+"P141i"	: "crm:P141i_was_assigned_by",
+"P142"	: "crm:P142_used_constituent",
+"P142i"	: "crm:P142i_was_used_in",
+"P143"	: "crm:P143_joined",
+"P143i"	: "crm:P143i_was_joined_by",
+"P144"	: "crm:P144_joined_with",
+"P144i"	: "crm:P144i_gained_member_by",
+"P145"	: "crm:P145_separated",
+"P145i"	: "crm:P145i_left_by",
+"P146"	: "crm:P146_separated_from",
+"P146i"	: "crm:P146i_lost_member_by",
+"P147"	: "crm:P147_curated",
+"P147i"	: "crm:P147i_was_curated_by",
+"P148"	: "crm:P148_has_component",
+"P148i"	: "crm:P148i_is_component_of",
+default : key
+]
+
+// CRM entities. Usage: $CRM_ENTITY("http://tmp/123", "E2", "123")$
+//CRM_ENTITY(uri, type, label) ::= "$RDF_ENTITY(uri, CRM_TYPE.(type), label)$"
+
+
+// CRM properties. Usage: $CRM_X_P1_Y("http://tmp/123", "http://tmp/456")$
+
+CRM_X_P1_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P1, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P1i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P1, literal=y_uri)$
+$endif$
+>>
+
+CRM_X_P2_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P2, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P2i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P2, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P3_Y(x_uri, y_txt, language=false) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P3, literal=y_txt, language=language)$
+>>
+
+CRM_X_P4_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P4, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P4i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P4, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P5_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P5, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P5i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P5, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P7_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P7, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P7i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P7, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P8_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P8, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P8i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P8, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P9_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P9, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P9i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P9, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P10_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P10, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P10i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P10, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P11_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P11, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P11i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P11, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P12_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P12, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P12i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P12, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P13_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P13, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P13i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P13, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P14_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P14, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P14i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P14, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P15_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P15, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P15i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P15, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P16_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P16, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P16i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P16, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P17_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P17, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P17i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P17, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P19_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P19, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P19i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P19, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P20_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P20, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P20i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P20, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P21_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P21, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P21i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P21, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P22_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P22, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P22i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P22, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P23_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P23, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P23i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P23, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P24_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P24, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P24i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P24, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P25_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P25, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P25i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P25, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P26_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P26, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P26i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P26, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P27_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P27, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P27i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P27, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P28_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P28, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P28i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P28, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P29_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P29, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P29i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P29, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P30_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P30, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P30i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P30, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P31_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P31, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P31i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P31, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P32_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P32, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P32i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P32, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P33_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P33, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P33i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P33, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P34_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P34, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P34i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P34, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P35_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P35, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P35i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P35, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P37_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P37, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P37i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P37, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P38_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P38, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P38i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P38, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P39_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P39, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P39i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P39, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P40_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P40, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P40i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P40, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P41_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P41, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P41i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P41, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P42_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P42, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P42i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P42, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P43_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P43, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P43i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P43, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P44_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P44, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P44i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P44, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P45_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P45, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P45i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P45, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P46_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P46, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P46i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P46, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P48_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P48, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P48i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P48, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P49_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P49, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P49i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P49, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P50_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P50, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P50i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P50, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P51_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P51, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P51i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P51, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P52_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P52, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P52i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P52, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P53_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P53, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P53i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P53, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P54_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P54, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P54i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P54, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P55_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P55, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P55i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P55, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P56_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P56, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P56i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P56, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P57_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P56, literal=y_txt)$
+>>
+
+CRM_X_P58_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P58, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P58i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P58, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P59_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P59, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P59i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P59, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P62_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P62, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P62i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P62, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P65_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P65, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P65i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P65, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P67_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P67, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P67i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P67, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P68_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P68, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P68i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P68, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P69_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P69, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P69i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P69, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P70_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P70, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P70i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P70, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P71_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P71, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P71i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P71, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P72_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P72, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P72i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P72, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P73_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P73, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P73i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P73, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P74_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P74, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P74i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P74, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P75_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P75, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P75i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P75, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P76_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P76, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P76i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P76, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P78_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P78, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P78i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P78, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P79_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P79, literal=y_txt)$
+>>
+
+CRM_X_P80_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P80, literal=y_txt)$
+>>
+
+CRM_X_P81_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P81, literal=y_txt)$
+>>
+
+CRM_X_P82_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P82, literal=y_txt)$
+>>
+
+CRM_X_P83_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P83, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P83i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P83, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P84_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P84, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P84i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P84, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P86_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P86, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P86i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P86, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P87_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P87, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P87i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P87, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P88_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P88, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P88i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P88, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P89_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P89, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P89i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P89, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P90_Y(x_uri, y_txt) ::= <<
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P90, literal=y_txt)$
+>>
+
+CRM_X_P91_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P91, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P91i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P91, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P92_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P92, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P92i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P92, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P93_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P93, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P93i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P93, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P94_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P94, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P94i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P94, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P95_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P95, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P95i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P95, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P96_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P96, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P96i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P96, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P97_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P97, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P97i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P97, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P98_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P98, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P98i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P98, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P99_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P99, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P99i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P99, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P100_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P100, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P100i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P100, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P101_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P101, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P101i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P101, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P102_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P102, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P102i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P102, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P103_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P103, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P103i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P103, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P104_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P104, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P104i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P104, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P105_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P105, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P105i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P105, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P106_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P106, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P106i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P106, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P107_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P107, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P107i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P107, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P108_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P108, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P108i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P108, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P109_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P109, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P109i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P109, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P110_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P110, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P110i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P110, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P111_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P111, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P111i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P111, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P112_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P112, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P112i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P112, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P113_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P113, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P113i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P113, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P114_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P114, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P114, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P114, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P115_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P115, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P115i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P115, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P116_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P116, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P116i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P116, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P117_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P117, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P117i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P117, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P118_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P118, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P118i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P118, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P119_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P119, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P119i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P119, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P120_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P120, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P120i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P120, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P121_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P121, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P121, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P120, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P122_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P122, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P122, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P122, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P123_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P123, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P123i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P123, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P124_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P124, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P124i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P124, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P125_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P125, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P125i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P125, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P126_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P126, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P126i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P126, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P127_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P127, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P127i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P127, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P128_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P128, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P128i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P128, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P129_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P129, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P129i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P129, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P130_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P130, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P130i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P130, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P131_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P131, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P131i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P131, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P132_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P132, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P132, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P132, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P133_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P133, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P133, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P133, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P134_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P134, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P134i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P134, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P135_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P135, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P135i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P135, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P136_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P136, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P136i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P136, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P137_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P137, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P137i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P137, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P138_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P138, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P138i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P138, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P139_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P139, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P139, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P139, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P140_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P140, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P140i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P140, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P141_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P141, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P141i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P141, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P142_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P142, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P142i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P142, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P143_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P143, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P143i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P143, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P144_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P144, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P144i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P144, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P145_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P145, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P145i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P145, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P146_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P146, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P146i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P146, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P147_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P147, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P147i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P147, literal=y_txt)$
+$endif$
+>>
+
+CRM_X_P148_Y(x_uri, y_uri=false, y_txt=false) ::= <<
+$if(y_uri)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P148, object=y_uri)$
+$RDF_PROPERTY(subject=y_uri, predicate=CRM_TYPE.P148i, object=x_uri)$
+$elseif(y_txt)$
+$RDF_PROPERTY(subject=x_uri, predicate=CRM_TYPE.P148, literal=y_txt)$
+$endif$
+>>
+

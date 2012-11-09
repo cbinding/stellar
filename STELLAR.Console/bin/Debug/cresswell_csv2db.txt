@@ -1,0 +1,2 @@
+#STELLAR commands to import the cresswell CSV data to a database. Usage: stellar < cresswell_csv2db.txt
+csv2db /db:cresswell /csv:"C:\Projects\stellar\data\Cresswell\cresswell.csv"

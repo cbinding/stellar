@@ -1,0 +1,84 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : DCTERMS.stg
+// Version : 001
+// Summary : string template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 15/03/2012 CFB Initially created template group
+//============================================================================//
+delimiters "$", "$"
+
+// Usage: $DCTERMS_TYPE.AUTHOR$ etc.
+DCTERMS_TYPE(type) ::= "$DCTERMS_TYPE.(type)$"
+DCTERMS_TYPE ::= [
+"SUBJECTSCHEME"		: "dcterms:SubjectScheme",
+"DATESCHEME"		: "dcterms:DateScheme",
+"FORMATSCHEME"		: "dcterms:FormatScheme",
+"LANGUAGESCHEME"	: "dcterms:LanguageScheme",
+"SPATIALSCHEME"		: "dcterms:SpatialScheme",
+"TEMPORALSCHEME"	: "dcterms:TemporalScheme",
+"TYPESCHEME"		: "dcterms:TypeScheme",
+"IDENTIFIERSCHEME"	: "dcterms:IdentifierScheme",
+"RELATIONSCHEME"	: "dcterms:RelationScheme",
+"SOURCESCHEME"		: "dcterms:SourceScheme",
+"TITLE"			: "dcterms:title",
+"AUDIENCE"		: "dcterms:audience",
+"ALTERNATIVE"		: "dcterms:alternative",
+"TABLEOFCONTENTS"	: "dcterms:tableOfContents",
+"ABSTRACT"		: "dcterms:abstract",
+"CREATED"		: "dcterms:created",
+"VALID"			: "dcterms:valid",
+"AVAILABLE"		: "dcterms:available",
+"ISSUED"		: "dcterms:issued",
+"MODIFIED"		: "dcterms:modified",
+"EXTENT"		: "dcterms:extent",
+"MEDIUM"		: "dcterms:medium",
+"ISVERSIONOF"		: "dcterms:isVersionOf",
+"HASVERSION"		: "dcterms:hasVersion",
+"ISREPLACEDBY"		: "dcterms:isReplacedBy",
+"REPLACES"		: "dcterms:replaces",
+"ISREQUIREDBY"		: "dcterms:isRequiredBy",
+"REQUIRES"		: "dcterms:requires",
+"ISPARTOF"		: "dcterms:isPartOf",
+"HASPART"		: "dcterms:hasPart",
+"ISREFERENCEDBY"	: "dcterms:isReferencedBy",
+"REFERENCES"		: "dcterms:references",
+"ISFORMATOF"		: "dcterms:isFormatOf",
+"HASFORMAT"		: "dcterms:hasFormat",
+"CONFORMSTO"		: "dcterms:conformsTo",
+"SPATIAL"		: "dcterms:spatial",
+"TEMPORAL"		: "dcterms:temporal",
+"MEDIATOR"		: "dcterms:mediator",
+"DATEACCEPTED"		: "dcterms:dateAccepted",
+"DATECOPYRIGHTED"	: "dcterms:dateCopyrighted",
+"DATESUBMITTED"		: "dcterms:dateSubmitted",
+"EDUCATIONLEVEL"	: "dcterms:educationLevel",
+"ACCESSRIGHTS"		: "dcterms:accessRights",
+"BIBLIOGRAPHICCITATION" : "dcterms:bibliographicCitation",
+"LICENSE"		: "dcterms:license",
+"RIGHTSHOLDER"		: "dcterms:rightsHolder",
+"PROVENANCE"		: "dcterms:provenance",
+"INSTRUCTIONALMETHOD"	: "dcterms:instructionalMethod",
+"ACCRUALMETHOD"		: "dcterms:accrualMethod",
+"ACCRUALPERIODICITY"	: "dcterms:accrualPeriodicity",
+"ACCRUALPOLICY"		: "dcterms:accrualPolicy",
+"CREATOR"		: "dcterms:creator",
+"SUBJECT"		: "dcterms:subject",
+"DESCRIPTION"		: "dcterms:description",
+"PUBLISHER"		: "dcterms:publisher",
+"CONTRIBUTOR"		: "dcterms:contributor",
+"DATE"			: "dcterms:date",
+"TYPE"			: "dcterms:type",
+"FORMAT"		: "dcterms:format",
+"IDENTIFIER"		: "dcterms:identifier",
+"SOURCE"		: "dcterms:source",
+"LANGUAGE"		: "dcterms:language",
+"RELATION"		: "dcterms:relation",
+"COVERAGE"		: "dcterms:coverage",
+"RIGHTS"		: "dcterms:rights",
+default			: key
+]

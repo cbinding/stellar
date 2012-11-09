@@ -1,0 +1,150 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_GROUPS.stg
+// Version : 001
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+
+// 001 20/10/2011 CFB Created template group
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+// STELLAR specific templates
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+RECORD(options, data) ::= "$CRMEH_GROUP(options, data)$"
+
+// CRMEH_GROUP. Fields anticipated:
+// data.group_id [mandatory]
+// data.group_note
+// data.group_type
+// data.group_type_uri
+// data.group_location
+// data.group_period
+// data.within_group_id
+// data.within_investigation_id
+// data.language
+// options.base_uri
+CRMEH_GROUP(options, data) ::= <<
+$if(data.group_id)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	type=CRMEH_TYPE("EHE0005"), 
+	label=data.group_id, 
+	language=data.language
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0092", data.group_id), 
+	type=CRMEH_TYPE("EHE0092"),
+	label=data.group_id,
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P87"), 
+	inverse=CRM_TYPE("P87i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0092", data.group_id)	
+)$
+
+$if(data.group_note)$ 
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P3"), 
+	literal=data.group_note, 
+	language=data.language
+)$
+$endif$ 
+
+$if(data.group_type)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P2"), 
+	inverse=CRM_TYPE("P2i"), 
+	object=CRMEH_URI(options.base_uri, "E55", data.group_type)
+)$
+$endif$ 
+
+$if(data.group_type_uri)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P2"), 
+	inverse=CRM_TYPE("P2i"), 
+	object=data.group_type_uri
+)$
+$endif$
+
+$if(data.group_location)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0093", data.group_location), 
+	type=CRMEH_TYPE("EHE0093"),
+	label=data.group_location,
+	language=data.language
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P87"), 
+	inverse=CRM_TYPE("P87i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0093", data.group_location)
+)$
+$endif$
+
+$if(data.group_period)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE1003", data.group_id), 
+	type=CRMEH_TYPE("EHE1003")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0070", data.group_period), 
+	type=CRMEH_TYPE("EHE0070")
+)$
+$RDF_ENTITY(
+	uri=CRMEH_URI(options.base_uri, "EHE0071", data.group_period), 
+	type=CRMEH_TYPE("EHE0071")
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1003", data.group_id), 
+	predicate=CRM_TYPE("P7"), 
+	inverse=CRM_TYPE("P7i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0007", data.group_id)
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE1003", data.group_id), 
+	predicate=CRM_TYPE("P4"), 
+	inverse=CRM_TYPE("P4i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0070", data.group_period)
+)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0070", data.group_period), 
+	predicate=CRM_TYPE("P1"), 
+	inverse=CRM_TYPE("P1i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0071", data.group_period)
+)$
+$endif$
+
+$if(data.within_group_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P891"), 
+	inverse=CRM_TYPE("P89i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0005", data.within_group_id)
+)$
+$endif$
+
+$if(data.within_investigation_id)$
+$RDF_PROPERTY(
+	subject=CRMEH_URI(options.base_uri, "EHE0005", data.group_id), 
+	predicate=CRM_TYPE("P89"), 
+	inverse=CRM_TYPE("P89i"), 
+	object=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id)
+)$
+$endif$
+
+$else$
+$RDF_COMMENT("group_id is not present")$
+$endif$
+>> 
+// end of CRMEH_GROUP

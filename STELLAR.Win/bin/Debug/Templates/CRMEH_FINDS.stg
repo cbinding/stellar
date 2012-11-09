@@ -1,0 +1,87 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_FINDS.stg
+// Version : 002
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+// 001 20/10/2011 CFB Created template group
+// 002 29/02/2012 CFB Now using entity/property templates e.g. EHE0001() etc.
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_FIND(options, data)$"
+
+// CRMEH_FIND. Fields anticipated:
+// data.find_id [mandatory]
+// data.find_note
+// data.find_type
+// data.find_type_uri
+// data.find_material
+// data.find_material_uri
+// data.production_period
+// data.within_context_id
+// data.within_investigation_id
+// data.language
+// options.base_uri
+CRMEH_FIND(options, data) ::= <<
+$if(data.find_id)$
+$CRMEH_EHE0009(uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), label=data.find_id)$
+$CRMEH_EHE2013(uri=CRMEH_URI(options.base_uri, "EHE2013", data.find_id))$
+$CRMEH_EHE0043(uri=CRMEH_URI(options.base_uri, "EHE0043", data.find_id), label=data.find_id)$
+$CRM_P1(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0043", data.find_id))$
+$CRM_P140(source_uri=CRMEH_URI(options.base_uri, "EHE2013", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id))$
+$CRM_P37(source_uri=CRMEH_URI(options.base_uri, "EHE2013", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0043", data.find_id))$
+
+$if(data.find_note)$
+$CRM_P3(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), literal=data.find_note, language=data.language)$
+$endif$
+
+$if(data.find_type)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=CRMEH_URI(options.base_uri, "E55", data.find_type))$
+$endif$
+
+$if(data.find_type_uri)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=data.find_type_uri)$
+$endif$
+
+$if(data.find_material)$
+$CRMEH_EHE0030(uri=CRMEH_URI(options.base_uri, "EHE0030", data.find_material), label=data.find_material)$
+$CRM_P45(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0030", data.find_material))$
+$endif$
+
+$if(data.find_material_uri)$
+$CRM_P45(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=data.find_material_uri)$
+$endif$
+
+$if(data.production_period)$
+$CRMEH_EHE1002(uri=CRMEH_URI(options.base_uri, "EHE1002", data.find_id))$
+$CRMEH_EHE0038(uri=CRMEH_URI(options.base_uri, "EHE0038", data.production_period))$
+$CRMEH_EHE0039(uri=CRMEH_URI(options.base_uri, "EHE0039", data.production_period))$
+$CRM_P108(source_uri=CRMEH_URI(options.base_uri, "EHE1002", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id))$
+$CRM_P4(source_uri=CRMEH_URI(options.base_uri, "EHE1002", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0038", data.production_period))$
+$CRM_P1(source_uri=CRMEH_URI(options.base_uri, "EHE0038", data.production_period), target_uri=CRMEH_URI(options.base_uri, "EHE0039", data.production_period))$
+$endif$
+
+$if(data.within_context_id)$
+$CRMEH_EHE1004(uri=CRMEH_URI(options.base_uri, "EHE1004", data.find_id))$
+$CRM_P25(source_uri=CRMEH_URI(options.base_uri, "EHE1004", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id))$
+$CRM_P26(source_uri=CRMEH_URI(options.base_uri, "EHE1004", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id))$
+$CRM_P53(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id))$
+$endif$
+
+$if(data.within_investigation_id)$
+$CRM_P53(source_uri=CRMEH_URI(options.base_uri, "EHE0009", data.find_id), target_uri=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id))$
+$endif$
+
+$else$
+$RDF_COMMENT("find_id is not present")$
+$endif$
+>> 
+// end of CRMEH_FIND

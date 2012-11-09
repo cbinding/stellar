@@ -1,0 +1,62 @@
+//==============================================================================
+// Creator : Ceri Binding, University of Glamorgan
+// Project : STELLAR
+// Classes : CRMEH_SAMPLES.stg
+// Version : 002
+// Summary : user defined template group for use with STELLAR application
+// License : http://creativecommons.org/licenses/by/3.0/ 
+// =============================================================================
+// History :
+// 001 20/10/2011 CFB Created template 
+// 002 29/02/2012 CFB Now using entity/property templates e.g. EHE0001() etc.
+//============================================================================//
+delimiters "$", "$"
+import "CRMEH.stg"
+
+HEADER(options) ::= "$RDF_HEADER()$"
+FOOTER(options) ::= "$RDF_FOOTER()$"
+
+RECORD(options, data) ::= "$CRMEH_SAMPLE(options, data)$"
+
+// CRMEH_SAMPLE. Fields anticipated:
+// data.sample_id [mandatory]
+// data.sample_note
+// data.sample_type
+// data.sample_type_uri
+// data.within_context_id
+// data.within_investigation_id
+// data.language
+// options.base_uri
+CRMEH_SAMPLE(options, data) ::= <<
+$if(data.sample_id)$
+$CRMEH_EHE0018(uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), label=data.sample_id)$
+$CRMEH_EHE2006(uri=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id))$
+$CRM_P113(source_uri=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id), target_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id))$
+
+$if(data.sample_note)$
+$CRM_P3(source_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), literal=data.sample_note, language=data.language)$
+$endif$
+
+$if(data.sample_type)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), target_uri=CRMEH_URI(options.base_uri, "E55", data.sample_type))$
+$endif$
+
+$if(data.sample_type_uri)$
+$CRM_P2(source_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), target_uri=data.sample_type_uri)$
+$endif$
+
+$if(data.within_context_id)$
+$CRMEH_EHE0008(uri=CRMEH_URI(options.base_uri, "EHE0008", data.within_context_id))$
+$CRM_P53(source_uri=CRMEH_URI(options.base_uri, "EHE0008", data.sample_id), target_uri=CRMEH_URI(options.base_uri, "EHE0007", data.within_context_id))$
+$CRM_P112(source_uri=CRMEH_URI(options.base_uri, "EHE2006", data.sample_id), target_uri=CRMEH_URI(options.base_uri, "EHE0008", data.within_context_id))$
+$endif$
+
+$if(data.within_investigation_id)$
+$CRM_P89(source_uri=CRMEH_URI(options.base_uri, "EHE0018", data.sample_id), target_uri=CRMEH_URI(options.base_uri, "EHE0003", data.within_investigation_id))$
+$endif$
+
+$else$
+$RDF_COMMENT("sample_id is not present")$
+$endif$
+>> 
+// end of CRMEH_SAMPLE

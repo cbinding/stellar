@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="fred" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="fred">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SITECODE_x0020_" type="xs:string" minOccurs="0" />
+              <xs:element name="CONTEXT" type="xs:string" minOccurs="0" />
+              <xs:element name="SAMPLE" type="xs:string" minOccurs="0" />
+              <xs:element name="BONE_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BONE" type="xs:string" minOccurs="0" />
+              <xs:element name="SPEC" type="xs:string" minOccurs="0" />
+              <xs:element name="PAR" type="xs:string" minOccurs="0" />
+              <xs:element name="PROP" type="xs:string" minOccurs="0" />
+              <xs:element name="FRAG_COUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="WEIGHT" type="xs:string" minOccurs="0" />
+              <xs:element name="S" type="xs:string" minOccurs="0" />
+              <xs:element name="AG" type="xs:string" minOccurs="0" />
+              <xs:element name="Column1" type="xs:string" minOccurs="0" />
+              <xs:element name="CARCAS_PART_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FU" type="xs:string" minOccurs="0" />
+              <xs:element name="Column2" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMENTS" type="xs:string" minOccurs="0" />
+              <xs:element name="SIEVE_SIZE" type="xs:string" minOccurs="0" />
+              <xs:element name="OBJECTID" type="xs:string" minOccurs="0" />
+              <xs:element name="SITE_C_x0020_" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

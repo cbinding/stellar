@@ -1,0 +1,39 @@
+STELLAR.Console v1.0 (type HELP for instructions)
+
+STELLAR.Console>
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\contexts.csv' to db 'silchester'
+1210 rows imported
+finished [elapsed: 00:01:29.704]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\finds.csv' to db 'silchester'
+2719 rows imported
+finished [elapsed: 00:03:06.316]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\finds_dims.csv' to db 'silchester'
+1574 rows imported
+finished [elapsed: 00:01:47.033]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\finds_treat.csv' to db 'silchester'
+3063 rows imported
+finished [elapsed: 00:03:34.972]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\objects.csv' to db 'silchester'
+17 rows imported
+finished [elapsed: 00:00:01.203]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\olinks.csv' to db 'silchester'
+2272 rows imported
+finished [elapsed: 00:02:43.784]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\photos.csv' to db 'silchester'
+237 rows imported
+finished [elapsed: 00:00:14.844]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\plinks.csv' to db 'silchester'
+89 rows imported
+finished [elapsed: 00:00:06.234]
+
+STELLAR.Console>Importing file 'C:\Projects\stellar\data\ADS_datasets\silchester\strat.csv' to db 'silchester'
+finished [elapsed: 00:00:46.016]
+
+STELLAR.Console>
