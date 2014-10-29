@@ -11,6 +11,8 @@
 // 001 20/10/2011 CFB Initially created template group
 // 002 11/01/2012 CFB $if(type)$ clause used in RDF_ENTITY,
 //			xmlencode(s) used throughout. md5encode added
+// 003 29/10/2014 CFB crm namespace changed from http://erlangen-crm.org/101001/ 
+//                    to http://www.cidoc-crm.org/cidoc-crm/
 //============================================================================//
 delimiters "$", "$"
 
@@ -26,7 +28,7 @@ RDF_HEADER() ::= <<
      xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#" 
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:crm="http://erlangen-crm.org/101001/"
+     xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
      xmlns:crmeh="http://purl.org/crmeh#">
 >>
 
