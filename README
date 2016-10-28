@@ -11,3 +11,8 @@ SemWeb.SqliteStore.dll (see http://razor.occams.info/code/semweb/)
 
 Some code included here may be derived from work already in the public domain. Where this is the case it will be indicated in comments in the source code.
 This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+Update (28/10/2016):
+See also STELETO (http://github.com/cbinding/STELETO) - a newer simple template-based conversion application based
+on a subset of the original STELLAR source code. It runs cross platform - tested on Windows and Linux (using mono).
+We used this application for some large data conversion operations in the context of the ARIADNE FP7 project
