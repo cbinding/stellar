@@ -193,8 +193,8 @@
     <recaptcha:RecaptchaControl     
         ID="recaptcha"    
         runat="server"     
-        PublicKey="6Lc_n78SAAAAALZXC3bedlwIQ1ErTFkyFQ0HvNlh"     
-        PrivateKey="6Lc_n78SAAAAADB1J0PaOPPEuSubM4DthU5QM4Ex" 
+        PublicKey="YYY"     
+        PrivateKey="XXX" 
         BorderColor="#99CCFF" BorderStyle="Solid" Theme="white" />
         
     <asp:CustomValidator ID="CustomValidator1" runat="server" 
