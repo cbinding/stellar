@@ -1,0 +1,22 @@
+
+HEADER(options) ::= <<
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+		<title>List of books</title>
+	</head>
+	<body>
+	<h1>List of books:</h1>
+	<table border=1>
+>>
+
+FOOTER(options) ::= "</table></body></html>"
+
+RECORD(options, data) ::= <<
+	<tr>
+	<td>$data.isbn$</td>
+	<td>$data.title$</td>
+	<td>$data.author$</td>
+	</tr>
+>>
+

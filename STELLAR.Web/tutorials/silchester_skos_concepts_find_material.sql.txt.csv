@@ -1,0 +1,53 @@
+concept_id,scheme_id,preflabel
+,materials,
+AB,materials,AB
+ANIMAL BONE,materials,ANIMAL BONE
+BONE,materials,BONE
+BONE?,materials,BONE?
+BS,materials,BS
+CA,materials,CA
+CBM,materials,CBM
+CERAMIC,materials,CERAMIC
+CERAMIC BUILDING MATERIAL,materials,CERAMIC BUILDING MATERIAL
+CHARCOAL,materials,CHARCOAL
+COPPER ALLOY,materials,COPPER ALLOY
+COPPER ALLOY BONE,materials,COPPER ALLOY BONE
+COPPER ALLOY IRON,materials,COPPER ALLOY IRON
+COPPER ALLOY LEAD,materials,COPPER ALLOY LEAD
+DA,materials,DA
+DAUB,materials,DAUB
+FRIT,materials,FRIT
+GBA,materials,GBA
+GL,materials,GL
+GLASS,materials,GLASS
+GLASS FRIT,materials,GLASS FRIT
+GOLD,materials,GOLD
+HUMAN BONE,materials,HUMAN BONE
+IRON,materials,IRON
+IRON COPPER ALLOY,materials,IRON COPPER ALLOY
+IVORY,materials,IVORY
+LEAD,materials,LEAD
+MARBLE,materials,MARBLE
+MI,materials,MI
+MISCELLANEOUS,materials,MISCELLANEOUS
+MM,materials,MM
+MO,materials,MO
+MORTAR,materials,MORTAR
+NATURAL,materials,NATURAL
+OPUS SIGNINUM,materials,OPUS SIGNINUM
+OTHER,materials,OTHER
+PLASTER,materials,PLASTER
+PO,materials,PO
+POL,materials,POL
+POT,materials,POT
+POTTERY,materials,POTTERY
+SA,materials,SA
+SAMIAN,materials,SAMIAN
+SH,materials,SH
+SHALE,materials,SHALE
+SHELL,materials,SHELL
+SILVER,materials,SILVER
+SPOT,materials,SPOT
+ST,materials,ST
+STONE,materials,STONE
+TI,materials,TI

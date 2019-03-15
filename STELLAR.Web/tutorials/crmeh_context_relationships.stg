@@ -1,0 +1,165 @@
+group crmeh_context_relationships;
+
+// template group file for use by StringTemplate component in STELLAR project
+
+// single line template for data namespace
+NAMESPACE_PREFIX() ::= "http://stellar/"
+
+// STELLAR looks for a template called 'MAIN' within the specified template group (.stg) 
+// file, passing a parameter called 'data' that can then be iterated and the attributes 
+// per record accessed as shown below. This template looks for the following record attributes 
+// (these would be specified as column names in the originating delimited data):
+// record.context_id (mandatory) - Unique identifier for the context
+// record.context_note
+// record.context_type
+// record.context_type_uri
+// record.strat_above
+// record.strat_below
+// record.strat_equal
+// record.phys_bonded_with
+// record.phys_butted_by
+// record.phys_butts
+// record.phys_consists_of
+// record.phys_part_of
+// record.phys_contains
+// record.phys_within
+// record.phys_cut_by
+// record.phys_cuts
+// record.phys_divided_into
+// record.phys_division_of
+// record.phys_filled_by
+// record.phys_fill_of
+// TODO - CREATE RECIPROCAL RELATIONSHIPS (AND SHORTCUTS) AUTOMATICALLY?
+// TODO - CREATE CRMEH EXTENSION PROPERTIES FOR PHYSICAL RELATIONSHIPS FIRST
+
+MAIN(data) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:crmeh="http://purl.org/crmeh#" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+	xmlns:dcterms="http://purl.org/dc/terms/" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:crm="http://erlangen-crm.org/101001/" 
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+$data:{ record | 
+<crmeh:EHE0007_Context rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">	
+	<rdfs:label>$record.context_id$</rdfs:label>	
+</crmeh:EHE0007_Context>
+
+$if(record.context_note)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crm:P3_has_note>$record.context_note$</crm:P3_has_note>
+</rdf:Description>
+$endif$
+
+$if(record.context_type)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crm:P2_has_type>
+	$if(record.context_type_uri)$
+		<crm:E55_Type  rdf:about="$record.context_type_uri$">
+	$else$
+		<crm:E55_Type>
+	$endif$
+	<rdf:value>$record.context_type$</rdf:value>				
+	</crm:E55_Type>
+	</crm:P2_has_type>
+</rdf:Description>
+$endif$
+
+$if(record.strat_above)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crmeh:EHP_strat_above rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.strat_above$"/>
+</rdf:Description>
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.strat_above$">
+	<crmeh:EHP_strat_below rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.context_id$"/>
+</rdf:Description>
+$endif$
+
+$if(record.strat_below)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crmeh:EHP_strat_below rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.strat_below$"/>
+</rdf:Description>
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.strat_below$">
+	<crmeh:EHP_strat_above rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.context_id$"/>
+</rdf:Description>
+$endif$
+
+$if(record.strat_equal)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crmeh:EHP_strat_equal rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.strat_equal$"/>
+</rdf:Description>
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.strat_equal$">
+	<crmeh:EHP_strat_equal rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.context_id$"/>
+</rdf:Description>
+$endif$
+
+$if(record.phys_bonded_with)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crmeh:EHP_phys_bonded_with rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_bonded_with$"/>
+</rdf:Description>
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.phys_bonded_with$">
+	<crmeh:EHP_phys_bonded_with rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.context_id$"/>
+</rdf:Description>
+$endif$
+
+$if(record.phys_butted_by)$
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.context_id$">
+	<crmeh:EHP_phys_butted_by rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_butted_by$"/>
+</rdf:Description>
+<rdf:Description rdf:about="$NAMESPACE_PREFIX$EHE0007_$record.phys_butted_by$">
+	<crmeh:EHP_phys_butted_by rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.context_id$"/>
+</rdf:Description>
+$endif$
+
+$if(record.phys_butts)$
+	<crmeh:EHP_phys_butts rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_butts$"/>
+$endif$
+
+$if(record.phys_consists_of)$
+	<crmeh:EHP_phys_consists_of rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_consists_of$"/>
+$endif$
+
+$if(record.phys_part_of)$
+	<crmeh:EHP_phys_part_of rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_part_of$"/>
+$endif$
+
+$if(record.phys_contains)$
+	<crmeh:EHP_phys_contains rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_contains$"/>
+$endif$
+
+$if(record.phys_within)$
+	<crmeh:EHP_phys_within rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_within$"/>
+$endif$
+
+$if(record.phys_cut_by)$
+	<crmeh:EHP_phys_cut_by rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_cut_by$"/>
+$endif$
+
+$if(record.phys_cuts)$
+	<crmeh:EHP_phys_cuts rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_cuts$"/>
+$endif$
+
+$if(record.phys_divided_into)$
+	<crmeh:EHP_phys_divided_into rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_divided_into$"/>
+$endif$
+
+$if(record.phys_division_of)$
+	<crmeh:EHP_phys_division_of rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_division_of$"/>
+$endif$
+
+$if(record.phys_filled_by)$
+	<crmeh:EHP_phys_filled_by rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_filled_by$"/>
+$endif$
+
+$if(record.phys_fill_of)$
+	<crmeh:EHP_phys_fill_of rdf:resource="$NAMESPACE_PREFIX$EHE0007_$record.phys_fill_of$"/>
+$endif$
+
+}$ 
+
+</rdf:RDF>
+ >>
+

@@ -1,0 +1,55 @@
+group crmeh_investigation_projects;
+
+// template group file for use by StringTemplate component in STELLAR project
+
+// multiline template for creating RDF file header
+CRMEH_HEADER() ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:crmeh="http://purl.org/crmeh#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+xmlns:dcterms="http://purl.org/dc/terms/" 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:ecrm="http://erlangen-crm.org/101001/" 
+xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+>>
+
+// single line template for creating RDF file footer
+CRMEH_FOOTER() ::= "</rdf:RDF>"
+
+// single line template for data namespace
+NAMESPACE_PREFIX() ::= "http://stellar/"
+
+// STELLAR looks for a template called 'MAIN' within the specified template group (.stg) 
+// file, passing a parameter called 'data' that can then be iterated and the attributes 
+// per record accessed as shown below. This template looks for the following record attributes - 
+// these would be specified as column names in the originating delimited data:
+// record.investigation_id (mandatory) - Unique identifier for the investigation
+// record.investigation_location
+
+MAIN(data) ::= <<
+$CRMEH_HEADER()$
+$data:{ record | 
+<crmeh:EHE0003_AreaOfInvestigation rdf:about="$NAMESPACE_PREFIX$EHE0003_$record.investigation_id$">	
+<rdfs:label>$record.investigation_id$</rdfs:label>
+<ecrm:P7i_witnessed>
+	<crmeh:EHE0001_EHProject rdf:about="$NAMESPACE_PREFIX$EHE0001_$record.investigation_id$">
+		<rdfs:label>$record.investigation_id$</rdfs:label>
+		<ecrm:P7_took_place_at rdf:resource="$NAMESPACE_PREFIX$EHE0003_$record.investigation_id$" />
+	</crmeh:EHE0001_EHProject>
+</ecrm:P7i_witnessed>
+$if(record.investigation_location)$
+	<ecrm:P87_is_identified_by>
+		<crmeh:EHE0019_AreaOfInvestigationDepiction rdf:about="$NAMESPACE_PREFIX$EHE0019_$record.investigation_id$">
+			<rdf:value rdf:datatype="http://franz.com/ns/allegrograph/3.0/geospatial/spherical/degrees/-180.0/180.0/-90.0/90.0/5.0">$record.investigation_location$</rdf:value>
+			<ecrm:P87i_identifies rdf:resource="$NAMESPACE_PREFIX$EHE0003_$record.investigation_id$" />
+		</crmeh:EHE0019_AreaOfInvestigationDepiction>
+	</ecrm:P87_is_identified_by>	
+$endif$
+</crmeh:EHE0003_AreaOfInvestigation>
+}$ 
+$CRMEH_FOOTER()$
+ >>
+

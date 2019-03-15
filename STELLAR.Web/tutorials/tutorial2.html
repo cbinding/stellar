@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title>STELLAR.Console tutorial 2</title>
+  <meta name="author" content="Ceri Binding, University of South Wales">
+  <meta name="keywords" content="STELLAR, RDF, CRM, SKOS, templates, tutorial">
+  <meta name="description" content="Tutorial on use of user-defined templates with STELLAR tools">
+  <link rel="SHORTCUT ICON" href="http://reswin1.isd.glam.ac.uk/stellar/favicon.ico"/>	
+ </head>
+
+ <body>
+ <img src="../img/cooltext470420858.png" width="435" height="114" border="0" alt="STELLAR">
+ <h1>STELLAR.Console tutorial 2 - user defined templates</h1>
+ <p>
+ This tutorial describes creating user-defined templates for use with STELLAR.Console application. The tutorial is based on STELLAR.Console version 1.6
+ </p>
+
+ <h2>Install the application</h2>
+ <p>
+ If you don't already have STELLAR.Console installed (or if you have a version less than 1.5) see <a href="tutorial1.html">tutorial 1</a> for details of installation.
+ </p>
+
+ <h2>User defined templates</h2>
+ <p>
+ The original STELLAR applications used predefined internal templates for converting data to a fixed RDF/XML format. Whilst the templates were successful and guaranteed consistent and valid output, they lacked flexibility. With this in mind, STELLAR now (additionally) employs the excellent <a href="http://www.stringtemplate.org/">StringTemplate</a> engine for converting data to other (user-defined) textual forms. User defined templates take the form of String Template Group (*.stg) files. The commands using this StringTemplate engine are DELIM2STG, CSV2STG, TAB2STG &amp; SQL2STG. 
+ </p>
+
+ <h2>String Template Group files</h2>
+ <p>
+ The general format of String Template Group files as used by STELLAR is described here; for more details of syntax and more advanced usage examples see the <a href="http://www.stringtemplate.org/">StringTemplate</a> website, and the template examples listed here. Templates consist of textual elements and placeholders delimited using a specific character - this character can be specified in the template; in STELLAR.Console the default is the dollar character e.g. "The first value is $value1$, the second value is $value2$". These placeholders are replaced by data values at runtime, producing user-defined textual output from the input data. 
+ </p>
+ <p>String Template Group files can define multiple templates, and templates can be 'called' from within other templates. STELLAR looks out for three key templates within your STG file called HEADER, RECORD and FOOTER. HEADER and FOOTER do not have to be present, but if present they will be called once only, at the start and end of processing respectively, they will be passed in a parameter called 'options', containing global option values imported from an external CSV file. RECORD will be called once per row of the input data, and will be passed in 'options' plus a second parameter called 'data', containing the data for the current row. The data values can be accessed using the syntax shown in the template example below (e.g. $data.object_id$ etc.) The RECORD template may have any format internally, and may call any other templates. The resultant output will be written to a specified output file. The contents of a simple example STG file are shown below (a downloadable link to this template, example data and output are listed in the table at the bottom of this page):
+ </p>
+
+ <h3>mydata.csv</h3>
+ <pre>
+object_id, object_label, object_value
+100,"fur coat",234.56
+101,"speedboat",5100.10
+102,"watch",
+ </pre>
+
+ <h3>mytemplate.stg</h3>
+  <pre>
+// template group file for use by StringTemplate component in STELLAR 
+// first specify the character to be used to delimit the start and end of named placeholders
+delimiters "$", "$"
+
+// this is how to define your own single line template
+my_template1(value1) ::= "Single line. Value is $value1$"
+
+// this is how to define your own multi line template 
+my_template2() ::= &lt;&lt;
+Multi line.
+$! this comment inside the template will be ignored !$
+The last line of my output
+&gt;&gt;
+
+// STELLAR looks for HEADER and if present calls it at the start of processing 
+HEADER(options) ::= "$options.title$"
+
+// STELLAR looks for FOOTER and if present calls it at the end of processing 
+FOOTER(options) ::= &lt;&lt;
+The penultimate line of my output
+$! this is a comment inside the template, it will be ignored !$
+The last line of my output
+&gt;&gt;
+
+// STELLAR looks for RECORD and calls it once per data row
+RECORD(options, data) ::= &lt;&lt;
+	Id: $data.object_id$
+	$! conditional checks for presence of data !$
+	$if(data.object_label)$		Label: $data.object_label$
+	$endif$
+	$! use an escape character (\) if you want to actually output a dollar character... !$		
+	$if(data.object_value)$		Value: \$$data.object_value$
+	$else$
+		Value: \$0.00
+	$endif$
+&gt;&gt;
+ </pre>
+ <h3>result.txt</h3>
+ <pre>
+Competition prizes
+
+	Id: 100
+
+		Label: fur coat
+		
+		Value: $234.56
+	Id: 101
+
+		Label: speedboat
+		
+		Value: $5100.10
+	Id: 102
+
+		Label: watch
+		
+		Value: $0.00 
+
+The penultimate line of my output
+The last line of my output
+ </pre>
+
+ <p>
+ The 'data' parameter represents a row of tabular data passed in to be processed within the RECORD template. It will have properties named according to the column names from your original input data. So for example if your input CSV file has columns called 'object_id' and 'object_label' your template can refer to them as $data.object_id$ and $data.object_label$. If the value for a particular column is blank or the column does not exist in the input data, the record will not have that property, hence the use of conditional checks before attempting to use object_label and object_value in the above example. The 'options' parameter works in the same way.
+ </p>
+ 
+ <h2>Command: CSV2STG</h2>
+ <p>
+ To convert data from a comma delimited (CSV) file using a specified template use the CSV2STG command in STELLAR.Console, specifying the name of the CSV file, the name of the STG file, the name of the options file and the name of the output file (note - TAB2STG command works in a similar manner, for tab delimited files):
+ </p>
+
+<pre>
+csv2stg /csv:"mydata.csv" /stg:"mytemplate.stg" /opt:myoptions.csv /out:"result.txt"
+</pre>
+<img src="command_csv2stg.PNG" width="669" height="338" border="0" alt="">
+
+<h2>Command: SQL2STG</h2>
+ <p>
+ To convert data from the result of a SQL query using a specified template use the SQL2STG command in STELLAR.Console, specifying the name of the database, the name of the file containing the SQL query, the name of the options file, the name of the STG template file and the name of the output file:
+ </p>
+<pre>
+sql2stg /db:"myDB" /sql:"myquery.sql" /opt:myoptions.csv /stg:"mytemplate.stg" /out:"result.txt"
+</pre>
+
+<h3>XML encoding of data values</h3>
+<p>
+Sometimes database values contain characters that would themselves cause problems if they were to be embedded directly into an HTML/XML file, or appended to some URI. The internal pre-defined templates will already do this automatically, but for the user defined templates (where the application cannot know the output format in advance), there are 2 STELLAR-specific functions available that can be embedded within your SQL queries. The functions are called SqliteXmlEncode and SqliteUrlEncode, and can be used as follows:
+</p>
+<pre>
+SELECT SqliteXmlEncode(column1) FROM table1;
+SELECT SqliteUrlEncode(column2) FROM table2;
+</pre>
+<p>
+An alternative way to achieve this encoding of values is within the templates themselves. STELLAR has some predefined string formatting options - Uppercase, Lowercase, UrlEncode, XmlEncode and TrimSpace. They are called within a template like so:
+</p>
+<pre>
+$myValue1;Uppercase$ $myValue21;Lowercase$ $myValue3;UrlEncode$ $myValue4;XmlEncode$ $myValue5;TrimSpace$
+</pre>
+
+<h2>Examples</h2>
+<p>Listed below are some downloadable examples of user-defined templates for use with STELLAR. Note we had to rename the *.stg files to make them acceptable for download from the web server. Right click to save the files to your machine, then rename them minus the .txt extension (i.e. mytemplate.stg.txt becomes mytemplate.stg)</p>
+<table border=1>
+<thead>
+<td>Input data</td><td>Template</td><td>Output</td>
+</thead>
+<tr>
+<td><a href="mydata.csv">mydata.csv</a></td><td><a href="mytemplate.stg.txt">mytemplate.stg.txt</a></td><td><a href="result.txt">result.txt</a></td>
+</tr>
+<tr>
+<td><a href="books.csv">books.csv</a></td><td><a href="books_to_html.stg.txt">books_to_html.stg.txt</a></td><td><a href="books.html">books.html</a></td>
+</tr>
+<tr>
+<td><a href="books.csv">books.csv</a></td><td><a href="books_to_rdf.stg.txt">books_to_rdf.stg.txt</a></td><td><a href="books.rdf">books.rdf</a></td>
+</tr>
+<tr>
+<td><a href="test_claros_objects.csv">test_claros_objects.csv</a></td><td><a href="http://reswin1.isd.glam.ac.uk/STELLAR/templates/claros_objects.stg.txt">claros_objects.stg.txt</a></td><td><a href="test_claros_objects.rdf">test_claros_objects.rdf</a></td>
+</tr>
+</table>
+
+ </body>
+</html>

@@ -1,0 +1,7 @@
+SELECT 
+	finds.sfno AS sample_id,
+	finds.context AS within_context_id	
+FROM
+	finds
+WHERE 
+	rec_type = 'SA';

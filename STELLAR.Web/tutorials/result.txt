@@ -1,0 +1,21 @@
+List of prizes
+
+	Id: 100
+
+		Label: fur coat
+		
+		Value: $234.56
+	Id: 101
+
+		Label: speedboat
+		
+		Value: $5100.10
+	Id: 102
+
+		Label: watch
+		
+		Value: $0.00
+ 
+
+The penultimate line of my output
+The last line of my output

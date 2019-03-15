@@ -1,0 +1,243 @@
+// template group file for use by StringTemplate component in STELLAR project
+
+// multiline template for creating RDF file header
+HEADER(options) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+>>
+
+// single line template for creating RDF file footer
+FOOTER(options) ::= "</rdf:RDF>"
+
+xmlencode(s) ::= "$s;format=\"XMLENCODE\"$"
+urlencode(s) ::= "$s;format=\"URLENCODE\"$"
+
+// Build consistently formatted identifiers (URIs) for entity instances
+// Usage e.g. URI("E55", "123") => "http://StellarNamespacePrefix/E55_123"
+URI(type, id) ::= "http://StellarNamespacePrefix/$urlencode(type)$_$urlencode(id)$"
+
+RECORD(options, data) ::= <<
+
+$if(data.object_id)$
+   <crm:E22_Man-Made_Object rdf:about="$URI("E22", data.object_id)$"/>      
+
+   <crm:E42_Identifier rdf:about="$URI("E42", data.object_id)$">
+      <rdfs:label>$xmlencode(data.object_id)$</rdfs:label>
+   </crm:E42_Identifier>   
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P1_is_identified_by rdf:resource="$URI("E42", data.object_id)$"/> 
+   </rdf:Description>
+
+    <rdf:Description rdf:about="$URI("E42", data.object_id)$">
+    <crm:P1i_identifies rdf:resource="$URI("E22", data.object_id)$"/>
+    </rdf:Description>
+$endif$  
+
+$if(data.object_label)$
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <rdfs:label>$xmlencode(data.object_label)$</rdfs:label>
+   </rdf:Description>
+$else$
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <rdfs:label>$xmlencode(data.object_id)$</rdfs:label>
+   </rdf:Description>
+$endif$  
+
+$if(data.object_title)$
+   <crm:E35_Title rdf:about="$URI("E35", data.object_id)$">
+      <rdfs:label>$xmlencode(data.object_title)$</rdfs:label>
+   </crm:E35_Title>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P102_has_title rdf:resource="$URI("E35", data.object_id)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E35", data.object_id)$">
+      <crm:P102i_is_title_of rdf:resource="$URI("E22", data.object_id)$"/>
+   </rdf:Description>
+$endif$
+
+$if(data.object_type_uri)$
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P2_has_type rdf:resource="$data.object_type_uri$"/>	
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$data.object_type_uri$">
+      <crm:P2i_is_type_of rdf:resource="$URI("E22", data.object_id)$"/>
+   </rdf:Description>
+$elseif(data.object_type_label)$
+   <crm:E55_Type rdf:about="$URI("E55", data.object_type_label)$">
+      <rdfs:label>$xmlencode(data.object_type_label)$</rdfs:label>
+   </crm:E55_Type>
+   
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P2_has_type rdf:resource="$URI("E55", data.object_type_label)$"/>	
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E55", data.object_type_label)$">
+      <crm:P2i_is_type_of rdf:resource="$URI("E22", data.object_id)$"/>
+   </rdf:Description>
+$endif$
+
+$if(data.thumb_uri)$
+   <crm:E38_Image rdf:about="$data.thumb_uri$"/>
+
+   <rdf:Description rdf:about="$data.thumb_uri$">
+      <crm:P138_represents rdf:resource="$URI("E22", data.object_id)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P138i_has_representation rdf:resource="$data.thumb_uri$"/>
+   </rdf:Description>   
+$endif$
+
+$if(data.image_uri)$
+   <crm:E38_Image rdf:about="$data.image_uri$"/>
+
+   <rdf:Description rdf:about="$data.image_uri$">
+      <crm:P138_represents rdf:resource="$URI("E22", data.object_id)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P138i_has_representation rdf:resource="$data.image_uri$"/>
+   </rdf:Description>  
+$endif$
+
+$if(data.page_uri)$
+   <crm:E31_Document rdf:about="$data.page_uri$">
+      <crm:P70_documents rdf:resource="$URI("E22", data.object_id)$"/>
+   </crm:E31_Document>
+   
+    <crm:E22_Man-Made_Object rdf:about="$URI("E22", data.object_id)$">
+      <crm:P70i_is_documented_in rdf:resource="$data.page_uri$"/>		
+   </crm:E22_Man-Made_Object>    
+$endif$
+
+$if(data.find_place_uri)$   
+   <crm:E53_Place rdf:about="$data.find_place_uri$"/>
+   <crm:E7_Activity rdf:about="$URI("E7", data.object_id)$"/>
+
+   <rdf:Description rdf:about="$URI("E7", data.object_id)$">
+       <crm:P7_took_place_at rdf:resource="$data.find_place_uri$"/>  
+       <crm:P16_used_specific_object rdf:resource="$URI("E22", data.object_id)$"/> 
+   </rdf:Description> 
+
+   <rdf:Description rdf:about="$data.find_place_uri$">
+      <crm:P7i_witnessed rdf:resource="$URI("E7", data.object_id)$"/> 
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P16i_was_used_for rdf:resource="$URI("E7", data.object_id)$"/>
+   </rdf:Description>   
+$elseif(data.find_place_label)$
+   <crm:E53_Place rdf:about="$URI("E53", data.find_place_label)$"/>
+   <crm:E7_Activity rdf:about="$URI("E7", data.object_id)$"/>
+   <crm:E44_PlaceAppellation rdf:about="$URI("E44", data.find_place_label)$">
+      <rdfs:label>$xmlencode(data.find_place_label)$</rdfs:label>
+   </crm:E44_PlaceAppellation>
+   
+   <rdf:Description rdf:about="$URI("E53", data.find_place_label)$">
+      <crm:P7i_witnessed rdf:resource="$URI("E7", data.object_id)$"/> 
+      <crm:P87_is_identified_by rdf:resource="$URI("E44", data.find_place_label)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E44", data.find_place_label)$">
+      <crm:P87i_identifies rdf:resource="$URI("E53", data.find_place_label)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E7", data.object_id)$">
+       <crm:P7_took_place_at rdf:resource="$URI("E53", data.find_place_label)$"/>  
+       <crm:P16_used_specific_object rdf:resource="$URI("E22", data.object_id)$"/> 
+   </rdf:Description>   
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P16i_was_used_for rdf:resource="$URI("E7", data.object_id)$"/>
+   </rdf:Description>   
+$endif$
+
+$if(data.production_material_uri)$
+   <crm:E57_Material rdf:about="$data.production_material_uri$"/>
+   <crm:E12_Production rdf:about="$URI("E12", data.object_id)$"/>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P108i_was_produced_by rdf:resource="$URI("E12", data.object_id)$"/>
+      <crm:P45_consists_of rdf:resource="$data.production_material_uri$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+     <crm:P108_produced rdf:resource="$URI("E22", data.object_id)$"/>
+     <crm:P126_employed rdf:resource="$data.production_material_uri$"/> 
+   </rdf:Description>
+   
+   <rdf:Description rdf:about="$data.production_material_uri$">
+      <crm:P45i_is_incorporated_in rdf:resource="$URI("E22", data.object_id)$"/>
+      <crm:P126_was_employed_in rdf:resource="$URI("E12", data.object_id)$"/>
+   </rdf:Description>
+$elseif(data.production_material_label)$
+   <crm:E57_Material rdf:about="$URI("E57", data.production_material_label)$">
+      <rdfs:label>$xmlencode(data.production_material_label)$</rdfs:label>
+   </crm:E57_Material>
+   <crm:E12_Production rdf:about="$URI("E12", data.object_id)$"/>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P108i_was_produced_by rdf:resource="$URI("E12", data.object_id)$"/>
+      <crm:P45_consists_of rdf:resource="$URI("E57", data.production_material_label)$"/>
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+     <crm:P108_produced rdf:resource="$URI("E22", data.object_id)$"/>
+     <crm:P126_employed rdf:resource="$URI("E57", data.production_material_label)$"/> 
+   </rdf:Description>
+   
+   <rdf:Description rdf:about="$URI("E57", data.production_material_label)$">
+      <crm:P45i_is_incorporated_in rdf:resource="$URI("E22", data.object_id)$"/>
+      <crm:P126_was_employed_in rdf:resource="$URI("E12", data.object_id)$"/>
+   </rdf:Description>       
+$endif$ 
+
+$if(data.production_period_uri)$
+   <crm:E12_Production rdf:about="$URI("E12", data.object_id)$"/>
+   <crm:E52_Time-Span rdf:about="$data.production_period_uri$"/>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P108i_was_produced_by rdf:resource="$URI("E12", data.object_id)$"/>      
+   </rdf:Description>
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+     <crm:P108_produced rdf:resource="$URI("E22", data.object_id)$"/>    
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+      <crm:P4_has_time-span rdf:resource="$data.production_period_uri$"/>
+   </rdf:Description>
+
+    <rdf:Description rdf:about="$data.production_period_uri$">
+      <crm:P4i_is_time-span_of rdf:resource="$URI("E12", data.object_id)$"/>
+   </rdf:Description>
+$elseif(data.production_period_label)$
+   <crm:E12_Production rdf:about="$URI("E12", data.object_id)$"/>
+   <crm:E52_Time-Span rdf:about="$URI("E52", data.production_period_label)$">
+      <rdfs:label>$xmlencode(data.production_period_label)$</rdfs:label>
+   </crm:E52_Time-Span>
+
+   <rdf:Description rdf:about="$URI("E22", data.object_id)$">
+      <crm:P108i_was_produced_by rdf:resource="$URI("E12", data.object_id)$"/>      
+   </rdf:Description>
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+     <crm:P108_produced rdf:resource="$URI("E22", data.object_id)$"/>    
+   </rdf:Description>
+
+   <rdf:Description rdf:about="$URI("E12", data.object_id)$">
+      <crm:P4_has_time-span rdf:resource="$URI("E52", data.production_period_label)$"/>
+   </rdf:Description>
+
+    <rdf:Description rdf:about="$URI("E52", data.production_period_label)$">
+      <crm:P4i_is_time-span_of rdf:resource="$URI("E12", data.object_id)$"/>
+   </rdf:Description>
+$endif$
+
+ >>

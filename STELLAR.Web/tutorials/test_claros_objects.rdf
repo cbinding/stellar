@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY crm "http://purl.org/NET/crm-owl#">
+<!ENTITY claros "http://purl.org/NET/Claros/vocab#">
+<!ENTITY claros_place "http://purl.org/NET/Claros/place#">
+<!ENTITY claros_placeid "http://purl.org/NET/Claros/placeid#">
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:crm="http://purl.org/NET/crm-owl#"
+     xmlns:claros="http://purl.org/NET/Claros/vocab#">
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/1">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>101</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 101</rdfs:label>
+
+
+ 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/222" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb101">
+					<rdfs:label>label for thumb 101</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image101">
+					<rdfs:label>label for image 101</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page101"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference101</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/555">
+						<rdf:value>condition label 1</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 1</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 1</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/789">
+
+					<rdfs:label>Vespasian</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/555">
+						<claros:period_begin rdf:datatype="&xsd;gYear">69</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">79</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/555" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/888">
+			<rdfs:label>Production material 1</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/666">
+						<rdf:value>material 1</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/444">
+					<rdfs:label>augmentation label 1</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 1</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/2">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>102</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 102</rdfs:label>
+
+		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>title for object 102</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+
+		<crm:P2_has_type>
+			<crm:E55_Type>
+				<rdf:value>type for object 102</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type> 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/223" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb102">
+					<rdfs:label>label for thumb 102</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image102">
+					<rdfs:label>label for image 102</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page102"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference102</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/556">
+						<rdf:value>condition label 2</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 2</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 2</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/790">
+
+					<rdfs:label>Roman</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/556">
+						<claros:period_begin rdf:datatype="&xsd;gYear">43</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">410</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/556" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/889">
+			<rdfs:label>Production material 2</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/667">
+						<rdf:value>material 2</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/445">
+					<rdfs:label>augmentation label 2</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 2</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/3">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>103</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 103</rdfs:label>
+
+		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>title for object 103</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+
+		<crm:P2_has_type>
+			<crm:E55_Type>
+				<rdf:value>type for object 103</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type> 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/224" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb103">
+					<rdfs:label>label for thumb 103</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image103">
+					<rdfs:label>label for image 103</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page103"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference103</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/557">
+						<rdf:value>condition label 3</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 3</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 3</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/791">
+
+					<rdfs:label>Tetricus I</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/557">
+						<claros:period_begin rdf:datatype="&xsd;gYear">270</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">274</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/557" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/890">
+			<rdfs:label>Production material 3</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/668">
+						<rdf:value>material 3</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/446">
+					<rdfs:label>augmentation label 3</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 3</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/4">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>104</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 104</rdfs:label>
+
+		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>title for object 104</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+
+		<crm:P2_has_type>
+			<crm:E55_Type>
+				<rdf:value>type for object 104</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type> 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/225" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb104">
+					<rdfs:label>label for thumb 104</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image104">
+					<rdfs:label>label for image 104</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page104"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference104</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/558">
+						<rdf:value>condition label 4</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Fred Bloggs</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 4</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 4</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/792">
+
+					<rdfs:label>Probus</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/558">
+						<claros:period_begin rdf:datatype="&xsd;gYear">276</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">282</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/558" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/891">
+			<rdfs:label>Production material 4</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/669">
+						<rdf:value>material 4</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/447">
+					<rdfs:label>augmentation label 4</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 4</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/5">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>105</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 105</rdfs:label>
+
+		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>title for object 105</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+
+		<crm:P2_has_type>
+			<crm:E55_Type>
+				<rdf:value>type for object 105</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type> 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/226" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb105">
+					<rdfs:label>label for thumb 105</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image105">
+					<rdfs:label>label for image 105</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page105"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference105</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/559">
+						<rdf:value>condition label 5</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>John Smith</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 5</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 5</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/793">
+
+					<rdfs:label>Aurelian</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/559">
+						<claros:period_begin rdf:datatype="&xsd;gYear">270</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">275</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/559" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/892">
+			<rdfs:label>Production material 5</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/670">
+						<rdf:value>material 5</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/448">
+					<rdfs:label>augmentation label 5</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 5</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+
+<crm:E22_Man-Made_Object rdf:about="http://claros/tmp/6">
+	
+		<crm:P48_has_preferred_identifier>
+			<crm:E42_Identifier>
+				<rdf:value>106</rdf:value>
+			</crm:E42_Identifier>
+		</crm:P48_has_preferred_identifier>
+
+		<rdfs:label>object 106</rdfs:label>
+
+		
+		 <crm:P102_has_title>
+			<crm:E35_Title>
+				<rdf:value>title for object 106</rdf:value>
+			</crm:E35_Title>
+		</crm:P102_has_title>
+
+		<crm:P2_has_type>
+			<crm:E55_Type>
+				<rdf:value>type for object 106</rdf:value>
+				<crm:P127_has_broader_term rdf:resource="&claros;ObjectType" />
+			</crm:E55_Type>
+		</crm:P2_has_type> 
+
+		<crm:P16i_was_used_for>
+			<crm:E7_Activity>
+				<crm:P2_has_type rdf:resource="&claros;Event_FindObject" />
+				<crm:P7_took_place_at rdf:resource="http://claros/tmp/227" />  
+			</crm:E7_Activity>
+		</crm:P16i_was_used_for>
+
+
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/thumb106">
+					<rdfs:label>label for thumb 106</rdfs:label>
+				<crm:P2_has_type rdf:resource="&claros;Thumbnail"/>
+			</crm:E38_Image>
+		</crm:P138i_has_representation>
+
+		<crm:P138i_has_representation>
+			<crm:E38_Image rdf:about="http://claros/tmp/image106">
+					<rdfs:label>label for image 106</rdfs:label>
+			</crm:E38_Image>
+		 </crm:P138i_has_representation>	
+
+		<crm:P70i_is_documented_in rdf:resource="http://claros/tmp/page106"/>		
+
+		<crm:P67i_is_referred_to_by>
+			<crm:E31_Document>
+				<rdfs:label>http://claros/tmp/reference106</rdfs:label>
+			</crm:E31_Document>
+		</crm:P67i_is_referred_to_by>
+
+		<crm:P44_has_condition>
+			<crm:E3_Condition_State>
+				<crm:P2_has_type>
+						<crm:E55_Type rdf:about="http://claros/tmp/560">
+						<rdf:value>condition label 6</rdf:value>
+					</crm:E55_Type>
+				</crm:P2_has_type>
+			</crm:E3_Condition_State>
+		</crm:P44_has_condition>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>clay</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Fabric" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Amphora, Neck</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Shape" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>BLACK-FIGURE</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Technique" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+
+		<crm:P41i_was_classified_by>
+			<crm:E17_Type_Assignment>
+      
+					<crm:P14_carried_out_by>
+						<crm:E39_Actor>
+							<rdfs:label>Jane Doe</rdfs:label>
+						</crm:E39_Actor>
+					</crm:P14_carried_out_by>
+				<crm:P42_assigned>
+					<crm:E55_Type>
+						<rdfs:label>Rolf Harris</rdfs:label>
+						<crm:P127_has_broader_term rdf:resource="&claros;Artist" />
+					</crm:E55_Type>
+				</crm:P42_assigned>
+			</crm:E17_Type_Assignment>
+		</crm:P41i_was_classified_by>
+	
+	<crm:P108i_was_produced_by>
+		<crm:E12_Production>
+				<rdfs:label>Production Label 6</rdfs:label>
+				<crm:P126_employed>
+					<crm:E57_Material>
+						<rdfs:label>Production material 6</rdfs:label>
+					</crm:E57_Material>
+				</crm:P126_employed>
+
+			<crm:P4_has_time-span>
+					<crm:E52_Time-Span rdf:about="http://claros/tmp/794">
+
+					<rdfs:label>Quintillus</rdfs:label>
+  
+
+					<crm:P82_at_some_time_within>
+							<claros:Period rdf:about="http://claros/tmp/560">
+						<claros:period_begin rdf:datatype="&xsd;gYear">270</claros:period_begin>
+							<claros:period_end rdf:datatype="&xsd;gYear">270</claros:period_end>
+						</claros:Period>
+					</crm:P82_at_some_time_within>
+
+
+					<crm:P82_at_some_time_within rdf:resource="http://claros/tmp/560" />					
+
+			</crm:E52_Time-Span>
+			</crm:P4_has_time-span>			
+		</crm:E12_Production>
+	</crm:P108i_was_produced_by>	
+
+		<crm:P45_consists_of>
+				<crm:E57_Material rdf:about="http://claros/tmp/893">
+			<rdfs:label>Production material 6</rdfs:label>
+				<crm:P1_is_identified_by>
+						<crm:E41_Appellation rdf:about="http://claros/tmp/671">
+						<rdf:value>material 6</rdf:value>
+					 </crm:E41_Appellation>
+				</crm:P1_is_identified_by>
+			</crm:E57_Material>
+		</crm:P45_consists_of>	
+
+		<crm:P56_bears_feature>
+			
+				<crm:E25_Man-Made_Feature rdf:about="http://claros/tmp/449">
+					<rdfs:label>augmentation label 6</rdfs:label>
+				<crm:P102_has_title>
+					<crm:E35_Title>
+						<rdf:value>augmentation description 6</rdf:value>
+					</crm:E35_Title>
+				</crm:P102_has_title>
+			</crm:E25_Man-Made_Feature>
+		</crm:P56_bears_feature>
+
+</crm:E22_Man-Made_Object>
+ 
+</rdf:RDF>
+ 

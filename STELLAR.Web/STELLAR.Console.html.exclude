@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>STELLAR.Console</title>
+    <meta name="author" content="Ceri Binding, University of South Wales"/>
+    <meta name="description" content="Description of the STELLAR.Console application"/>
+</head>
+<body>
+    <img src="img/cooltext470420858.png" width="435" height="114" alt=""/><br />
+     <p>
+     STELLAR.Console is a command line utility application to perform a variety of data manipulation 
+     and conversion tasks related to the aims of the STELLAR project. Files of delimited tabular data 
+     can be imported and consolidated to a local database then queried using SQL. A series of 'templates' 
+     can then convert the query results to Resource Description Framework (RDF) conforming to a particular
+     model in a robust, consistent and repeatable way.
+     </p>
+     <p>
+     The application runs on Microsoft Windows platforms, and requires installation of Microsoft .NET 
+     Framework 3.5 runtime (will be installed automatically if not present)
+     </p>
+    <a href="STELLAR.Applications.pdf">View the documentation (PDF, 3644KB)</a><br />
+    <a href="STELLAR.Setup.msi">Download the STELLAR.Console installation package (Windows installer, 4567KB)</a>
+    <p>
+    <a href="default.aspx">STELLAR.Web</a> is a browser based application providing a subset of the 
+    functionality of STELLAR.Console.
+    </p>
+</body>
+</html>

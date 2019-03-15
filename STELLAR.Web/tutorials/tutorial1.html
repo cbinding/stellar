@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title>STELLAR.Console tutorial 1</title>
+  <meta name="author" content="Ceri Binding, University of South Wales">
+  <meta name="keywords" content="STELLAR, RDF, CRM, SKOS, tutorial">
+  <meta name="description" content="Tutorial on use of the STELLAR tools for database to RDF conversion">
+  <link rel="SHORTCUT ICON" href="http://reswin1.isd.glam.ac.uk/stellar/favicon.ico"/>	
+ </head>
+
+ <body>
+ <img src="../img/cooltext470420858.png" width="435" height="114" border="0" alt="STELLAR">
+ <h1>STELLAR.Console tutorial</h1>
+ <p>
+ This tutorial describes installing the STELLAR.Console application, importing data from delimited files to an internal database, and exporting the data via SQL queries both to delimited files and to specific RDF formats. The tutorial is based on STELLAR.Console version 1.6
+ </p>
+
+ <h2>Install the application</h2>
+ <p>
+ Go to <a href="http://hypermedia.research.glam.ac.uk/resources/STELLAR-applications/">http://hypermedia.research.glam.ac.uk/resources/STELLAR-applications/</a>. It is worth reading the associated documentation (STELLAR.Applications.pdf)  prior to undertaking the tutorial, as it will provide a good overview of the functionality available. Install the STELLAR.Console application (STELLAR.Setup.msi). Make a note of where the application was installed. If you already have a previous version of STELLAR.Console installed you will be prompted to 'uninstall' or 'repair' - choose 'repair' to upgrade your existing installation to the latest version.
+ </p>
+
+ <h2>Download the example data</h2>
+ <p>
+ In the interests of making this tutorial as realistic as possible the data used is the Roman Town Insula IX database from the Silchester project. The dataset (Data Copyright &copy; University of Reading) is hosted by the <a href="http://archaeologydataservice.ac.uk/">Archaeology Data Service</a> (ADS) and made available to download as a series of comma delimited text files (.csv) via their ArchSearch portal at <a href="http://ads.ahds.ac.uk/catalogue/resources.html?silchester_ahrc_2007">http://ads.ahds.ac.uk/catalogue/resources.html?silchester_ahrc_2007</a> (Select "downloads" then "CSV"). Create a suitable new directory  (e.g. c:\stellar_tutorial) and copy the CSV data files to that location.
+ </p>
+
+ <h2>Getting started</h2>
+ <p>
+ Start the STELLAR.Console application from it's installation directory by double clicking on STELLAR.Console.exe. Note the STELLAR environment is displayed in grey on blue just to distinguish it from the normal command prompt.
+ </p> 
+ <IMG SRC="startup.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+
+<h2>Set the data directory</h2>
+<p>
+The very first thing to do is to set a default data directory so you don't need to specify full file paths in subsequent commands. By default on startup the data directory will be the installation directory of the running application (You can verify this by just typing the command 'datadir' and hitting return). This is where STELLAR will look first for data files, and where it will attempt to write output files. Change the data directory like so (note: this setting is not remembered for subsequent sessions)
+</p>
+<pre>
+datadir /dir:"c:\stellar_tutorial"
+</pre>
+
+<h2>Import the delimited data files</h2>
+<p>
+To import one of the CSV files, type the following command:
+</p>
+<pre>
+csv2db /db:silchester /csv:"contexts.csv"
+</pre>
+<IMG SRC="command_csv2db_one.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+<p>
+This creates a new internal database (silchester.db3) in the current data directory. If a database already exists with this name it will be used. The CSV data file will be imported to a named table in the database. By default the table name given will be the lowercase name of the data file minus any path and extension (i.e. "contexts"), but you may override that if necessary by adding /table:"mytablename" to the command. If the table already exists it will be overwritten. The application will give feedback to confirm that the file imported correctly, and you can verify the table creation by use of one or more of the following commands:
+</p>
+<pre>
+dbtables /db:silchester
+dbcolumns /db:silchester /table:contexts
+dbrowcount /db:silchester /table:contexts
+</pre>
+<IMG SRC="command_dbcolumns.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+<p>
+See the document STELLAR.Applications.pdf for further details of these commands. 
+</p>
+ <h2>Create a command file</h2>
+ <p>
+ Although all STELLAR commands can be executed interactively, for consistency and repeatability you may find it more convenient to create a text file containing all the commands to be run sequentially. The commands to import all the Silchester CSV data to a new database are shown below, for convenience a text file of these commands is provided (<a href="silchester_csv2db.txt" target="_blank">silchester_csv2db.txt</a>). Note command lines starting with the hash ('#') character will be treated as comments by the application, allowing you to document your command files.
+ </p>
+
+ <pre>
+# Import the CSV data files to database 'silchester'
+# Usage: STELLAR.Console < silchester_csv2db.txt
+csv2db /db:silchester /csv:"contexts.csv"
+csv2db /db:silchester /csv:"finds.csv"
+csv2db /db:silchester /csv:"finds_dims.csv"
+csv2db /db:silchester /csv:"finds_treat.csv"
+csv2db /db:silchester /csv:"objects.csv"
+csv2db /db:silchester /csv:"olinks.csv"
+csv2db /db:silchester /csv:"photos.csv"
+csv2db /db:silchester /csv:"plinks.csv"
+csv2db /db:silchester /csv:"strat.csv"
+</pre>
+
+<h3>Run the commands</h3>
+<p>
+Now to import all CSV data files to named tables in the 'silchester' database, enter the following command: 
+<pre>
+cmdfile /cmd:silchester_csv2db.txt
+</pre>
+<IMG SRC="command_csv2db_all.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+
+<h2>Querying the database</h2>
+<p>
+SQL queries can be defined and saved to text files, then run against a STELLAR.Console database. A set of pre-defined SQL queries have been created for this tutorial, to extract named data columns that will be subsequently used by the STELLAR templates to produce RDF data. 
+</p>
+<ul>
+<li><a href="silchester_crmeh_contexts_context_note.sql.txt" target="_blank">silchester_crmeh_contexts_context_note.sql.txt</a></li>
+<li><a href="silchester_crmeh_contexts_context_type.sql.txt" target="_blank">silchester_crmeh_contexts_context_type.sql.txt</a></li>
+<li><a href="silchester_crmeh_contexts_strat_lower_id.sql.txt" target="_blank">silchester_crmeh_contexts_strat_lower_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_contexts_within_group_id.sql.txt" target="_blank"">silchester_crmeh_contexts_within_group_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_contexts_within_investigation_id.sql.txt" target="_blank"">silchester_crmeh_contexts_within_investigation_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_finds_find_material.sql.txt" target="_blank"">silchester_crmeh_finds_find_material.sql.txt</a></li>
+<li><a href="silchester_crmeh_finds_find_type.sql.txt" target="_blank"">silchester_crmeh_finds_find_type.sql.txt</a></li>
+<li><a href="silchester_crmeh_finds_production_period.sql.txt" target="_blank"">silchester_crmeh_finds_production_period.sql.txt</a></li>
+<li><a href="silchester_crmeh_finds_within_context_id.sql.txt" target="_blank"">silchester_crmeh_finds_within_context_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_finds_within_investigation_id.sql.txt" target="_blank"">silchester_crmeh_finds_within_investigation_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_groups_group_note.sql.txt" target="_blank"">silchester_crmeh_groups_group_note.sql.txt</a></li>
+<li><a href="silchester_crmeh_groups_within_group_id.sql.txt" target="_blank"">silchester_crmeh_groups_within_group_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_groups_within_investigation_id.sql.txt" target="_blank"">silchester_crmeh_groups_within_investigation_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_sample_measurements.sql.txt" target="_blank"">silchester_crmeh_sample_measurements.sql.txt</a></li>
+<li><a href="silchester_crmeh_samples_sample_note.sql.txt" target="_blank"">silchester_crmeh_samples_sample_note.sql.txt</a></li>
+<li><a href="silchester_crmeh_samples_within_context_id.sql.txt" target="_blank"">silchester_crmeh_samples_within_context_id.sql.txt</a></li>
+<li><a href="silchester_crmeh_samples_within_investigation_id.sql.txt" target="_blank"">silchester_crmeh_samples_within_investigation_id.sql.txt</a></li>
+<li><a href="silchester_skos_concepts_find_material.sql.txt" target="_blank"">silchester_skos_concepts_find_material.sql.txt</a></li>
+</ul>
+<h2>SQL2CSV</h2>
+<p>
+To run one of these queries type the following command:
+</p>
+<pre>
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_context_note.sql.txt"
+</pre>
+<p>
+This will run the SQL query and produce a CSV file containing the results. By default the output file will be named by appending ".csv" to the SQL file name, but you can override the default if  necessary by adding /csv:"myfilename.csv" to the command. Again for consistency and repeatability you may find it more convenient to create a text file containing all the commands. The commands to run all the SQL queries sequentially are shown below, a text file of these commands is provided (<a href="silchester_sql2csv.txt" target="_blank">silchester_sql2csv.txt</a>) 
+</p>
+<pre>
+# Run SQL query and  export results to CSV 
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_context_note.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_context_type.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_strat_lower_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_within_group_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_contexts_within_investigation_id.sql.txt"
+sql2csv /db:silchester /sql:"silchester_crmeh_finds_find_material.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_finds_find_type.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_finds_production_period.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_finds_within_context_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_finds_within_investigation_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_groups_group_note.sql.txt"
+sql2csv /db:silchester /sql:"silchester_crmeh_groups_within_group_id.sql.txt"
+sql2csv /db:silchester /sql:"silchester_crmeh_groups_within_investigation_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_sample_measurements.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_samples_sample_note.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_samples_within_context_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_crmeh_samples_within_investigation_id.sql.txt" 
+sql2csv /db:silchester /sql:"silchester_skos_concepts_find_material.sql.txt" 
+</pre>
+<h3>Run the commands</h3>
+<p>
+Now to run all SQL queries and export the results to CSV, enter the following command: 
+<pre>
+cmdfile /cmd:silchester_sql2csv.txt
+</pre>
+<IMG SRC="command_sql2csv_all.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+<h2>SQL2RDF</h2>
+<p>
+Once you have confirmed the output is as expected, it can be used to produce RDF data. There are two ways to approach this task, either use the output from SQL2CSV as input for the RDF conversion using command CSV2RDF, or perform the conversion from the query to RDF in one step using the command SQL2RDF, the end result will be the same. CSV2RDF can be used where you have alternative means of producing the CSV files (rather than using the internal STELLAR database functionality). We will show how to use the SQL queries to directly produce RDF.
+</p>
+<p>
+To run one of the queries and produce RDF enter the following command:
+</p>
+<pre>
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_context_note.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+</pre>
+<IMG SRC="command_sql2rdf_one.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+<p>
+This will run the SQL query and produce RDF data conforming to the CRMEH_CONTEXTS template. By default the output file will be named by appending ".rdf" to the SQL file name, but you can override the default if necessary by adding /rdf:"myfilename.rdf" to the command. Again for consistency and repeatability you may find it more convenient to create a text file containing all the commands. The commands to run all the SQL queries sequentially are shown below, a text file containing these commands is provided (<a href="silchester_sql2rdf.txt" target="_blank">silchester_sql2rdf.txt</a>) 
+</p>
+<pre>
+# STELLAR commands to export the silchester data to RDF 
+# Usage: STELLAR.Console < silchester_sql2rdf.txt
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_context_note.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_context_type.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_strat_lower_id.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_within_group_id.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_contexts_within_investigation_id.sql.txt" /template:CRMEH_CONTEXTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_finds_find_material.sql.txt" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_finds_find_type.sql.txt" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_finds_production_period.sql.txt" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_finds_within_context_id.sql.txt" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_finds_within_investigation_id.sql.txt" /template:CRMEH_FINDS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_groups_group_note.sql.txt" /template:CRMEH_GROUPS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_groups_within_group_id.sql.txt" /template:CRMEH_GROUPS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_groups_within_investigation_id.sql.txt" /template:CRMEH_GROUPS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_sample_measurements.sql.txt" /template:CRMEH_SAMPLE_MEASUREMENTS /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_samples_sample_note.sql.txt" /template:CRMEH_SAMPLES /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_samples_within_context_id.sql.txt" /template:CRMEH_SAMPLES /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_crmeh_samples_within_investigation_id.sql.txt" /template:CRMEH_SAMPLES /ns:"http://stellar/silchester/"
+sql2rdf /db:silchester /sql:"silchester_skos_concepts_find_material.sql.txt" /template:SKOS_CONCEPTS /ns:"http://stellar/silchester/concepts/"
+</pre>
+<h3>Run the commands</h3>
+<p>
+Now to run all SQL queries and convert the results to RDF, enter the following command: 
+<pre>
+cmdfile /cmd:silchester_sql2rdf.txt
+</pre>
+<IMG SRC="command_sql2rdf_all.png" WIDTH="669" HEIGHT="338" BORDER="0" ALT="">
+<h2>What next?</h2>
+<p>
+You now have a set of RDF data files containing archaeological data conforming to CRMEH model, which can be imported into any RDF enabled system e.g. triplestore etc. One useful (and free) visual tool we have used for testing the outputs of STELLAR is 'Gruff' (<a href="http://www.franz.com/agraph/gruff/">http://www.franz.com/agraph/gruff/</a>). The following picture shows some of the converted silchester data from the tutorial displayed using the Gruff tool.
+</p>
+<IMG SRC="gruff_example.jpg" WIDTH="744" HEIGHT="531" BORDER="0" ALT="">
+<p>
+Next you might want to explore creating and using your own templates to shape the data to ANY textual format (i.e. not just RDF). See <a href="tutorial2.html">tutorial2.html</a> for details of how to do that.
+</p>
+
+ </body>
+</html>

@@ -1,0 +1,10 @@
+# Import the silchester CSV data to a database 
+csv2db /db:silchester /csv:"contexts.csv"
+csv2db /db:silchester /csv:"finds.csv"
+csv2db /db:silchester /csv:"finds_dims.csv"
+csv2db /db:silchester /csv:"finds_treat.csv"
+csv2db /db:silchester /csv:"objects.csv"
+csv2db /db:silchester /csv:"olinks.csv"
+csv2db /db:silchester /csv:"photos.csv"
+csv2db /db:silchester /csv:"plinks.csv"
+csv2db /db:silchester /csv:"strat.csv"
